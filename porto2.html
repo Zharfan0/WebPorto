@@ -1,0 +1,2046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="Muhammad Zharfan Widyadana Hukmana — QA Engineer & Aspiring IT Auditor. Fresh Graduate Information Technology UMY. 300+ bugs found, BNSP certified, AI research grant recipient.">
+<meta name="keywords" content="Zharfan, QA Engineer, IT Auditor, Quality Assurance, UMY, BNSP, Software Testing, Katalon, Postman">
+<meta name="author" content="Muhammad Zharfan Widyadana Hukmana">
+<meta property="og:title" content="Zharfan — QA Engineer & IT Auditor">
+<meta property="og:description" content="Fresh Graduate Information Technology UMY. 300+ bugs, BNSP certified, AI grant recipient.">
+<meta property="og:type" content="website">
+<title>Zharfan — QA Engineer & IT Auditor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+--ink:#0a0a0f;
+--ink-2:#2d2d3a;
+--ink-3:#5a5a72;
+--ink-4:#9595a8;
+--surface:#ffffff;
+--surface-2:#f7f7fa;
+--surface-3:#ededf3;
+--accent:#1a5276;
+--accent-2:#2471a3;
+--accent-glow:rgba(26,82,118,0.12);
+--accent-subtle:rgba(26,82,118,0.06);
+--gold:#b8943f;
+--gold-light:#f0c660;
+--success:#1a7a4a;
+--border:rgba(0,0,0,0.08);
+--border-strong:rgba(0,0,0,0.14);
+--radius:16px;
+--radius-sm:10px;
+--shadow:0 2px 20px rgba(0,0,0,0.06);
+--shadow-md:0 8px 40px rgba(0,0,0,0.1);
+--shadow-lg:0 24px 60px rgba(0,0,0,0.14);
+}
+
+body.dark{
+--ink:#f0f0f8;
+--ink-2:#c8c8dc;
+--ink-3:#8888a4;
+--ink-4:#555570;
+--surface:#0f0f1a;
+--surface-2:#181828;
+--surface-3:#22223a;
+--accent:#4a9fd4;
+--accent-2:#6ab8e8;
+--accent-glow:rgba(74,159,212,0.15);
+--accent-subtle:rgba(74,159,212,0.07);
+--gold:#e0b84a;
+--gold-light:#f5d27a;
+--border:rgba(255,255,255,0.08);
+--border-strong:rgba(255,255,255,0.14);
+}
+
+html{scroll-behavior:smooth}
+
+body{
+font-family:'DM Sans',sans-serif;
+background:var(--surface);
+color:var(--ink);
+line-height:1.6;
+transition:background .3s,color .3s;
+overflow-x:hidden;
+}
+
+/* ======================== LANGUAGE POPUP ======================== */
+.lang-overlay{
+position:fixed;inset:0;
+background:rgba(5,5,15,0.85);
+backdrop-filter:blur(20px);
+z-index:9999;
+display:flex;align-items:center;justify-content:center;
+opacity:1;transition:opacity .4s;
+}
+.lang-overlay.fade-out{opacity:0;pointer-events:none}
+
+.lang-popup{
+background:var(--surface);
+border:1px solid var(--border-strong);
+border-radius:24px;
+padding:48px 40px;
+text-align:center;
+max-width:440px;width:90%;
+box-shadow:var(--shadow-lg);
+transform:translateY(0);
+animation:popIn .5s cubic-bezier(.34,1.56,.64,1);
+}
+@keyframes popIn{from{opacity:0;transform:translateY(24px) scale(.96)}to{opacity:1;transform:translateY(0) scale(1)}}
+
+.lang-popup .greeting{
+font-family:'Fraunces',serif;
+font-size:2rem;
+font-weight:300;
+font-style:italic;
+color:var(--ink);
+margin-bottom:8px;
+line-height:1.2;
+}
+.lang-popup .subtext{
+font-size:.9rem;
+color:var(--ink-3);
+margin-bottom:32px;
+}
+.lang-btns{
+display:flex;gap:12px;justify-content:center;flex-wrap:wrap;
+}
+.lang-btn{
+padding:14px 32px;
+border-radius:50px;
+border:1.5px solid var(--border-strong);
+background:transparent;
+color:var(--ink);
+font-family:'DM Sans',sans-serif;
+font-size:.95rem;
+font-weight:500;
+cursor:pointer;
+transition:all .25s;
+display:flex;align-items:center;gap:8px;
+}
+.lang-btn:hover{
+background:var(--accent);
+border-color:var(--accent);
+color:white;
+transform:translateY(-2px);
+box-shadow:0 8px 24px var(--accent-glow);
+}
+.lang-btn.primary{
+background:var(--accent);
+border-color:var(--accent);
+color:white;
+}
+.lang-btn.primary:hover{
+background:var(--accent-2);
+border-color:var(--accent-2);
+}
+
+/* ======================== SCROLLBAR ======================== */
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--surface-2)}
+::-webkit-scrollbar-thumb{background:var(--accent);border-radius:6px}
+
+/* ======================== NAVBAR ======================== */
+.navbar{
+position:sticky;top:0;z-index:100;
+background:var(--surface);
+border-bottom:1px solid var(--border);
+backdrop-filter:blur(16px);
+transition:all .3s;
+}
+body.dark .navbar{background:rgba(15,15,26,.92)}
+
+.nav-inner{
+max-width:1200px;margin:0 auto;padding:0 28px;
+display:flex;align-items:center;justify-content:space-between;
+height:64px;
+}
+.logo-mark{
+font-family:'Fraunces',serif;
+font-size:1.5rem;
+font-weight:600;
+color:var(--accent);
+text-decoration:none;
+letter-spacing:-0.02em;
+}
+.logo-mark span{
+font-style:italic;
+font-weight:300;
+}
+
+.nav-right{display:flex;align-items:center;gap:8px}
+.nav-links{
+display:flex;gap:4px;list-style:none;align-items:center;
+}
+.nav-links a{
+text-decoration:none;
+color:var(--ink-3);
+font-size:.88rem;
+font-weight:500;
+padding:6px 12px;
+border-radius:8px;
+transition:all .2s;
+}
+.nav-links a:hover{color:var(--ink);background:var(--surface-2)}
+
+.nav-controls{display:flex;align-items:center;gap:8px;margin-left:16px}
+.icon-btn{
+width:36px;height:36px;
+border-radius:10px;
+border:1px solid var(--border);
+background:var(--surface-2);
+color:var(--ink-3);
+cursor:pointer;
+display:flex;align-items:center;justify-content:center;
+font-size:.9rem;
+transition:all .2s;
+}
+.icon-btn:hover{color:var(--accent);border-color:var(--accent);background:var(--accent-subtle)}
+
+.lang-switcher{
+display:flex;align-items:center;
+background:var(--surface-2);
+border:1px solid var(--border);
+border-radius:10px;
+padding:3px;
+gap:2px;
+}
+.lang-opt{
+padding:4px 10px;
+border-radius:7px;
+font-size:.78rem;
+font-weight:600;
+cursor:pointer;
+color:var(--ink-4);
+transition:all .2s;
+border:none;background:transparent;
+}
+.lang-opt.active{
+background:var(--accent);
+color:white;
+}
+
+/* ======================== HERO ======================== */
+.hero{
+min-height:calc(100vh - 64px);
+display:flex;align-items:center;
+position:relative;
+overflow:hidden;
+padding:80px 0;
+}
+
+.hero-bg{
+position:absolute;inset:0;
+background:
+radial-gradient(ellipse 60% 50% at 20% 50%, var(--accent-glow) 0%, transparent 70%),
+radial-gradient(ellipse 40% 40% at 80% 20%, rgba(184,148,63,.07) 0%, transparent 60%);
+pointer-events:none;
+}
+
+.hero-grid-lines{
+position:absolute;inset:0;
+background-image:
+linear-gradient(var(--border) 1px, transparent 1px),
+linear-gradient(90deg, var(--border) 1px, transparent 1px);
+background-size:60px 60px;
+opacity:.4;
+pointer-events:none;
+}
+
+.hero-inner{
+max-width:1200px;margin:0 auto;padding:0 28px;
+width:100%;
+display:grid;grid-template-columns:1fr auto;
+gap:60px;align-items:center;
+}
+
+.hero-label{
+display:inline-flex;align-items:center;gap:8px;
+background:var(--surface-2);
+border:1px solid var(--border-strong);
+border-radius:50px;
+padding:6px 16px 6px 8px;
+font-size:.78rem;
+font-weight:600;
+color:var(--ink-3);
+letter-spacing:.04em;
+text-transform:uppercase;
+margin-bottom:24px;
+}
+.hero-label .dot{
+width:8px;height:8px;
+border-radius:50%;
+background:var(--success);
+animation:pulse 2s infinite;
+}
+@keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(26,122,74,.4)}50%{opacity:.8;box-shadow:0 0 0 6px rgba(26,122,74,0)}}
+
+.hero h1{
+font-family:'Fraunces',serif;
+font-size:clamp(2.8rem,5vw,4.2rem);
+font-weight:300;
+line-height:1.1;
+letter-spacing:-0.03em;
+color:var(--ink);
+margin-bottom:12px;
+}
+.hero h1 .name-highlight{
+font-style:italic;
+color:var(--accent);
+}
+.hero h1 .name-last{
+display:block;
+font-weight:600;
+font-style:normal;
+color:var(--ink);
+}
+
+.hero-role{
+font-size:1.1rem;
+color:var(--ink-3);
+margin-bottom:28px;
+min-height:2rem;
+}
+.typed-cursor{
+display:inline-block;
+width:2px;height:1.1em;
+background:var(--accent);
+margin-left:2px;
+vertical-align:text-bottom;
+animation:blink .7s step-end infinite;
+}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+
+.hero-desc{
+font-size:1rem;
+color:var(--ink-3);
+line-height:1.7;
+max-width:540px;
+margin-bottom:36px;
+}
+
+.hero-stats{
+display:flex;gap:32px;flex-wrap:wrap;
+margin-bottom:40px;
+}
+.stat{border-left:2px solid var(--border-strong);padding-left:16px}
+.stat-n{
+font-family:'Fraunces',serif;
+font-size:1.9rem;
+font-weight:600;
+color:var(--ink);
+line-height:1;
+}
+.stat-n em{color:var(--accent)}
+.stat-l{font-size:.78rem;color:var(--ink-4);margin-top:4px;text-transform:uppercase;letter-spacing:.04em}
+
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap}
+
+.btn{
+display:inline-flex;align-items:center;gap:8px;
+padding:12px 24px;
+border-radius:12px;
+font-family:'DM Sans',sans-serif;
+font-size:.9rem;font-weight:600;
+text-decoration:none;
+cursor:pointer;border:none;
+transition:all .25s cubic-bezier(.34,1.56,.64,1);
+}
+.btn-primary{
+background:var(--accent);
+color:white;
+box-shadow:0 4px 16px var(--accent-glow);
+}
+.btn-primary:hover{
+background:var(--accent-2);
+transform:translateY(-2px);
+box-shadow:0 8px 28px var(--accent-glow);
+}
+.btn-ghost{
+background:var(--surface-2);
+color:var(--ink);
+border:1px solid var(--border-strong);
+}
+.btn-ghost:hover{
+background:var(--surface-3);
+transform:translateY(-2px);
+}
+
+/* Hero avatar */
+.hero-avatar-wrap{
+flex-shrink:0;
+position:relative;
+}
+.hero-avatar{
+width:280px;height:280px;
+border-radius:24px;
+overflow:hidden;
+border:2px solid var(--border-strong);
+box-shadow:var(--shadow-md);
+background:var(--surface-2);
+position:relative;
+}
+.hero-avatar img{
+width:100%;height:100%;
+object-fit:cover;
+object-position:center 20%;
+}
+.avatar-badge{
+position:absolute;
+bottom:-12px;right:-12px;
+background:var(--gold);
+color:white;
+font-size:.72rem;
+font-weight:700;
+padding:8px 14px;
+border-radius:10px;
+letter-spacing:.02em;
+box-shadow:var(--shadow);
+border:2px solid var(--surface);
+}
+
+/* ======================== SECTIONS ======================== */
+section{padding:100px 0;border-top:1px solid var(--border)}
+.container{max-width:1200px;margin:0 auto;padding:0 28px}
+
+.section-eyebrow{
+font-size:.75rem;
+font-weight:700;
+letter-spacing:.12em;
+text-transform:uppercase;
+color:var(--accent);
+margin-bottom:12px;
+display:flex;align-items:center;gap:8px;
+}
+.section-eyebrow::before{
+content:'';
+display:inline-block;
+width:24px;height:2px;
+background:var(--accent);
+}
+.section-title{
+font-family:'Fraunces',serif;
+font-size:clamp(1.8rem,3vw,2.6rem);
+font-weight:300;
+line-height:1.2;
+letter-spacing:-0.02em;
+color:var(--ink);
+margin-bottom:56px;
+}
+.section-title strong{font-weight:600}
+
+/* ======================== CARDS ======================== */
+.cards-grid{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(340px,1fr));
+gap:24px;
+}
+
+.card{
+background:var(--surface);
+border:1px solid var(--border);
+border-radius:var(--radius);
+padding:28px;
+transition:all .3s;
+position:relative;
+overflow:hidden;
+}
+.card::after{
+content:'';position:absolute;inset:0;
+background:linear-gradient(135deg,var(--accent-subtle),transparent);
+opacity:0;transition:opacity .3s;
+}
+.card:hover{
+border-color:var(--border-strong);
+box-shadow:var(--shadow-md);
+transform:translateY(-4px);
+}
+.card:hover::after{opacity:1}
+
+.card-icon{
+width:44px;height:44px;
+background:var(--accent-subtle);
+border-radius:12px;
+display:flex;align-items:center;justify-content:center;
+color:var(--accent);
+font-size:1.1rem;
+margin-bottom:20px;
+}
+.card-title{
+font-size:1.05rem;
+font-weight:600;
+color:var(--ink);
+margin-bottom:6px;
+line-height:1.3;
+}
+.card-meta{
+font-size:.78rem;
+color:var(--accent);
+font-weight:600;
+letter-spacing:.02em;
+margin-bottom:12px;
+text-transform:uppercase;
+}
+.card-role{
+font-size:.8rem;
+color:var(--ink-3);
+font-weight:500;
+margin-bottom:10px;
+}
+.card-body{
+font-size:.88rem;
+color:var(--ink-3);
+line-height:1.65;
+}
+.card-body ul{margin-left:14px}
+.card-body li{margin-bottom:6px}
+
+.card-link{
+display:inline-flex;align-items:center;gap:6px;
+color:var(--accent);
+font-size:.83rem;font-weight:600;
+text-decoration:none;
+margin-top:16px;
+transition:gap .2s;
+cursor:pointer;
+border:none;background:transparent;padding:0;font-family:inherit;
+}
+.card-link:hover{gap:10px}
+
+/* ======================== ABOUT ======================== */
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1.6fr;
+gap:60px;
+align-items:start;
+}
+
+.about-photo{
+position:relative;
+}
+.about-photo-frame{
+width:100%;
+aspect-ratio:3/4;
+border-radius:var(--radius);
+overflow:hidden;
+border:1px solid var(--border-strong);
+}
+.about-photo-frame img{
+width:100%;height:100%;
+object-fit:cover;
+object-position:center 20%;
+}
+.about-tags{
+display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;
+}
+
+.pill{
+display:inline-flex;align-items:center;gap:6px;
+background:var(--surface-2);
+border:1px solid var(--border);
+border-radius:50px;
+padding:6px 14px;
+font-size:.78rem;font-weight:500;
+color:var(--ink-3);
+transition:all .2s;
+}
+.pill:hover{
+background:var(--accent);
+border-color:var(--accent);
+color:white;
+}
+.pill i{font-size:.8rem}
+
+.about-text p{
+font-size:.97rem;
+color:var(--ink-3);
+line-height:1.75;
+margin-bottom:20px;
+}
+.about-text p strong{color:var(--ink)}
+
+.about-highlights{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:16px;
+margin-top:32px;
+}
+.highlight-item{
+background:var(--surface-2);
+border:1px solid var(--border);
+border-radius:var(--radius-sm);
+padding:16px;
+}
+.highlight-item .hi-num{
+font-family:'Fraunces',serif;
+font-size:1.6rem;
+font-weight:600;
+color:var(--accent);
+line-height:1;
+}
+.highlight-item .hi-label{
+font-size:.78rem;
+color:var(--ink-4);
+margin-top:4px;
+}
+
+/* ======================== EXPERIENCE TIMELINE ======================== */
+.timeline{
+position:relative;
+padding-left:32px;
+}
+.timeline::before{
+content:'';
+position:absolute;
+left:0;top:8px;bottom:0;
+width:1px;
+background:var(--border-strong);
+}
+.tl-item{
+position:relative;
+margin-bottom:48px;
+}
+.tl-dot{
+position:absolute;
+left:-38px;top:8px;
+width:12px;height:12px;
+border-radius:50%;
+background:var(--accent);
+border:2px solid var(--surface);
+box-shadow:0 0 0 3px var(--accent-glow);
+}
+.tl-date{
+font-size:.75rem;
+font-weight:700;
+color:var(--accent);
+letter-spacing:.06em;
+text-transform:uppercase;
+margin-bottom:6px;
+}
+.tl-title{
+font-size:1.05rem;
+font-weight:600;
+color:var(--ink);
+margin-bottom:2px;
+}
+.tl-sub{
+font-size:.83rem;
+color:var(--ink-3);
+margin-bottom:12px;
+}
+.tl-body{
+font-size:.88rem;
+color:var(--ink-3);
+line-height:1.65;
+}
+.tl-body ul{margin-left:14px}
+.tl-body li{margin-bottom:6px}
+
+/* ======================== SKILLS ======================== */
+.skills-section{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+gap:24px;
+}
+.skill-group{
+background:var(--surface-2);
+border:1px solid var(--border);
+border-radius:var(--radius);
+padding:24px;
+}
+.skill-group-title{
+font-size:.78rem;
+font-weight:700;
+color:var(--ink-3);
+letter-spacing:.1em;
+text-transform:uppercase;
+margin-bottom:16px;
+display:flex;align-items:center;gap:8px;
+}
+.skill-group-title i{color:var(--accent)}
+.skill-tags{display:flex;flex-wrap:wrap;gap:8px}
+.skill-chip{
+background:var(--surface);
+border:1px solid var(--border-strong);
+border-radius:8px;
+padding:6px 12px;
+font-size:.8rem;
+font-weight:500;
+color:var(--ink-2);
+transition:all .2s;
+cursor:default;
+}
+.skill-chip:hover{
+background:var(--accent);
+border-color:var(--accent);
+color:white;
+transform:translateY(-2px);
+}
+
+/* ======================== PROJECTS ======================== */
+.projects-grid{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(360px,1fr));
+gap:24px;
+}
+.project-card{
+background:var(--surface);
+border:1px solid var(--border);
+border-radius:var(--radius);
+padding:28px;
+transition:all .3s;
+display:flex;flex-direction:column;
+}
+.project-card:hover{
+border-color:var(--border-strong);
+box-shadow:var(--shadow-md);
+transform:translateY(-4px);
+}
+.project-card-top{
+display:flex;align-items:flex-start;
+justify-content:space-between;
+margin-bottom:16px;
+}
+.project-icon{
+width:48px;height:48px;
+background:var(--accent-subtle);
+border-radius:14px;
+display:flex;align-items:center;justify-content:center;
+color:var(--accent);
+font-size:1.2rem;
+}
+.project-badge{
+font-size:.72rem;
+font-weight:700;
+padding:4px 10px;
+border-radius:6px;
+letter-spacing:.04em;
+}
+.badge-award{background:rgba(184,148,63,.1);color:var(--gold)}
+.badge-personal{background:var(--accent-subtle);color:var(--accent)}
+.badge-grant{background:rgba(26,122,74,.1);color:var(--success)}
+
+.project-title{
+font-size:1rem;
+font-weight:600;
+color:var(--ink);
+margin-bottom:8px;
+line-height:1.3;
+}
+.project-desc{
+font-size:.87rem;
+color:var(--ink-3);
+line-height:1.65;
+flex:1;
+margin-bottom:16px;
+}
+.project-chips{
+display:flex;flex-wrap:wrap;gap:6px;
+margin-bottom:16px;
+}
+.tech-chip{
+font-size:.72rem;
+font-weight:500;
+padding:3px 9px;
+background:var(--surface-2);
+border:1px solid var(--border);
+border-radius:6px;
+color:var(--ink-3);
+}
+.project-links-row{
+display:flex;gap:12px;flex-wrap:wrap;
+margin-top:auto;
+}
+
+/* ======================== CERTIFICATIONS ======================== */
+.cert-grid{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+gap:20px;
+}
+.cert-card{
+background:var(--surface-2);
+border:1px solid var(--border);
+border-radius:var(--radius);
+padding:24px;
+display:flex;gap:16px;
+transition:all .3s;
+}
+.cert-card:hover{
+border-color:var(--border-strong);
+box-shadow:var(--shadow);
+transform:translateX(4px);
+}
+.cert-icon{
+width:44px;height:44px;
+background:var(--surface);
+border:1px solid var(--border-strong);
+border-radius:12px;
+display:flex;align-items:center;justify-content:center;
+color:var(--gold);
+font-size:1.1rem;
+flex-shrink:0;
+}
+.cert-name{
+font-size:.95rem;
+font-weight:600;
+color:var(--ink);
+margin-bottom:4px;
+}
+.cert-issuer{
+font-size:.8rem;
+color:var(--ink-3);
+margin-bottom:8px;
+}
+
+/* ======================== ORGANIZATION ======================== */
+.org-grid{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+gap:20px;
+}
+.org-card{
+background:var(--surface);
+border:1px solid var(--border);
+border-left:3px solid var(--accent);
+border-radius:var(--radius);
+padding:22px 24px;
+transition:all .25s;
+}
+.org-card:hover{
+box-shadow:var(--shadow);
+transform:translateX(4px);
+}
+.org-title{
+font-size:.95rem;
+font-weight:600;
+color:var(--ink);
+margin-bottom:4px;
+display:flex;align-items:center;gap:8px;
+}
+.org-title i{color:var(--accent);font-size:.9rem}
+.org-period{
+font-size:.75rem;
+color:var(--accent);
+font-weight:600;
+letter-spacing:.04em;
+text-transform:uppercase;
+margin-bottom:8px;
+}
+.org-desc{
+font-size:.85rem;
+color:var(--ink-3);
+line-height:1.6;
+}
+
+/* ======================== CONTACT ======================== */
+.contact-layout{
+display:grid;
+grid-template-columns:1fr 1.4fr;
+gap:60px;
+align-items:start;
+}
+.contact-info h3{
+font-family:'Fraunces',serif;
+font-size:1.6rem;
+font-weight:400;
+color:var(--ink);
+margin-bottom:16px;
+}
+.contact-info p{
+font-size:.9rem;
+color:var(--ink-3);
+line-height:1.7;
+margin-bottom:28px;
+}
+.contact-items{
+display:flex;flex-direction:column;gap:14px;margin-bottom:28px;
+}
+.contact-item{
+display:flex;align-items:center;gap:12px;
+text-decoration:none;
+color:var(--ink-3);
+font-size:.9rem;
+transition:color .2s;
+}
+.contact-item:hover{color:var(--accent)}
+.contact-item-icon{
+width:36px;height:36px;
+background:var(--accent-subtle);
+border:1px solid var(--border);
+border-radius:10px;
+display:flex;align-items:center;justify-content:center;
+color:var(--accent);
+font-size:.9rem;
+flex-shrink:0;
+}
+.social-row{display:flex;gap:10px}
+.social-icon{
+width:40px;height:40px;
+background:var(--surface-2);
+border:1px solid var(--border);
+border-radius:10px;
+display:flex;align-items:center;justify-content:center;
+color:var(--ink-3);
+text-decoration:none;
+font-size:1rem;
+transition:all .2s;
+}
+.social-icon:hover{
+background:var(--accent);
+border-color:var(--accent);
+color:white;
+transform:translateY(-3px);
+}
+
+/* Form */
+.contact-form{
+display:flex;flex-direction:column;gap:14px;
+}
+.form-group{display:flex;flex-direction:column;gap:6px}
+.form-label{
+font-size:.78rem;
+font-weight:600;
+color:var(--ink-3);
+letter-spacing:.04em;
+text-transform:uppercase;
+}
+.form-input{
+background:var(--surface-2);
+border:1px solid var(--border-strong);
+border-radius:10px;
+padding:12px 16px;
+color:var(--ink);
+font-family:'DM Sans',sans-serif;
+font-size:.9rem;
+transition:all .2s;
+outline:none;
+}
+.form-input:focus{
+border-color:var(--accent);
+box-shadow:0 0 0 3px var(--accent-glow);
+background:var(--surface);
+}
+.form-input::placeholder{color:var(--ink-4)}
+textarea.form-input{resize:vertical;min-height:120px}
+
+/* ======================== FLOATING ACTIONS ======================== */
+.floating-bar{
+position:fixed;
+bottom:28px;right:28px;
+display:flex;flex-direction:column;
+gap:10px;
+z-index:90;
+}
+.fab{
+width:48px;height:48px;
+border-radius:14px;
+border:none;
+cursor:pointer;
+display:flex;align-items:center;justify-content:center;
+font-size:1rem;
+transition:all .3s cubic-bezier(.34,1.56,.64,1);
+text-decoration:none;
+box-shadow:var(--shadow-md);
+}
+.fab-primary{
+background:var(--accent);
+color:white;
+}
+.fab-primary:hover{transform:scale(1.12);box-shadow:0 12px 28px var(--accent-glow)}
+.fab-secondary{
+background:var(--surface);
+color:var(--ink-3);
+border:1px solid var(--border-strong);
+}
+.fab-secondary:hover{transform:scale(1.12);color:var(--accent)}
+
+/* ======================== TOAST ======================== */
+.toast{
+position:fixed;bottom:28px;left:50%;
+transform:translateX(-50%) translateY(80px);
+background:var(--ink);
+color:var(--surface);
+padding:12px 24px;
+border-radius:12px;
+font-size:.88rem;
+font-weight:500;
+z-index:9998;
+transition:transform .3s cubic-bezier(.34,1.56,.64,1);
+box-shadow:var(--shadow-md);
+}
+.toast.show{transform:translateX(-50%) translateY(0)}
+
+/* ======================== FOOTER ======================== */
+footer{
+padding:60px 0;
+border-top:1px solid var(--border);
+text-align:center;
+}
+.footer-logo{
+font-family:'Fraunces',serif;
+font-size:1.8rem;
+font-weight:300;
+font-style:italic;
+color:var(--accent);
+margin-bottom:16px;
+}
+footer p{
+font-size:.83rem;
+color:var(--ink-4);
+line-height:1.6;
+}
+
+/* ======================== MODAL LIGHTBOX ======================== */
+.modal{
+display:none;
+position:fixed;inset:0;
+background:rgba(0,0,0,.88);
+backdrop-filter:blur(8px);
+z-index:9990;
+cursor:pointer;
+}
+.modal.open{display:flex;align-items:center;justify-content:center}
+.modal-img{
+max-width:88%;max-height:88vh;
+border-radius:12px;
+object-fit:contain;
+cursor:auto;
+transition:transform .1s;
+}
+.modal-close{
+position:absolute;
+top:20px;right:24px;
+color:white;
+font-size:1.8rem;
+cursor:pointer;
+width:40px;height:40px;
+background:rgba(255,255,255,.1);
+border-radius:10px;
+display:flex;align-items:center;justify-content:center;
+transition:background .2s;
+}
+.modal-close:hover{background:rgba(255,255,255,.2)}
+.modal-caption{
+position:absolute;
+bottom:24px;left:50%;transform:translateX(-50%);
+background:rgba(0,0,0,.7);
+color:white;
+padding:8px 20px;
+border-radius:50px;
+font-size:.83rem;
+white-space:nowrap;
+}
+
+/* ======================== EDUCATION ======================== */
+.edu-grid{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(340px,1fr));
+gap:24px;
+}
+.edu-card{
+background:var(--surface-2);
+border:1px solid var(--border);
+border-radius:var(--radius);
+padding:28px;
+transition:all .3s;
+}
+.edu-card:hover{
+border-color:var(--border-strong);
+box-shadow:var(--shadow);
+transform:translateY(-3px);
+}
+.edu-degree{
+font-size:.75rem;
+font-weight:700;
+color:var(--accent);
+letter-spacing:.08em;
+text-transform:uppercase;
+margin-bottom:8px;
+}
+.edu-school{
+font-size:1.05rem;
+font-weight:600;
+color:var(--ink);
+margin-bottom:4px;
+}
+.edu-meta{
+font-size:.85rem;
+color:var(--ink-3);
+}
+
+/* ======================== SCROLL ANIM ======================== */
+.reveal{
+opacity:0;
+transform:translateY(24px);
+transition:opacity .6s cubic-bezier(.25,.8,.25,1),transform .6s cubic-bezier(.25,.8,.25,1);
+}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* ======================== MOBILE NAV ======================== */
+.hamburger{
+display:none;
+flex-direction:column;
+gap:5px;
+cursor:pointer;
+padding:4px;
+}
+.hamburger span{
+display:block;width:22px;height:2px;
+background:var(--ink-3);
+border-radius:2px;
+transition:all .3s;
+}
+
+/* ======================== RESPONSIVE ======================== */
+@media(max-width:1024px){
+.hero-inner{grid-template-columns:1fr;text-align:center}
+.hero-avatar-wrap{display:none}
+.hero-stats{justify-content:center}
+.hero-cta{justify-content:center}
+.hero-label{justify-content:center}
+.about-grid{grid-template-columns:1fr;gap:40px}
+.about-photo-frame{max-height:400px}
+.contact-layout{grid-template-columns:1fr;gap:40px}
+}
+@media(max-width:768px){
+.nav-links{display:none}
+.hamburger{display:flex}
+.nav-links.mobile-open{
+display:flex;flex-direction:column;
+position:fixed;inset:64px 0 0 0;
+background:var(--surface);
+padding:24px;gap:8px;
+z-index:99;
+}
+.nav-links.mobile-open a{
+padding:12px 16px;
+border-radius:10px;
+font-size:1rem;
+}
+.cards-grid,.projects-grid,.org-grid,.cert-grid,.edu-grid,.skills-section{
+grid-template-columns:1fr;
+}
+.about-highlights{grid-template-columns:1fr 1fr}
+.hero{padding:60px 0}
+section{padding:70px 0}
+}
+</style>
+</head>
+<body>
+
+<!-- LANGUAGE WELCOME POPUP -->
+<div class="lang-overlay" id="langOverlay">
+  <div class="lang-popup">
+    <div class="greeting" id="langGreeting">Welcome</div>
+    <p class="subtext" id="langSubtext">Please choose your preferred language to continue</p>
+    <div class="lang-btns">
+      <button class="lang-btn primary" onclick="chooseLang('en')">
+        🇬🇧 English
+      </button>
+      <button class="lang-btn" onclick="chooseLang('id')">
+        🇮🇩 Bahasa Indonesia
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL LIGHTBOX -->
+<div class="modal" id="modal">
+  <div class="modal-close" id="modalClose">&times;</div>
+  <img class="modal-img" id="modalImg" src="" alt="">
+  <div class="modal-caption" id="modalCaption"></div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="logo-mark">Zhar<span>fan.</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about" data-i18n="nav.about">About</a></li>
+      <li><a href="#education" data-i18n="nav.education">Education</a></li>
+      <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+      <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+      <li><a href="#certifications" data-i18n="nav.certifications">Certifications</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+      <li><a href="./index.html">Porto V1</a></li>
+    </ul>
+    <div class="nav-controls">
+      <div class="lang-switcher">
+        <button class="lang-opt active" id="langEN" onclick="setLang('en')">EN</button>
+        <button class="lang-opt" id="langID" onclick="setLang('id')">ID</button>
+      </div>
+      <button class="icon-btn" id="darkToggle" title="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+      </button>
+      <button class="icon-btn hamburger" id="hamburger" title="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid-lines"></div>
+  <div class="hero-inner container">
+    <div class="hero-content">
+      <div class="hero-label">
+        <span class="dot"></span>
+        <span data-i18n="hero.badge">Open to Work · Fresh Graduate 2026</span>
+      </div>
+      <h1>
+        Muhammad<br>
+        <span class="name-highlight">Zharfan</span>
+        <span class="name-last">Widyadana Hukmana</span>
+      </h1>
+      <div class="hero-role">
+        <span id="typedText"></span><span class="typed-cursor"></span>
+      </div>
+      <p class="hero-desc" data-i18n="hero.desc">
+        Information Technology graduate from UMY with hands-on QA experience, 300+ bugs documented, BNSP certified, and AI research grant recipient. Passionate about software quality, system auditing, and building reliable digital products.
+      </p>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-n"><em>300</em>+</div>
+          <div class="stat-l" data-i18n="hero.stat1">Bugs Reported</div>
+        </div>
+        <div class="stat">
+          <div class="stat-n"><em>6</em>+</div>
+          <div class="stat-l" data-i18n="hero.stat2">Months QA Exp.</div>
+        </div>
+        <div class="stat">
+          <div class="stat-n"><em>4</em></div>
+          <div class="stat-l" data-i18n="hero.stat3">Grants & Awards</div>
+        </div>
+        <div class="stat">
+          <div class="stat-n"><em>150</em>+</div>
+          <div class="stat-l" data-i18n="hero.stat4">Students Taught</div>
+        </div>
+      </div>
+      <div class="hero-cta">
+        <a href="#experience" class="btn btn-primary">
+          <i class="fas fa-briefcase"></i>
+          <span data-i18n="hero.cta1">View Portfolio</span>
+        </a>
+        <a href="https://wa.me/6281215946218" target="_blank" class="btn btn-ghost">
+          <i class="fab fa-whatsapp"></i>
+          <span data-i18n="hero.cta2">Contact Me</span>
+        </a>
+      </div>
+    </div>
+    <div class="hero-avatar-wrap">
+      <div class="hero-avatar">
+        <img src="./Asset/foto-profil.jpg" alt="Muhammad Zharfan Widyadana Hukmana"
+          onerror="this.parentElement.style.background='var(--surface-3)';this.style.display='none'">
+      </div>
+      <div class="avatar-badge">QA Engineer</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="section-eyebrow" data-i18n="section.about">About</div>
+    <h2 class="section-title" data-i18n="about.title">Getting to know <strong>Zharfan</strong></h2>
+    <div class="about-grid">
+      <div class="about-photo">
+        <div class="about-photo-frame">
+          <img src="./Asset/foto-profil.jpg" alt="Zharfan"
+            onerror="this.parentElement.style.background='var(--surface-3)';this.style.display='none'">
+        </div>
+        <div class="about-tags">
+          <span class="pill"><i class="fas fa-graduation-cap"></i> S1 TI UMY · GPA 3.4</span>
+          <span class="pill"><i class="fas fa-certificate"></i> BNSP</span>
+          <span class="pill"><i class="fas fa-language"></i> TOEIC 531</span>
+          <span class="pill"><i class="fas fa-microchip"></i> AI Grant</span>
+          <span class="pill"><i class="fas fa-file-alt"></i> HAKI</span>
+          <span class="pill"><i class="fas fa-rocket"></i> Bisnis Inkubasi</span>
+        </div>
+      </div>
+      <div class="about-text">
+        <p data-i18n="about.p1">Information Technology undergraduate (Class of 2022) at <strong>Universitas Muhammadiyah Yogyakarta</strong> with a GPA of 3.4/4.0. Recipient of grant funding in community service, Artificial Intelligence research, and business development.</p>
+        <p data-i18n="about.p2">Experienced as a <strong>Junior QA Engineer</strong> with 300+ bugs discovered and documented. Holder of <strong>BNSP Software Analysis and Requirement</strong> certification. Passionate about software quality, system security, and compliance.</p>
+        <p data-i18n="about.p3">Currently seeking a <strong>QA / Junior IT Auditor</strong> position to implement expertise in software testing, system security, and regulatory compliance within a quality-driven team.</p>
+        <div class="about-highlights">
+          <div class="highlight-item">
+            <div class="hi-num">300+</div>
+            <div class="hi-label" data-i18n="about.h1">Bugs Reported</div>
+          </div>
+          <div class="highlight-item">
+            <div class="hi-num">6+</div>
+            <div class="hi-label" data-i18n="about.h2">Months QA Experience</div>
+          </div>
+          <div class="highlight-item">
+            <div class="hi-num">3.4</div>
+            <div class="hi-label" data-i18n="about.h3">GPA / 4.0</div>
+          </div>
+          <div class="highlight-item">
+            <div class="hi-num">4</div>
+            <div class="hi-label" data-i18n="about.h4">Grants & Awards</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="container">
+    <div class="section-eyebrow" data-i18n="section.education">Education</div>
+    <h2 class="section-title" data-i18n="education.title">Academic <strong>Background</strong></h2>
+    <div class="edu-grid reveal">
+      <div class="edu-card">
+        <div class="edu-degree" data-i18n="edu.bachelor">Bachelor of Information Technology</div>
+        <div class="edu-school">Universitas Muhammadiyah Yogyakarta</div>
+        <div class="edu-meta">2022 – 2026 &nbsp;·&nbsp; GPA 3.4 / 4.0</div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-degree" data-i18n="edu.highschool">High School · Natural Science</div>
+        <div class="edu-school">Madrasah Aliyah Mu'allimin Muhammadiyah Yogyakarta</div>
+        <div class="edu-meta">2019 – 2022</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <div class="section-eyebrow" data-i18n="section.experience">Work Experience</div>
+    <h2 class="section-title" data-i18n="experience.title">Professional <strong>Journey</strong></h2>
+    <div class="timeline reveal">
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-date">Mar 2026 – Jun 2026</div>
+        <div class="tl-title" data-i18n="exp1.title">Junior Quality Assurance</div>
+        <div class="tl-sub">PT. Rimba Ananta Vikasa Indonesia (PWKT)</div>
+        <div class="tl-body">
+          <ul>
+            <li data-i18n="exp1.l1">Independently owned a full application module — test planning, execution, and bug reporting</li>
+            <li data-i18n="exp1.l2">Led testing of new features and UI migration with thorough regression testing</li>
+            <li data-i18n="exp1.l3">Handled client technical issues directly as frontline support</li>
+            <li data-i18n="exp1.l4">Completed average 10–15 tasks daily via ClickUp</li>
+          </ul>
+          <button class="card-link" onclick="openModal('./Asset/Sertif-MagangRimba.png','Certificate - QA PT. Rimba Ananta Vikasa')">
+            <i class="fas fa-external-link-alt"></i> <span data-i18n="cert.view">View Certificate</span> →
+          </button>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-date">Nov 2025 – Feb 2026</div>
+        <div class="tl-title" data-i18n="exp2.title">Intern — Quality Assurance</div>
+        <div class="tl-sub">PT. Rimba Ananta Vikasa Indonesia</div>
+        <div class="tl-body">
+          <ul>
+            <li data-i18n="exp2.l1">Designed and executed 200–300+ test cases on Oaktree, an integrated freight forwarding system</li>
+            <li data-i18n="exp2.l2">Performed end-to-end testing for Hollywings Store including XSS security validation on input forms</li>
+            <li data-i18n="exp2.l3">Proposed input validation standardization that improved company's internal QA procedures</li>
+            <li data-i18n="exp2.l4">Coordinated with developers via ClickUp & Discord in sprint meetings and bug tracking</li>
+          </ul>
+          <button class="card-link" onclick="openModal('./Asset/Sertif-MagangRimba.png','Internship Certificate - QA PT. Rimba Ananta Vikasa')">
+            <i class="fas fa-external-link-alt"></i> <span data-i18n="cert.view">View Certificate</span> →
+          </button>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-date">2023 – 2026</div>
+        <div class="tl-title" data-i18n="exp3.title">Teaching / Lab Assistant</div>
+        <div class="tl-sub">Universitas Muhammadiyah Yogyakarta</div>
+        <div class="tl-body">
+          <ul>
+            <li data-i18n="exp3.l1"><strong>Requirements Engineering</strong> (2023/2024) — 40 students, Design Thinking & PACT Framework</li>
+            <li data-i18n="exp3.l2"><strong>Software Testing & QA</strong> (2024/2025) — RTM, Katalon Studio, Jira</li>
+            <li data-i18n="exp3.l3"><strong>Probability & Statistics</strong> (2025/2026) — 100+ students, lectures and research article guidance</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <div class="section-eyebrow" data-i18n="section.skills">Skills</div>
+    <h2 class="section-title" data-i18n="skills.title">Technical <strong>Expertise</strong></h2>
+    <div class="skills-section reveal">
+      <div class="skill-group">
+        <div class="skill-group-title"><i class="fas fa-vial"></i> <span data-i18n="skills.testing">Testing Tools</span></div>
+        <div class="skill-tags">
+          <span class="skill-chip">Katalon Studio</span>
+          <span class="skill-chip">Postman</span>
+          <span class="skill-chip">Jira</span>
+          <span class="skill-chip">ClickUp</span>
+          <span class="skill-chip">Burp Suite</span>
+          <span class="skill-chip">Nmap</span>
+          <span class="skill-chip">Wireshark</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title"><i class="fas fa-code"></i> <span data-i18n="skills.programming">Programming</span></div>
+        <div class="skill-tags">
+          <span class="skill-chip">Python</span>
+          <span class="skill-chip">TypeScript</span>
+          <span class="skill-chip">SQL</span>
+          <span class="skill-chip">HTML/CSS</span>
+          <span class="skill-chip">Node.js</span>
+          <span class="skill-chip">Groovy</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title"><i class="fas fa-shield-alt"></i> <span data-i18n="skills.security">Security</span></div>
+        <div class="skill-tags">
+          <span class="skill-chip">OWASP Top 10</span>
+          <span class="skill-chip">XSS Testing</span>
+          <span class="skill-chip">SQL Injection</span>
+          <span class="skill-chip">TryHackMe</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title"><i class="fas fa-tools"></i> <span data-i18n="skills.other">Design & Other</span></div>
+        <div class="skill-tags">
+          <span class="skill-chip">Figma</span>
+          <span class="skill-chip">Canva</span>
+          <span class="skill-chip">CorelDraw</span>
+          <span class="skill-chip">Microsoft Office</span>
+          <span class="skill-chip">Excel</span>
+          <span class="skill-chip">scikit-learn</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <div class="section-eyebrow" data-i18n="section.projects">Projects & Awards</div>
+    <h2 class="section-title" data-i18n="projects.title">Selected <strong>Work</strong></h2>
+    <div class="projects-grid reveal">
+
+      <div class="project-card">
+        <div class="project-card-top">
+          <div class="project-icon"><i class="fas fa-heartbeat"></i></div>
+          <span class="project-badge badge-grant" data-i18n="badge.grant">AI Research Grant</span>
+        </div>
+        <div class="project-title">myHeartD v2 — AI Coronary Heart Disease Detection</div>
+        <div class="project-desc" data-i18n="proj1.desc">Python ML web app for coronary heart disease prediction using Gradient Boosting. Registered with HAKI No. 000947021 (2025) at UMY Directorate of Innovation and Commercialization.</div>
+        <div class="project-chips">
+          <span class="tech-chip">Python</span>
+          <span class="tech-chip">scikit-learn</span>
+          <span class="tech-chip">Gradient Boosting</span>
+          <span class="tech-chip">Vercel</span>
+        </div>
+        <div class="project-links-row">
+          <a href="https://chd-main.vercel.app" target="_blank" class="card-link">
+            <i class="fas fa-external-link-alt"></i> <span data-i18n="link.demo">Live Demo</span> →
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-top">
+          <div class="project-icon"><i class="fas fa-vial"></i></div>
+          <span class="project-badge badge-personal" data-i18n="badge.personal">Personal Project</span>
+        </div>
+        <div class="project-title">Automation Testing Portfolio — Katalon Studio</div>
+        <div class="project-desc" data-i18n="proj2.desc">E-commerce automation test suite covering login, search, add-to-cart, and checkout flows using Katalon Studio and Groovy scripting.</div>
+        <div class="project-chips">
+          <span class="tech-chip">Katalon Studio</span>
+          <span class="tech-chip">Groovy</span>
+          <span class="tech-chip">Test Suite</span>
+        </div>
+        <div class="project-links-row">
+          <a href="https://github.com/Zharfan0/katalon-automation-project" target="_blank" class="card-link">
+            <i class="fab fa-github"></i> GitHub →
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-top">
+          <div class="project-icon"><i class="fas fa-shield-alt"></i></div>
+          <span class="project-badge badge-personal" data-i18n="badge.personal">Personal Project</span>
+        </div>
+        <div class="project-title">Cybersecurity Portfolio — TryHackMe & Security Audit</div>
+        <div class="project-desc" data-i18n="proj3.desc">Security learning through TryHackMe (OWASP Top 10, Security Engineer path). Created sample security audit report for demo e-commerce.</div>
+        <div class="project-chips">
+          <span class="tech-chip">OWASP Top 10</span>
+          <span class="tech-chip">Burp Suite</span>
+          <span class="tech-chip">Nmap</span>
+          <span class="tech-chip">XSS</span>
+        </div>
+        <div class="project-links-row">
+          <a href="https://github.com/Zharfan0/cybersecurity-portfolio" target="_blank" class="card-link">
+            <i class="fab fa-github"></i> GitHub →
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-top">
+          <div class="project-icon"><i class="fas fa-print"></i></div>
+          <span class="project-badge badge-personal" data-i18n="badge.capstone">Capstone Project</span>
+        </div>
+        <div class="project-title">OtoPrint — Academic Document Vending Machine</div>
+        <div class="project-desc" data-i18n="proj4.desc">Self-service document printing system (Academic Active Letters, Transcripts) with QR code verification, admin panel for template management (.docx), drag-and-drop field layout, and printer maintenance.</div>
+        <div class="project-chips">
+          <span class="tech-chip">Node.js</span>
+          <span class="tech-chip">Express</span>
+          <span class="tech-chip">SQLite3</span>
+          <span class="tech-chip">QR Code</span>
+          <span class="tech-chip">Bootstrap 5</span>
+        </div>
+        <div class="project-links-row">
+          <a href="https://github.com/Zharfan0/WEBAPP-OTOPRINT" target="_blank" class="card-link">
+            <i class="fab fa-github"></i> GitHub →
+          </a>
+          <a href="https://drive.google.com/file/d/1_Dm-6LlE0WCNj07U_-bN14IJQh-qY-t1/view" target="_blank" class="card-link">
+            <i class="fas fa-play-circle"></i> <span data-i18n="link.demo">Demo</span> →
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-top">
+          <div class="project-icon"><i class="fas fa-brain"></i></div>
+          <span class="project-badge badge-grant" data-i18n="badge.grant2">Creative Ideas Grant</span>
+        </div>
+        <div class="project-title">Nerveey — AI Parkinson's Detection Concept</div>
+        <div class="project-desc" data-i18n="proj5.desc">Software innovation concept for early Parkinson's detection using CNN (eye movement analysis) and NLP (symptom diagnosis). Received university-level creative ideas competition grant.</div>
+        <div class="project-chips">
+          <span class="tech-chip">CNN</span>
+          <span class="tech-chip">NLP</span>
+          <span class="tech-chip">Figma</span>
+          <span class="tech-chip">UI/UX</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-top">
+          <div class="project-icon"><i class="fas fa-cloud"></i></div>
+          <span class="project-badge badge-award" data-i18n="badge.award">1st Place</span>
+        </div>
+        <div class="project-title">Cloud Computing Club Competition</div>
+        <div class="project-desc" data-i18n="proj6.desc">1st Place — AWS & Yayasan Sagasitas Indonesia (D.I. Yogyakarta Regional, 2021). Tourism website UI/UX design with AWS service implementation.</div>
+        <div class="project-chips">
+          <span class="tech-chip">AWS</span>
+          <span class="tech-chip">UI/UX</span>
+          <span class="tech-chip">Figma</span>
+        </div>
+        <div class="project-links-row">
+          <button class="card-link" onclick="openModal('./Asset/Sertif-CloudComputing.png','Certificate - 1st Place Cloud Computing Competition')">
+            <i class="fas fa-certificate"></i> <span data-i18n="cert.view">View Certificate</span> →
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="container">
+    <div class="section-eyebrow" data-i18n="section.cert">Certifications</div>
+    <h2 class="section-title" data-i18n="cert.title">Credentials & <strong>Achievements</strong></h2>
+    <div class="cert-grid reveal">
+      <div class="cert-card">
+        <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+        <div>
+          <div class="cert-name">BNSP — Software Analysis and Requirement</div>
+          <div class="cert-issuer">Badan Nasional Sertifikasi Profesi · 2026</div>
+          <button class="card-link" onclick="openModal('./Asset/Sertif-BNSP.png','BNSP Certificate - Software Analysis and Requirement')">
+            <i class="fas fa-external-link-alt"></i> <span data-i18n="cert.view">View</span> →
+          </button>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon"><i class="fas fa-language"></i></div>
+        <div>
+          <div class="cert-name">TOEIC Model Test — Score 531</div>
+          <div class="cert-issuer">HOPE (Higher Objectives of Professional Education) · 2025</div>
+          <button class="card-link" onclick="openModal('./Asset/Sertif-TOEIC.png','TOEIC Score Certificate - 531')">
+            <i class="fas fa-external-link-alt"></i> <span data-i18n="cert.view">View</span> →
+          </button>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon"><i class="fas fa-trophy"></i></div>
+        <div>
+          <div class="cert-name" data-i18n="cert3.name">Governor — BEM KMFT UMY Faculty of Engineering</div>
+          <div class="cert-issuer">2024 – 2025</div>
+          <button class="card-link" onclick="openModal('./Asset/Sertif-BEM.png','Certificate - Governor BEM KMFT Faculty of Engineering')">
+            <i class="fas fa-external-link-alt"></i> <span data-i18n="cert.view">View</span> →
+          </button>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon"><i class="fas fa-seedling"></i></div>
+        <div>
+          <div class="cert-name" data-i18n="cert4.name">Vessel Program — Business Incubation UMY</div>
+          <div class="cert-issuer" data-i18n="cert4.issuer">Verity Valor Board Game · University Level Grant · 2024</div>
+          <button class="card-link" onclick="openModal('./Asset/Sertif-Vessel.png','Vessel Program Certificate - Business Incubation UMY')">
+            <i class="fas fa-external-link-alt"></i> <span data-i18n="cert.view">View</span> →
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ORGANIZATIONS -->
+<section id="organization">
+  <div class="container">
+    <div class="section-eyebrow" data-i18n="section.org">Organizations</div>
+    <h2 class="section-title" data-i18n="org.title">Leadership & <strong>Community</strong></h2>
+    <div class="org-grid reveal">
+      <div class="org-card">
+        <div class="org-title"><i class="fas fa-gavel"></i> <span data-i18n="org1.title">Governor — BEM KMFT UMY</span></div>
+        <div class="org-period">2024 – 2025</div>
+        <div class="org-desc" data-i18n="org1.desc">Led the Student Executive Board of the Faculty of Engineering. Established faculty-wide information channel, organized PKM training for students.</div>
+      </div>
+      <div class="org-card">
+        <div class="org-title"><i class="fas fa-users"></i> <span data-i18n="org2.title">Head of Orientation Committee — IT Program</span></div>
+        <div class="org-period">2023</div>
+        <div class="org-desc" data-i18n="org2.desc">Led orientation committee for the incoming Class of 2023 with 200+ participants, from concept to full execution.</div>
+      </div>
+      <div class="org-card">
+        <div class="org-title"><i class="fas fa-landmark"></i> <span data-i18n="org3.title">Member — Knowledge Division IPM Bantul</span></div>
+        <div class="org-period">2023 – 2025</div>
+        <div class="org-desc" data-i18n="org3.desc">Coordinated with branch IPM chapters across Bantul, organized scholarly seminars, and served as speaker in scientific training events.</div>
+      </div>
+      <div class="org-card">
+        <div class="org-title"><i class="fas fa-chart-line"></i> <span data-i18n="org4.title">Steering Committee — YSI UMY</span></div>
+        <div class="org-period">2024 – 2025</div>
+        <div class="org-desc" data-i18n="org4.desc">Oversaw and evaluated the organizing committee for the YSI community service program, which received UMY grant funding.</div>
+      </div>
+      <div class="org-card">
+        <div class="org-title"><i class="fas fa-chalkboard-teacher"></i> <span data-i18n="org5.title">Facilitator — Darul Arqam Madya</span></div>
+        <div class="org-period">2023</div>
+        <div class="org-desc" data-i18n="org5.desc">Accompanied and guided students in their self-development journey, discussions, and activities at Madrasah Mu'allimin.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="section-eyebrow" data-i18n="section.contact">Contact</div>
+    <h2 class="section-title" data-i18n="contact.title">Let's <strong>Connect</strong></h2>
+    <div class="contact-layout">
+      <div class="contact-info">
+        <h3 data-i18n="contact.h3">Open to opportunities</h3>
+        <p data-i18n="contact.p">Currently seeking QA Engineer or Junior IT Auditor positions. Feel free to reach out for collaboration, job offers, or just to say hello!</p>
+        <div class="contact-items">
+          <a href="mailto:zharfanwidyadana@gmail.com" class="contact-item">
+            <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+            zharfanwidyadana@gmail.com
+          </a>
+          <a href="https://wa.me/6281215946218" target="_blank" class="contact-item">
+            <div class="contact-item-icon"><i class="fab fa-whatsapp"></i></div>
+            +62 812 1594 6218
+          </a>
+          <a href="https://linktr.ee/zharfann" target="_blank" class="contact-item">
+            <div class="contact-item-icon"><i class="fas fa-link"></i></div>
+            linktr.ee/zharfann
+          </a>
+        </div>
+        <div class="social-row">
+          <a href="https://www.linkedin.com/in/zharfan-widyadana-a34600217/" target="_blank" class="social-icon" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/Zharfan0" target="_blank" class="social-icon" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://linktr.ee/zharfann" target="_blank" class="social-icon" aria-label="Linktree">
+            <i class="fas fa-tree"></i>
+          </a>
+        </div>
+      </div>
+      <div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label class="form-label" data-i18n="form.name">Full Name</label>
+            <input type="text" class="form-input" id="formName" data-i18n-placeholder="form.namePH" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" data-i18n="form.email">Email</label>
+            <input type="email" class="form-input" id="formEmail" data-i18n-placeholder="form.emailPH" placeholder="your@email.com" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" data-i18n="form.message">Message</label>
+            <textarea class="form-input" id="formMsg" data-i18n-placeholder="form.msgPH" placeholder="Job offer, collaboration, or just say hi..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" id="submitBtn">
+            <i class="fas fa-paper-plane"></i>
+            <span data-i18n="form.send">Send Message</span>
+          </button>
+          <p style="font-size:.75rem;color:var(--ink-4)" data-i18n="form.note">* Will be replied within 24 hours</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-logo">Zharfan.</div>
+    <p data-i18n="footer.p1">Muhammad Zharfan Widyadana Hukmana · Information Technology UMY · 2026</p>
+    <p style="margin-top:8px" data-i18n="footer.p2">QA Engineer & Aspiring IT Auditor · Open to work · Available immediately</p>
+  </div>
+</footer>
+
+<!-- FLOATING ACTIONS -->
+<div class="floating-bar">
+  <a href="https://drive.google.com/uc?export=download&id=1yeCnInBNKcxlVtLUA6KUbsPozvs-tSQL"
+     target="_blank" class="fab fab-primary" title="Download CV">
+    <i class="fas fa-download"></i>
+  </a>
+  <a href="#home" class="fab fab-secondary" id="scrollTop" title="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+</div>
+
+<script>
+// ==================== i18n DATA ====================
+const i18n = {
+  en: {
+    "nav.about":"About","nav.education":"Education","nav.experience":"Experience",
+    "nav.projects":"Projects","nav.certifications":"Certifications","nav.contact":"Contact",
+    "hero.badge":"Open to Work · Fresh Graduate 2026",
+    "hero.desc":"Information Technology graduate from UMY with hands-on QA experience, 300+ bugs documented, BNSP certified, and AI research grant recipient. Passionate about software quality, system auditing, and building reliable digital products.",
+    "hero.stat1":"Bugs Reported","hero.stat2":"Months QA Exp.","hero.stat3":"Grants & Awards","hero.stat4":"Students Taught",
+    "hero.cta1":"View Portfolio","hero.cta2":"Contact Me",
+    "section.about":"About","section.education":"Education","section.experience":"Work Experience",
+    "section.skills":"Skills","section.projects":"Projects & Awards","section.cert":"Certifications",
+    "section.org":"Organizations","section.contact":"Contact",
+    "about.title":"Getting to know","about.p1":"Information Technology undergraduate (Class of 2022) at <strong>Universitas Muhammadiyah Yogyakarta</strong> with a GPA of 3.4/4.0. Recipient of grant funding in community service, Artificial Intelligence research, and business development.",
+    "about.p2":"Experienced as a <strong>Junior QA Engineer</strong> with 300+ bugs discovered and documented. Holder of <strong>BNSP Software Analysis and Requirement</strong> certification. Passionate about software quality, system security, and compliance.",
+    "about.p3":"Currently seeking a <strong>QA / Junior IT Auditor</strong> position to implement expertise in software testing, system security, and regulatory compliance within a quality-driven team.",
+    "about.h1":"Bugs Reported","about.h2":"Months QA Exp.","about.h3":"GPA / 4.0","about.h4":"Grants & Awards",
+    "education.title":"Academic","edu.bachelor":"Bachelor of Information Technology","edu.highschool":"High School · Natural Science",
+    "experience.title":"Professional",
+    "exp1.title":"Junior Quality Assurance",
+    "exp1.l1":"Independently owned a full application module — test planning, execution, and bug reporting",
+    "exp1.l2":"Led testing of new features and UI migration with thorough regression testing",
+    "exp1.l3":"Handled client technical issues directly as frontline support",
+    "exp1.l4":"Completed average 10–15 tasks daily via ClickUp",
+    "exp2.title":"Intern — Quality Assurance",
+    "exp2.l1":"Designed and executed 200–300+ test cases on Oaktree, an integrated freight forwarding system",
+    "exp2.l2":"Performed end-to-end testing for Hollywings Store including XSS security validation on input forms",
+    "exp2.l3":"Proposed input validation standardization that improved company's internal QA procedures",
+    "exp2.l4":"Coordinated with developers via ClickUp & Discord in sprint meetings and bug tracking",
+    "exp3.title":"Teaching / Lab Assistant",
+    "exp3.l1":"<strong>Requirements Engineering</strong> (2023/2024) — 40 students, Design Thinking & PACT Framework",
+    "exp3.l2":"<strong>Software Testing & QA</strong> (2024/2025) — RTM, Katalon Studio, Jira",
+    "exp3.l3":"<strong>Probability & Statistics</strong> (2025/2026) — 100+ students, lectures and research article guidance",
+    "skills.title":"Technical","skills.testing":"Testing Tools","skills.programming":"Programming",
+    "skills.security":"Security","skills.other":"Design & Other",
+    "projects.title":"Selected",
+    "badge.grant":"AI Research Grant","badge.personal":"Personal Project","badge.capstone":"Capstone Project",
+    "badge.grant2":"Creative Ideas Grant","badge.award":"1st Place",
+    "proj1.desc":"Python ML web app for coronary heart disease prediction using Gradient Boosting. Registered with HAKI No. 000947021 (2025) at UMY Directorate of Innovation and Commercialization.",
+    "proj2.desc":"E-commerce automation test suite covering login, search, add-to-cart, and checkout flows using Katalon Studio and Groovy scripting.",
+    "proj3.desc":"Security learning through TryHackMe (OWASP Top 10, Security Engineer path). Created sample security audit report for demo e-commerce.",
+    "proj4.desc":"Self-service document printing system (Academic Active Letters, Transcripts) with QR code verification, admin panel for template management (.docx), drag-and-drop field layout, and printer maintenance.",
+    "proj5.desc":"Software innovation concept for early Parkinson's detection using CNN (eye movement analysis) and NLP (symptom diagnosis). Received university-level creative ideas competition grant.",
+    "proj6.desc":"1st Place — AWS & Yayasan Sagasitas Indonesia (D.I. Yogyakarta Regional, 2021). Tourism website UI/UX design with AWS service implementation.",
+    "cert.view":"View Certificate","cert.title":"Credentials &",
+    "cert3.name":"Governor — BEM KMFT UMY Faculty of Engineering",
+    "cert4.name":"Vessel Program — Business Incubation UMY","cert4.issuer":"Verity Valor Board Game · University Level Grant · 2024",
+    "org.title":"Leadership &",
+    "org1.title":"Governor — BEM KMFT UMY","org1.desc":"Led the Student Executive Board of the Faculty of Engineering. Established faculty-wide information channel, organized PKM training for students.",
+    "org2.title":"Head of Orientation Committee — IT Program","org2.desc":"Led orientation committee for the incoming Class of 2023 with 200+ participants, from concept to full execution.",
+    "org3.title":"Member — Knowledge Division IPM Bantul","org3.desc":"Coordinated with branch IPM chapters across Bantul, organized scholarly seminars, and served as speaker in scientific training events.",
+    "org4.title":"Steering Committee — YSI UMY","org4.desc":"Oversaw and evaluated the organizing committee for the YSI community service program, which received UMY grant funding.",
+    "org5.title":"Facilitator — Darul Arqam Madya","org5.desc":"Accompanied and guided students in their self-development journey, discussions, and activities at Madrasah Mu'allimin.",
+    "contact.title":"Let's","contact.h3":"Open to opportunities",
+    "contact.p":"Currently seeking QA Engineer or Junior IT Auditor positions. Feel free to reach out for collaboration, job offers, or just to say hello!",
+    "form.name":"Full Name","form.namePH":"Your name","form.email":"Email","form.emailPH":"your@email.com",
+    "form.message":"Message","form.msgPH":"Job offer, collaboration, or just say hi...","form.send":"Send Message",
+    "form.note":"* Will be replied within 24 hours",
+    "footer.p1":"Muhammad Zharfan Widyadana Hukmana · Information Technology UMY · 2026",
+    "footer.p2":"QA Engineer & Aspiring IT Auditor · Open to work · Available immediately",
+    "link.demo":"Live Demo",
+    "typed.words":"QA Engineer,Aspiring IT Auditor,Bug Hunter,AI Enthusiast,Fresh Graduate TI UMY"
+  },
+  id: {
+    "nav.about":"Tentang","nav.education":"Pendidikan","nav.experience":"Pengalaman",
+    "nav.projects":"Proyek","nav.certifications":"Sertifikasi","nav.contact":"Kontak",
+    "hero.badge":"Terbuka untuk Bekerja · Fresh Graduate 2026",
+    "hero.desc":"Lulusan Teknologi Informasi UMY dengan pengalaman QA langsung, 300+ bug terdokumentasi, bersertifikasi BNSP, dan penerima hibah riset AI. Bersemangat di bidang kualitas perangkat lunak, audit sistem, dan membangun produk digital yang andal.",
+    "hero.stat1":"Bug Dilaporkan","hero.stat2":"Bulan Pengalaman QA","hero.stat3":"Hibah & Penghargaan","hero.stat4":"Mahasiswa Diajar",
+    "hero.cta1":"Lihat Portofolio","hero.cta2":"Hubungi Saya",
+    "section.about":"Tentang","section.education":"Pendidikan","section.experience":"Pengalaman Kerja",
+    "section.skills":"Keahlian","section.projects":"Proyek & Penghargaan","section.cert":"Sertifikasi",
+    "section.org":"Organisasi","section.contact":"Kontak",
+    "about.title":"Mengenal","about.p1":"Mahasiswa Teknologi Informasi angkatan 2022 di <strong>Universitas Muhammadiyah Yogyakarta</strong> dengan IPK 3.4/4.0. Penerima pendanaan hibah di bidang pengabdian masyarakat, riset Kecerdasan Buatan, dan pengembangan bisnis.",
+    "about.p2":"Berpengalaman sebagai <strong>Junior QA Engineer</strong> dengan 300+ bug ditemukan dan didokumentasikan. Pemegang sertifikasi <strong>BNSP Analisis dan Kebutuhan Perangkat Lunak</strong>. Semangat di bidang kualitas perangkat lunak, keamanan sistem, dan kepatuhan.",
+    "about.p3":"Saat ini mencari posisi <strong>QA / Junior IT Auditor</strong> untuk mengimplementasikan keahlian dalam pengujian perangkat lunak, keamanan sistem, dan kepatuhan regulasi dalam tim yang berorientasi kualitas.",
+    "about.h1":"Bug Dilaporkan","about.h2":"Bulan Pengalaman QA","about.h3":"IPK / 4.0","about.h4":"Hibah & Penghargaan",
+    "education.title":"Latar Belakang","edu.bachelor":"Sarjana Teknologi Informasi","edu.highschool":"SMA / Madrasah Aliyah · IPA",
+    "experience.title":"Perjalanan",
+    "exp1.title":"Junior Quality Assurance",
+    "exp1.l1":"Bertanggung jawab penuh atas satu modul aplikasi — perencanaan tes, eksekusi, dan pelaporan bug",
+    "exp1.l2":"Memimpin pengujian fitur baru dan migrasi UI dengan regression testing menyeluruh",
+    "exp1.l3":"Menangani masalah teknis klien langsung sebagai frontline support",
+    "exp1.l4":"Menyelesaikan rata-rata 10–15 task harian melalui ClickUp",
+    "exp2.title":"Karyawan Magang — QA",
+    "exp2.l1":"Merancang dan mengeksekusi 200–300+ test case pada Oaktree, sistem freight forwarding terintegrasi",
+    "exp2.l2":"Melakukan end-to-end testing untuk Hollywings Store termasuk validasi keamanan XSS pada form input",
+    "exp2.l3":"Mengusulkan standarisasi validasi input yang meningkatkan prosedur QA internal perusahaan",
+    "exp2.l4":"Koordinasi aktif dengan developer via ClickUp & Discord dalam sprint meeting dan pelacakan bug",
+    "exp3.title":"Asisten Dosen / Lab",
+    "exp3.l1":"<strong>Rekayasa Kebutuhan</strong> (2023/2024) — 40 mahasiswa, Design Thinking & PACT Framework",
+    "exp3.l2":"<strong>Pengujian & Penjaminan Mutu PL</strong> (2024/2025) — RTM, Katalon Studio, Jira",
+    "exp3.l3":"<strong>Probabilitas Statistika</strong> (2025/2026) — 100+ mahasiswa, kuliah dan bimbingan artikel ilmiah",
+    "skills.title":"Keahlian","skills.testing":"Tools Pengujian","skills.programming":"Pemrograman",
+    "skills.security":"Keamanan","skills.other":"Desain & Lainnya",
+    "projects.title":"Karya",
+    "badge.grant":"Hibah Riset AI","badge.personal":"Proyek Personal","badge.capstone":"Capstone Project",
+    "badge.grant2":"Hibah Ide Kreatif","badge.award":"Juara 1",
+    "proj1.desc":"Aplikasi web ML Python untuk prediksi penyakit jantung koroner menggunakan Gradient Boosting. Terdaftar HAKI No. 000947021 (2025) di Direktorat Inovasi dan Hilirisasi UMY.",
+    "proj2.desc":"Suite automation testing e-commerce mencakup alur login, pencarian, add-to-cart, dan checkout menggunakan Katalon Studio dan Groovy scripting.",
+    "proj3.desc":"Pembelajaran keamanan siber melalui TryHackMe (OWASP Top 10, jalur Security Engineer). Membuat sample laporan audit keamanan untuk demo e-commerce.",
+    "proj4.desc":"Sistem cetak dokumen mandiri (Surat Aktif Kuliah, Transkrip) dengan verifikasi QR code, panel admin untuk manajemen template (.docx), tata letak field drag-and-drop, dan pemeliharaan printer.",
+    "proj5.desc":"Konsep inovasi perangkat lunak untuk deteksi dini Parkinson menggunakan CNN (analisis pergerakan mata) dan NLP (diagnosis gejala). Meraih hibah kompetisi ide kreatif tingkat universitas.",
+    "proj6.desc":"Juara 1 — AWS & Yayasan Sagasitas Indonesia (Regional D.I. Yogyakarta, 2021). Desain UI/UX website pariwisata dengan implementasi layanan AWS.",
+    "cert.view":"Lihat Sertifikat","cert.title":"Kredensial &",
+    "cert3.name":"Gubernur — BEM KMFT UMY Fakultas Teknik",
+    "cert4.name":"Program Vessel — Inkubasi Bisnis UMY","cert4.issuer":"Board Game Verity Valor · Hibah Tingkat Universitas · 2024",
+    "org.title":"Kepemimpinan &",
+    "org1.title":"Gubernur — BEM KMFT UMY","org1.desc":"Memimpin Badan Eksekutif Mahasiswa Fakultas Teknik. Membentuk channel informasi se-Fakultas, menyelenggarakan pelatihan PKM bagi mahasiswa.",
+    "org2.title":"Ketua Panitia Masa Ta'aruf — Prodi TI","org2.desc":"Memimpin kepanitiaan orientasi mahasiswa baru angkatan 2023 dengan 200+ peserta, dari konsep hingga pelaksanaan.",
+    "org3.title":"Anggota — Bidang Pengkajian IPM Bantul","org3.desc":"Koordinasi ke Pimpinan Cabang se-Bantul, menyelenggarakan seminar keilmuan, dan menjadi pemateri dalam kegiatan pelatihan ilmiah.",
+    "org4.title":"Steering Committee — YSI UMY","org4.desc":"Mengawal dan mengevaluasi panitia program pengabdian masyarakat YSI yang mendapat pendanaan hibah UMY.",
+    "org5.title":"Fasilitator — Darul Arqam Madya","org5.desc":"Mendampingi dan membimbing santri dalam perjalanan pengembangan diri, diskusi, dan kegiatan di Madrasah Mu'allimin.",
+    "contact.title":"Ayo","contact.h3":"Terbuka untuk peluang",
+    "contact.p":"Saat ini mencari posisi QA Engineer atau Junior IT Auditor. Jangan ragu menghubungi untuk kolaborasi, tawaran kerja, atau sekadar menyapa!",
+    "form.name":"Nama Lengkap","form.namePH":"Nama Anda","form.email":"Email","form.emailPH":"email@anda.com",
+    "form.message":"Pesan","form.msgPH":"Tawaran kerja, kolaborasi, atau sekadar menyapa...","form.send":"Kirim Pesan",
+    "form.note":"* Pesan akan dibalas dalam 1x24 jam",
+    "footer.p1":"Muhammad Zharfan Widyadana Hukmana · Teknologi Informasi UMY · 2026",
+    "footer.p2":"QA Engineer & Aspiring IT Auditor · Terbuka untuk bekerja · Siap segera",
+    "link.demo":"Demo Langsung",
+    "typed.words":"QA Engineer,Aspiring IT Auditor,Pemburu Bug,AI Enthusiast,Fresh Graduate TI UMY"
+  }
+};
+
+// ==================== LANGUAGE SYSTEM ====================
+let currentLang = 'en';
+
+function chooseLang(lang) {
+  const overlay = document.getElementById('langOverlay');
+  overlay.classList.add('fade-out');
+  setTimeout(() => overlay.style.display = 'none', 400);
+  setLang(lang);
+  localStorage.setItem('portfolioLang', lang);
+}
+
+function setLang(lang) {
+  currentLang = lang;
+  const d = i18n[lang];
+  document.documentElement.lang = lang;
+
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (d[key]) el.innerHTML = d[key];
+  });
+
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    if (d[key]) el.placeholder = d[key];
+  });
+
+  // Update lang switcher buttons
+  document.getElementById('langEN').classList.toggle('active', lang === 'en');
+  document.getElementById('langID').classList.toggle('active', lang === 'id');
+
+  // Re-init typed words
+  initTyped(d['typed.words'].split(','));
+
+  localStorage.setItem('portfolioLang', lang);
+}
+
+// ==================== TYPING EFFECT ====================
+let typedInterval;
+let typedWords = ['QA Engineer','Aspiring IT Auditor','Bug Hunter','AI Enthusiast'];
+let tIdx = 0, tChar = 0, tDeleting = false;
+
+function initTyped(words) {
+  typedWords = words;
+  tIdx = 0; tChar = 0; tDeleting = false;
+  clearTimeout(typedInterval);
+  runTyped();
+}
+
+function runTyped() {
+  const el = document.getElementById('typedText');
+  if (!el) return;
+  const word = typedWords[tIdx % typedWords.length];
+  if (tDeleting) {
+    el.textContent = word.substring(0, tChar - 1);
+    tChar--;
+  } else {
+    el.textContent = word.substring(0, tChar + 1);
+    tChar++;
+  }
+  let delay = tDeleting ? 40 : 90;
+  if (!tDeleting && tChar === word.length) { delay = 2200; tDeleting = true; }
+  else if (tDeleting && tChar === 0) { tDeleting = false; tIdx++; delay = 400; }
+  typedInterval = setTimeout(runTyped, delay);
+}
+
+// ==================== DARK MODE ====================
+function initDark() {
+  const saved = localStorage.getItem('portfolioTheme');
+  if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.body.classList.add('dark');
+    document.getElementById('darkToggle').innerHTML = '<i class="fas fa-sun"></i>';
+  }
+}
+document.getElementById('darkToggle').addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+  const d = document.body.classList.contains('dark');
+  document.getElementById('darkToggle').innerHTML = d ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+  localStorage.setItem('portfolioTheme', d ? 'dark' : 'light');
+});
+
+// ==================== HAMBURGER ========================
+document.getElementById('hamburger').addEventListener('click', function() {
+  document.getElementById('navLinks').classList.toggle('mobile-open');
+});
+document.querySelectorAll('#navLinks a').forEach(a => {
+  a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('mobile-open'));
+});
+
+// ==================== SCROLL REVEAL ====================
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); revealObserver.unobserve(e.target); }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.reveal, .card, .org-card, .cert-card, .edu-card, .project-card, .tl-item, .skill-group').forEach(el => {
+  el.classList.add('reveal');
+  revealObserver.observe(el);
+});
+
+// ==================== MODAL LIGHTBOX ====================
+const modal = document.getElementById('modal');
+const modalImg = document.getElementById('modalImg');
+const modalCaption = document.getElementById('modalCaption');
+
+window.openModal = function(src, caption) {
+  if (!src || src === '#') return;
+  modalImg.src = src;
+  modalCaption.textContent = caption || '';
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+};
+
+document.getElementById('modalClose').onclick = closeModal;
+modal.onclick = function(e) { if (e.target === modal) closeModal(); };
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+function closeModal() {
+  modal.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// ==================== CONTACT FORM ====================
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = document.getElementById('submitBtn');
+  const name = document.getElementById('formName').value.trim();
+  const email = document.getElementById('formEmail').value.trim();
+  const msg = document.getElementById('formMsg').value.trim();
+
+  if (!name || !email || !msg) { showToast(currentLang === 'id' ? 'Lengkapi semua kolom!' : 'Please fill all fields!'); return; }
+
+  btn.disabled = true;
+  btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> ' + (currentLang === 'id' ? 'Mengirim...' : 'Sending...');
+
+  try {
+    const fd = new URLSearchParams();
+    fd.append('name', name); fd.append('email', email); fd.append('message', msg);
+    await fetch('https://script.google.com/macros/s/AKfycbz5N_YLiNsI7ItE2p7XqSqBSph39ZBtnMAa7fGR4rz1ACYnpHAejQX9RJfmIb9_UYwP/exec', {
+      method:'POST', mode:'no-cors',
+      headers:{'Content-Type':'application/x-www-form-urlencoded'},
+      body: fd.toString()
+    });
+    showToast((currentLang === 'id' ? `Terima kasih ${name}! Pesan terkirim.` : `Thanks ${name}! Message sent.`), true);
+    this.reset();
+  } catch {
+    showToast(currentLang === 'id' ? 'Gagal. Hubungi via email langsung.' : 'Failed. Please email directly.');
+  } finally {
+    btn.disabled = false;
+    btn.innerHTML = '<i class="fas fa-paper-plane"></i> ' + i18n[currentLang]['form.send'];
+  }
+});
+
+// ==================== TOAST ====================
+function showToast(msg, success = false) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.style.background = success ? 'var(--success)' : 'var(--ink)';
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 3500);
+}
+
+// ==================== SCROLL TO TOP VISIBILITY ====================
+const scrollTopBtn = document.getElementById('scrollTop');
+window.addEventListener('scroll', () => {
+  scrollTopBtn.style.opacity = window.scrollY > 400 ? '1' : '0';
+  scrollTopBtn.style.pointerEvents = window.scrollY > 400 ? 'all' : 'none';
+});
+scrollTopBtn.style.opacity = '0';
+
+// ==================== SMOOTH SCROLL FOR # LINKS ====================
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', function(e) {
+    const href = this.getAttribute('href');
+    if (href === '#') return;
+    const target = document.querySelector(href);
+    if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  });
+});
+
+// ==================== INIT ====================
+(function init() {
+  initDark();
+  const savedLang = localStorage.getItem('portfolioLang');
+  if (savedLang) {
+    document.getElementById('langOverlay').style.display = 'none';
+    setLang(savedLang);
+  } else {
+    // Show popup with cycle greeting
+    const greetings = ['Welcome 👋', 'Selamat datang 🙏'];
+    let gi = 0;
+    const gEl = document.getElementById('langGreeting');
+    setInterval(() => { gi = (gi+1) % greetings.length; gEl.textContent = greetings[gi]; }, 2000);
+    initTyped(i18n['en']['typed.words'].split(','));
+  }
+})();
+</script>
+</body>
+</html>
