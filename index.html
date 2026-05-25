@@ -3,24 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="description" content="Portofolio Muhammad Zharfan Widyadana Hukmana - QA Engineer & IT Auditor dengan pengalaman 300+ bugs, sertifikasi BNSP, dan penerima hibah AI. Fresh graduate Teknologi Informasi UMY.">
-    <meta name="keywords" content="Zharfan, IT Auditor, QA Engineer, Quality Assurance, Portofolio, UMY, myHeartD, AI, BNSP, Sertifikasi, Software Testing, Katalon, Postman, Jira">
+    <meta name="description" content="Portfolio Muhammad Zharfan Widyadana Hukmana - QA Engineer & IT Auditor dengan pengalaman 300+ bugs, sertifikasi BNSP, dan penerima hibah AI. Fresh graduate Teknologi Informasi UMY.">
+    <meta name="keywords" content="Zharfan, IT Auditor, QA Engineer, Quality Assurance, Portfolio, UMY, myHeartD, AI, BNSP, Sertifikasi, Software Testing, Katalon, Postman, Jira">
     <meta name="author" content="Muhammad Zharfan Widyadana Hukmana">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="Zharfan | QA Engineer & IT Auditor Portfolio">
     <meta property="og:description" content="Fresh graduate Teknologi Informasi UMY dengan pengalaman QA 6 bulan, 300+ bugs ditemukan, dan sertifikasi BNSP.">
     <meta property="og:type" content="website">
     <title>Zharfan | QA Engineer & IT Auditor Portfolio</title>
-    <link rel="icon" type="image/png" href="./Asset/favicon-badgecheck.png" /> <!-- Jika pakai PNG -->
+    <link rel="icon" type="image/png" href="./Asset/favicon-badgecheck.png" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        /* ==================== SEMUA CSS SAMA PERSIS DENGAN KODE LAMA ==================== */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
             --bg-primary: #ffffff;
             --bg-secondary: #f8fafc;
@@ -46,17 +42,7 @@
             --input-text: #0f172a;
             --input-placeholder: #64748b;
         }
-
-        body {
-            font-family: 'Inter', 'Poppins', sans-serif;
-            background-color: var(--bg-primary);
-            color: var(--text-primary);
-            line-height: 1.5;
-            scroll-behavior: smooth;
-            transition: background-color 0.3s, color 0.2s;
-        }
-
-        
+        body { font-family: 'Inter', 'Poppins', sans-serif; background-color: var(--bg-primary); color: var(--text-primary); line-height: 1.5; scroll-behavior: smooth; transition: background-color 0.3s, color 0.2s; }
         body.dark {
             --bg-primary: #0f172a;
             --bg-secondary: #1e293b;
@@ -80,804 +66,166 @@
             --input-text: #f1f5f9;
             --input-placeholder: #94a3b8;
         }
-
-        /* ==================== DARK MODE PERBAIKAN ==================== */
-        body.dark .card h3,
-        body.dark .org-card h3,
-        body.dark .org-card h3 i,
-        body.dark .card h3 i {
-            color: #f1f5f9 !important; /* Putih untuk semua judul di dark mode */
-        }
-
-        body.dark .card .date,
-        body.dark .card .role,
-        body.dark .org-card .date {
-            color: #90cdf4 !important; /* Biru muda terang, tetap terbaca */
-        }
-
-        body.dark .card p,
-        body.dark .card li,
-        body.dark .org-card p,
-        body.dark .skills-wrapper .skill-tag {
-            color: #cbd5e1 !important; /* Abu-abu terang untuk teks biasa */
-        }
-
-        body.dark .skill-tag {
-            background: #2d3a5e !important;
-            color: #f1f5f9 !important; /* Putih untuk teks di dalam skill tag */
-        }
-
-        body.dark .skill-tag i {
-            color: #f1f5f9 !important; /* Icon di skill tag jadi putih */
-        }
-
-        body.dark .project-link,
-        body.dark .project-links a {
-            color: #90cdf4 !important; /* Biru muda terang untuk link */
-        }
-
-        body.dark .project-link:hover,
-        body.dark .project-links a:hover {
-            color: #ffffff !important; /* Putih saat hover */
-        }
-
-        body.dark .org-card {
-            background: var(--card-bg);
-            border-left-color: #2c7da0; /* Biru terang untuk border */
-        }
-
-        body.dark .hero-badge {
-            background: #2d3a5e;
-            color: #f1f5f9;
-        }
-
-        body.dark .contact-info-bar i {
-            color: #90cdf4; /* Icon di contact section */
-        }
-
-        body.dark .contact-info-bar a {
-            color: #cbd5e1;
-        }
-
-        body.dark .contact-info-bar a:hover {
-            color: #ffffff;
-        }
-
-        body.dark .stat-number {
-            color: #90cdf4; /* Angka statistik di hero */
-        }
-
-        body.dark .typing-text {
-            color: #90cdf4; /* Teks typing effect */
-        }
-
-        body.dark .section-title {
-            color: #f1f5f9;
-        }
-
-        body.dark .section-title:after {
-            background: linear-gradient(90deg, #2c7da0, #4a9ec4);
-        }
-
-        body.dark .logo {
-            background: linear-gradient(135deg, #2c7da0, #4a9ec4, #6bb5d8);
-            -webkit-background-clip: text;
-            background-clip: text;
-        }
-
-        body.dark .btn-outline {
-            border-color: #2c7da0;
-            color: #90cdf4;
-        }
-
-        body.dark .btn-outline:hover {
-            background: rgba(44, 125, 160, 0.2);
-            color: #ffffff;
-        }
-
-        body.dark .floating-cv a {
-            background: linear-gradient(135deg, #2c7da0, #4a9ec4);
-        }
-
-        body.dark .contact-form input,
-        body.dark .contact-form textarea {
-            background: #1e293b;
-            border-color: #334155;
-            color: #f1f5f9;
-        }
-
-        body.dark .contact-form input:focus,
-        body.dark .contact-form textarea:focus {
-            border-color: #2c7da0;
-            box-shadow: 0 0 0 3px rgba(44, 125, 160, 0.3);
-        }
-
-        body.dark footer {
-            color: #94a3b8;
-        }
-
-        /* Dark mode untuk link di contact section */
-        body.dark .contact-section a,
-        body.dark #contact a {
-            color: #90cdf4 !important; /* Biru muda terang */
-        }
-
-        body.dark .contact-section a:hover,
-        body.dark #contact a:hover {
-            color: #ffffff !important; /* Putih saat hover */
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: var(--bg-secondary);
-        }
-        ::-webkit-scrollbar-thumb {
-            background: var(--accent);
-            border-radius: 10px;
-        }
-
+        /* Dark mode fixes (sama persis dengan kode lama) */
+        body.dark .card h3, body.dark .org-card h3, body.dark .org-card h3 i, body.dark .card h3 i { color: #f1f5f9 !important; }
+        body.dark .card .date, body.dark .card .role, body.dark .org-card .date { color: #90cdf4 !important; }
+        body.dark .card p, body.dark .card li, body.dark .org-card p, body.dark .skills-wrapper .skill-tag { color: #cbd5e1 !important; }
+        body.dark .skill-tag { background: #2d3a5e !important; color: #f1f5f9 !important; }
+        body.dark .skill-tag i { color: #f1f5f9 !important; }
+        body.dark .project-link, body.dark .project-links a { color: #90cdf4 !important; }
+        body.dark .project-link:hover, body.dark .project-links a:hover { color: #ffffff !important; }
+        body.dark .org-card { background: var(--card-bg); border-left-color: #2c7da0; }
+        body.dark .hero-badge { background: #2d3a5e; color: #f1f5f9; }
+        body.dark .contact-info-bar i { color: #90cdf4; }
+        body.dark .contact-info-bar a { color: #cbd5e1; }
+        body.dark .contact-info-bar a:hover { color: #ffffff; }
+        body.dark .stat-number { color: #90cdf4; }
+        body.dark .typing-text { color: #90cdf4; }
+        body.dark .section-title { color: #f1f5f9; }
+        body.dark .section-title:after { background: linear-gradient(90deg, #2c7da0, #4a9ec4); }
+        body.dark .logo { background: linear-gradient(135deg, #2c7da0, #4a9ec4, #6bb5d8); -webkit-background-clip: text; background-clip: text; }
+        body.dark .btn-outline { border-color: #2c7da0; color: #90cdf4; }
+        body.dark .btn-outline:hover { background: rgba(44, 125, 160, 0.2); color: #ffffff; }
+        body.dark .floating-cv a { background: linear-gradient(135deg, #2c7da0, #4a9ec4); }
+        body.dark .contact-form input, body.dark .contact-form textarea { background: #1e293b; border-color: #334155; color: #f1f5f9; }
+        body.dark .contact-form input:focus, body.dark .contact-form textarea:focus { border-color: #2c7da0; box-shadow: 0 0 0 3px rgba(44, 125, 160, 0.3); }
+        body.dark footer { color: #94a3b8; }
+        body.dark .contact-section a, body.dark #contact a { color: #90cdf4 !important; }
+        body.dark .contact-section a:hover, body.dark #contact a:hover { color: #ffffff !important; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-secondary); }
+        ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 10px; }
+        /* Language Popup Styles */
+        .lang-popup-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); backdrop-filter: blur(12px); z-index: 10000; display: flex; align-items: center; justify-content: center; transition: opacity 0.4s ease; }
+        .lang-popup-container { background: var(--bg-primary); border-radius: 32px; padding: 48px 40px; text-align: center; max-width: 440px; width: 90%; box-shadow: var(--shadow-xl); border: 1px solid var(--border); animation: popupFadeIn 0.5s cubic-bezier(0.34,1.56,0.64,1); }
+        @keyframes popupFadeIn { from { opacity: 0; transform: translateY(30px) scale(0.96); } to { opacity: 1; transform: translateY(0) scale(1); } }
+        .lang-popup-container h2 { font-size: 2rem; margin-bottom: 12px; color: var(--text-primary); }
+        .lang-popup-container p { color: var(--text-muted); margin-bottom: 32px; }
+        .lang-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+        .lang-btn-popup { padding: 14px 32px; border-radius: 50px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease; border: none; font-family: inherit; }
+        .lang-btn-primary { background: linear-gradient(135deg, var(--accent), var(--accent-light)); color: white; }
+        .lang-btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 20px var(--accent-glow); }
+        .lang-btn-secondary { background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border); }
+        .lang-btn-secondary:hover { transform: translateY(-3px); background: var(--accent); color: white; border-color: var(--accent); }
+        /* Language Switch di Navbar */
+        .nav-controls { display: flex; align-items: center; gap: 12px; }
+        .lang-switch { background: var(--tag-bg); border: 1px solid var(--border); border-radius: 40px; padding: 4px; display: flex; gap: 4px; }
+        .lang-switch-btn { padding: 6px 14px; border-radius: 30px; border: none; background: transparent; font-size: 0.8rem; font-weight: 600; cursor: pointer; transition: all 0.2s; color: var(--text-secondary); }
+        .lang-switch-btn.active { background: var(--accent); color: white; }
+        .lang-switch-btn:hover:not(.active) { background: var(--accent-glow); color: var(--accent); }
         /* Navbar */
-        .navbar {
-            position: sticky;
-            top: 0;
-            background: var(--bg-primary);
-            backdrop-filter: blur(12px);
-            background-color: rgba(var(--bg-primary-rgb, 255,255,255), 0.85);
-            border-bottom: 1px solid var(--border);
-            z-index: 1000;
-            padding: 16px 0;
-            transition: all 0.3s;
-        }
-        body.dark .navbar {
-            background-color: rgba(15, 23, 42, 0.9);
-        }
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .logo {
-            font-size: 1.6rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--accent), var(--accent-light), var(--accent-lighter));
-            background-size: 200% 200%;
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            animation: gradientShift 3s ease infinite;
-        }
-        @keyframes gradientShift {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-        .nav-links {
-            display: flex;
-            gap: 28px;
-            list-style: none;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-secondary);
-            font-weight: 500;
-            transition: all 0.2s;
-            position: relative;
-        }
-        .nav-links a:after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--accent);
-            transition: width 0.3s;
-        }
-        .nav-links a:hover:after {
-            width: 100%;
-        }
-        .nav-links a:hover {
-            color: var(--accent);
-        }
-        .dark-toggle {
-            background: var(--tag-bg);
-            border: none;
-            font-size: 1.2rem;
-            cursor: pointer;
-            padding: 8px 12px;
-            border-radius: 40px;
-            color: var(--accent);
-            transition: all 0.2s;
-        }
-        .dark-toggle:hover {
-            transform: scale(1.05);
-        }
-
-        /* Buttons */
-        .btn {
-            display: inline-block;
-            padding: 12px 28px;
-            border-radius: 40px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            margin: 6px 8px 6px 0;
-            border: 1px solid transparent;
-            cursor: pointer;
-        }
-        .btn-primary {
-            background: linear-gradient(135deg, var(--accent), var(--accent-light));
-            color: white;
-            box-shadow: 0 4px 12px var(--accent-glow);
-        }
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px var(--accent-glow);
-        }
-        .btn-outline {
-            border: 1px solid var(--accent);
-            color: var(--accent);
-            background: transparent;
-        }
-        .btn-outline:hover {
-            background: var(--accent-glow);
-            transform: translateY(-3px);
-        }
-
-        /* Hero */
-        .hero {
-            padding: 80px 0 60px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 30% 50%, var(--accent-glow) 0%, transparent 50%);
-            pointer-events: none;
-        }
-        .hero h1 {
-            font-size: 3.2rem;
-            font-weight: 800;
-            margin-bottom: 16px;
-            background: linear-gradient(135deg, var(--text-primary), var(--accent-light));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-        .hero .badge-container {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            flex-wrap: wrap;
-            margin-bottom: 20px;
-        }
-        .hero-badge {
-            background: var(--tag-bg);
-            color: var(--tag-text);
-            padding: 6px 16px;
-            border-radius: 40px;
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
-        .typing-text {
-            font-size: 1.3rem;
-            color: var(--accent);
-            font-weight: 600;
-            min-height: 60px;
-            margin-bottom: 20px;
-        }
-        .stats-container {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
-            margin: 40px 0 20px;
-        }
-        .stat-item {
-            text-align: center;
-        }
-        .stat-number {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--accent);
-        }
-        .stat-label {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-        }
-        .contact-info-bar {
-            display: flex;
-            justify-content: center;
-            gap: 24px;
-            flex-wrap: wrap;
-            margin-top: 20px;
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-        }
-        .contact-info-bar a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-        .contact-info-bar a:hover {
-            color: var(--accent);
-        }
-        .contact-info-bar i {
-            margin-right: 8px;
-            color: var(--accent);
-        }
-
-        /* Section */
-        section {
-            padding: 70px 0;
-            border-bottom: 1px solid var(--border);
-        }
-        .section-title {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 40px;
-            position: relative;
-            display: inline-block;
-        }
-        .section-title:after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 60px;
-            height: 4px;
-            background: linear-gradient(90deg, var(--accent), var(--accent-light));
-            border-radius: 4px;
-        }
-
-        /* Cards */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-            gap: 28px;
-        }
-        .card {
-            background: var(--card-bg);
-            border-radius: 20px;
-            padding: 24px;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border);
-            transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
-        }
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 4px;
-            height: 0;
-            background: linear-gradient(180deg, var(--accent), var(--accent-light));
-            transition: height 0.3s;
-        }
-        .card:hover::before {
-            height: 100%;
-        }
-        .card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-xl);
-        }
-        .card h3 {
-            font-size: 1.35rem;
-            margin-bottom: 12px;
-            color: var(--text-primary);
-        }
-        .card .date, .card .role {
-            font-size: 0.8rem;
-            color: var(--accent);
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-        .card ul {
-            margin-left: 18px;
-            color: var(--text-secondary);
-        }
-        .card li {
-            margin-bottom: 8px;
-        }
-        /* Perbaikan Hover Skill Tags - Light Mode & Dark Mode */
-        .skill-tag {
-            display: inline-block;
-            background: var(--tag-bg);
-            color: var(--tag-text);
-            padding: 6px 14px;
-            border-radius: 40px;
-            font-size: 0.75rem;
-            font-weight: 500;
-            margin: 6px 6px 0 0;
-            transition: all 0.2s ease;
-            cursor: default;
-        }
-
-        .skill-tag:hover {
-            transform: translateY(-2px);
-            background: var(--accent) !important;
-            color: #ffffff !important;
-        }
-
-        .skill-tag:hover i {
-            color: #ffffff !important;
-        }
-
-        /* Dark mode specific hover */
-        body.dark .skill-tag:hover {
-            background: var(--accent) !important;
-            color: #ffffff !important;
-        }
-
-        body.dark .skill-tag:hover i {
-            color: #ffffff !important;
-        }
-        .project-links {
-            margin-top: 16px;
-        }
-        .project-links a {
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.9rem;
-            transition: all 0.2s;
-        }
-        .project-links a:hover {
-            margin-left: 5px;
-        }
-
-        .skills-wrapper {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 12px;
-        }
-
-        .org-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        .org-card {
-            background: var(--card-bg);
-            border-radius: 16px;
-            padding: 20px;
-            border-left: 4px solid var(--accent);
-            box-shadow: var(--shadow);
-            transition: all 0.3s;
-        }
-        .org-card:hover {
-            transform: translateX(5px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .org-card h3 i {
-            color: var(--accent);
-            margin-right: 12px;
-            width: 28px;
-        }
-
-        /*Project*/
-        .project-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 16px;
-        }
-
-        .project-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.9rem;
-            transition: transform 0.2s ease;
-        }
-
-        .project-link:hover {
-            transform: translateX(5px);
-        }
-
-        /* Contact Form */
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            max-width: 600px;
-            margin-top: 30px;
-        }
-        .contact-form input, .contact-form textarea {
-            padding: 14px 18px;
-            border-radius: 16px;
-            border: 2px solid var(--border);
-            background: var(--bg-primary);
-            color: var(--text-primary);
-            font-family: inherit;
-            transition: all 0.2s;
-        }
-        .contact-form input::placeholder,
-        .contact-form textarea::placeholder {
-            color: var(--input-placeholder);
-        }
-        .contact-form input:focus, .contact-form textarea:focus {
-            outline: none;
-            border-color: var(--accent);
-            box-shadow: 0 0 0 3px var(--accent-glow);
-        }
-        .contact-form button {
-            width: fit-content;
-            background: linear-gradient(135deg, var(--accent), var(--accent-light));
-            color: white;
-            border: none;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        .contact-form button:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-        }
-        .social-links {
-            display: flex;
-            gap: 24px;
-            margin-top: 24px;
-            flex-wrap: wrap;
-        }
-        .social-links a {
-            color: var(--text-secondary);
-            font-size: 1.6rem;
-            transition: all 0.2s;
-        }
-        .social-links a:hover {
-            color: var(--accent);
-            transform: translateY(-5px) scale(1.1);
-        }
-
-        /* Floating CV Button */
-        .floating-cv {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            z-index: 999;
-        }
-        .floating-cv a {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            background: linear-gradient(135deg, var(--accent), var(--accent-light));
-            color: white;
-            padding: 12px 24px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            box-shadow: var(--shadow-lg);
-            transition: all 0.3s;
-        }
-        .floating-cv a:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-xl);
-        }
-
-        footer {
-            text-align: center;
-            padding: 32px;
-            color: var(--text-muted);
-            font-size: 0.85rem;
-        }
-
-        /* Lightbox Modal */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 9999;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            backdrop-filter: blur(5px);
-            cursor: pointer;
-        }
-
-        .modal-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            max-width: 90%;
-            max-height: 90%;
-            object-fit: contain;
-            border-radius: 12px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-        }
-
-        .close-modal {
-            position: absolute;
-            top: 20px;
-            right: 35px;
-            color: #f1f1f1;
-            font-size: 40px;
-            font-weight: bold;
-            transition: 0.3s;
-            cursor: pointer;
-            z-index: 10000;
-        }
-
-        .modal-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            max-width: 90%;
-            max-height: 90%;
-            object-fit: contain;
-            border-radius: 12px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-            transition: transform 0.1s ease;
-            cursor: grab;
-        }
-
-        .modal-content:active {
-            cursor: grabbing;
-        }
-
-        .close-modal {
-            position: absolute;
-            top: 20px;
-            right: 35px;
-            color: #f1f1f1;
-            font-size: 40px;
-            font-weight: bold;
-            transition: 0.3s;
-            cursor: pointer;
-            z-index: 10000;
-        }
-
-        .close-modal:hover {
-            color: var(--accent);
-        }
-
-        .modal-caption {
-            position: absolute;
-            bottom: 20px;
-            left: 0;
-            right: 0;
-            text-align: center;
-            color: white;
-            font-size: 14px;
-            background: rgba(0,0,0,0.6);
-            padding: 8px;
-            margin: 0 auto;
-            width: fit-content;
-            border-radius: 20px;
-        }
-
-        /* Toolbar Zoom - Pojok Kanan Bawah */
-        .zoom-toolbar {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            display: flex;
-            gap: 12px;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 12px 18px;
-            border-radius: 60px;
-            z-index: 10001;
-            backdrop-filter: blur(8px);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-        }
-
-        .zoom-btn {
-            background: var(--accent);
-            border: none;
-            color: white;
-            font-size: 1.3rem;
-            font-weight: bold;
-            width: 42px;
-            height: 42px;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: all 0.2s;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .zoom-btn:hover {
-            background: var(--accent-light);
-            transform: scale(1.08);
-        }
-
-        .reset-btn {
-            background: #dc2626;
-        }
-
-        .reset-btn:hover {
-            background: #b91c1c;
-        }
-
-        /* Responsive untuk HP */
-        @media (max-width: 768px) {
-            .zoom-toolbar {
-                bottom: 20px;
-                right: 20px;
-                padding: 8px 14px;
-                gap: 8px;
-            }
-            .zoom-btn {
-                width: 36px;
-                height: 36px;
-                font-size: 1.1rem;
-            }
-        }
-
-        /* Loading Toast */
-        .toast-notif {
-            position: fixed;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--accent);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 50px;
-            font-weight: 500;
-            z-index: 1000;
-            animation: slideUp 0.3s ease;
-        }
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateX(-50%) translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(-50%) translateY(0);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-            .nav-container { flex-direction: column; gap: 16px; }
-            .nav-links { justify-content: center; gap: 18px; }
-            .section-title { font-size: 1.8rem; }
-            .grid { grid-template-columns: 1fr; }
-            .stats-container { gap: 20px; }
-            .stat-number { font-size: 1.4rem; }
-            .floating-cv { bottom: 20px; right: 20px; }
-            .floating-cv a { padding: 8px 16px; font-size: 0.8rem; }
-        }
+        .navbar { position: sticky; top: 0; background: var(--bg-primary); backdrop-filter: blur(12px); background-color: rgba(var(--bg-primary-rgb,255,255,255),0.85); border-bottom: 1px solid var(--border); z-index: 1000; padding: 16px 0; transition: all 0.3s; }
+        body.dark .navbar { background-color: rgba(15,23,42,0.9); }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .logo { font-size: 1.6rem; font-weight: 800; background: linear-gradient(135deg, var(--accent), var(--accent-light), var(--accent-lighter)); background-size: 200% 200%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: gradientShift 3s ease infinite; text-decoration: none; }
+        @keyframes gradientShift { 0%,100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+        .nav-links { display: flex; gap: 28px; list-style: none; align-items: center; flex-wrap: wrap; }
+        .nav-links a { text-decoration: none; color: var(--text-secondary); font-weight: 500; transition: all 0.2s; position: relative; }
+        .nav-links a:after { content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px; background: var(--accent); transition: width 0.3s; }
+        .nav-links a:hover:after { width: 100%; }
+        .nav-links a:hover { color: var(--accent); }
+        .dark-toggle { background: var(--tag-bg); border: none; font-size: 1.2rem; cursor: pointer; padding: 8px 12px; border-radius: 40px; color: var(--accent); transition: all 0.2s; }
+        .dark-toggle:hover { transform: scale(1.05); }
+        .btn { display: inline-block; padding: 12px 28px; border-radius: 40px; font-weight: 600; text-decoration: none; transition: all 0.3s ease; margin: 6px 8px 6px 0; border: 1px solid transparent; cursor: pointer; }
+        .btn-primary { background: linear-gradient(135deg, var(--accent), var(--accent-light)); color: white; box-shadow: 0 4px 12px var(--accent-glow); }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 20px var(--accent-glow); }
+        .btn-outline { border: 1px solid var(--accent); color: var(--accent); background: transparent; }
+        .btn-outline:hover { background: var(--accent-glow); transform: translateY(-3px); }
+        .hero { padding: 80px 0 60px; text-align: center; position: relative; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 30% 50%, var(--accent-glow) 0%, transparent 50%); pointer-events: none; }
+        .hero h1 { font-size: 3.2rem; font-weight: 800; margin-bottom: 16px; background: linear-gradient(135deg, var(--text-primary), var(--accent-light)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .hero .badge-container { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
+        .hero-badge { background: var(--tag-bg); color: var(--tag-text); padding: 6px 16px; border-radius: 40px; font-size: 0.8rem; font-weight: 500; }
+        .typing-text { font-size: 1.3rem; color: var(--accent); font-weight: 600; min-height: 60px; margin-bottom: 20px; }
+        .stats-container { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin: 40px 0 20px; }
+        .stat-item { text-align: center; }
+        .stat-number { font-size: 1.8rem; font-weight: 800; color: var(--accent); }
+        .stat-label { font-size: 0.8rem; color: var(--text-muted); }
+        .contact-info-bar { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-top: 20px; font-size: 0.9rem; color: var(--text-secondary); }
+        .contact-info-bar a { color: var(--text-secondary); text-decoration: none; transition: color 0.2s; }
+        .contact-info-bar a:hover { color: var(--accent); }
+        .contact-info-bar i { margin-right: 8px; color: var(--accent); }
+        section { padding: 70px 0; border-bottom: 1px solid var(--border); }
+        .section-title { font-size: 2rem; font-weight: 700; margin-bottom: 40px; position: relative; display: inline-block; }
+        .section-title:after { content: ''; position: absolute; bottom: -10px; left: 0; width: 60px; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light)); border-radius: 4px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 28px; }
+        .card { background: var(--card-bg); border-radius: 20px; padding: 24px; box-shadow: var(--shadow); border: 1px solid var(--border); transition: all 0.5s cubic-bezier(0.4,0,0.2,1); position: relative; overflow: hidden; }
+        .card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 0; background: linear-gradient(180deg, var(--accent), var(--accent-light)); transition: height 0.3s; }
+        .card:hover::before { height: 100%; }
+        .card:hover { transform: translateY(-8px) scale(1.02); box-shadow: var(--shadow-xl); }
+        .card h3 { font-size: 1.35rem; margin-bottom: 12px; color: var(--text-primary); }
+        .card .date, .card .role { font-size: 0.8rem; color: var(--accent); font-weight: 600; margin-bottom: 12px; }
+        .card ul { margin-left: 18px; color: var(--text-secondary); }
+        .card li { margin-bottom: 8px; }
+        .skill-tag { display: inline-block; background: var(--tag-bg); color: var(--tag-text); padding: 6px 14px; border-radius: 40px; font-size: 0.75rem; font-weight: 500; margin: 6px 6px 0 0; transition: all 0.2s ease; cursor: default; }
+        .skill-tag:hover { transform: translateY(-2px); background: var(--accent) !important; color: #ffffff !important; }
+        .skill-tag:hover i { color: #ffffff !important; }
+        body.dark .skill-tag:hover { background: var(--accent) !important; color: #ffffff !important; }
+        body.dark .skill-tag:hover i { color: #ffffff !important; }
+        .project-links { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 20px; }
+        .project-links a { color: var(--accent); text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: all 0.2s; }
+        .project-links a:hover { margin-left: 5px; }
+        .skills-wrapper { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 12px; }
+        .org-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+        .org-card { background: var(--card-bg); border-radius: 16px; padding: 20px; border-left: 4px solid var(--accent); box-shadow: var(--shadow); transition: all 0.3s; }
+        .org-card:hover { transform: translateX(5px); box-shadow: var(--shadow-lg); }
+        .org-card h3 i { color: var(--accent); margin-right: 12px; width: 28px; }
+        .project-link { display: inline-flex; align-items: center; gap: 6px; color: var(--accent); text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: transform 0.2s ease; }
+        .project-link:hover { transform: translateX(5px); }
+        .contact-form { display: flex; flex-direction: column; gap: 20px; max-width: 600px; margin-top: 30px; }
+        .contact-form input, .contact-form textarea { padding: 14px 18px; border-radius: 16px; border: 2px solid var(--border); background: var(--bg-primary); color: var(--text-primary); font-family: inherit; transition: all 0.2s; }
+        .contact-form input::placeholder, .contact-form textarea::placeholder { color: var(--input-placeholder); }
+        .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-glow); }
+        .contact-form button { width: fit-content; background: linear-gradient(135deg, var(--accent), var(--accent-light)); color: white; border: none; cursor: pointer; transition: all 0.2s; }
+        .contact-form button:disabled { opacity: 0.6; cursor: not-allowed; }
+        .social-links { display: flex; gap: 24px; margin-top: 24px; flex-wrap: wrap; }
+        .social-links a { color: var(--text-secondary); font-size: 1.6rem; transition: all 0.2s; }
+        .social-links a:hover { color: var(--accent); transform: translateY(-5px) scale(1.1); }
+        .floating-cv { position: fixed; bottom: 30px; right: 30px; z-index: 999; }
+        .floating-cv a { display: flex; align-items: center; gap: 10px; background: linear-gradient(135deg, var(--accent), var(--accent-light)); color: white; padding: 12px 24px; border-radius: 50px; text-decoration: none; font-weight: 600; box-shadow: var(--shadow-lg); transition: all 0.3s; }
+        .floating-cv a:hover { transform: translateY(-5px); box-shadow: var(--shadow-xl); }
+        footer { text-align: center; padding: 32px; color: var(--text-muted); font-size: 0.85rem; }
+        .modal { display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9); backdrop-filter: blur(5px); cursor: pointer; }
+        .modal-content { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); max-width: 90%; max-height: 90%; object-fit: contain; border-radius: 12px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); transition: transform 0.1s ease; cursor: grab; }
+        .modal-content:active { cursor: grabbing; }
+        .close-modal { position: absolute; top: 20px; right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold; transition: 0.3s; cursor: pointer; z-index: 10000; }
+        .close-modal:hover { color: var(--accent); }
+        .modal-caption { position: absolute; bottom: 20px; left: 0; right: 0; text-align: center; color: white; font-size: 14px; background: rgba(0,0,0,0.6); padding: 8px; margin: 0 auto; width: fit-content; border-radius: 20px; }
+        .zoom-toolbar { position: fixed; bottom: 30px; right: 30px; display: flex; gap: 12px; background: rgba(0,0,0,0.7); padding: 12px 18px; border-radius: 60px; z-index: 10001; backdrop-filter: blur(8px); box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+        .zoom-btn { background: var(--accent); border: none; color: white; font-size: 1.3rem; font-weight: bold; width: 42px; height: 42px; border-radius: 50%; cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; justify-content: center; }
+        .zoom-btn:hover { background: var(--accent-light); transform: scale(1.08); }
+        .reset-btn { background: #dc2626; }
+        .reset-btn:hover { background: #b91c1c; }
+        @media (max-width: 768px) { .zoom-toolbar { bottom: 20px; right: 20px; padding: 8px 14px; gap: 8px; } .zoom-btn { width: 36px; height: 36px; font-size: 1.1rem; } }
+        .toast-notif { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); background: var(--accent); color: white; padding: 12px 24px; border-radius: 50px; font-weight: 500; z-index: 1000; animation: slideUp 0.3s ease; }
+        @keyframes slideUp { from { opacity: 0; transform: translateX(-50%) translateY(20px); } to { opacity: 1; transform: translateX(-50%) translateY(0); } }
+        @media (max-width: 768px) { .hero h1 { font-size: 2rem; } .nav-container { flex-direction: column; gap: 16px; } .nav-links { justify-content: center; gap: 18px; } .section-title { font-size: 1.8rem; } .grid { grid-template-columns: 1fr; } .stats-container { gap: 20px; } .stat-number { font-size: 1.4rem; } .floating-cv { bottom: 20px; right: 20px; } .floating-cv a { padding: 8px 16px; font-size: 0.8rem; } .nav-controls { margin-top: 10px; } }
     </style>
 </head>
 <body>
 
-<!-- Modal Lightbox untuk Sertifikat dengan Zoom -->
+<!-- Language Popup -->
+<div id="langPopup" class="lang-popup-overlay">
+    <div class="lang-popup-container">
+        <h2>🌐 Pilih Bahasa</h2>
+        <p id="popupSubtext">Pilih bahasa yang Anda inginkan / Choose your preferred language</p>
+        <div class="lang-buttons">
+            <button class="lang-btn-popup lang-btn-primary" onclick="setLanguage('id')">
+                🇮🇩 Bahasa Indonesia
+            </button>
+            <button class="lang-btn-popup lang-btn-secondary" onclick="setLanguage('en')">
+                🇬🇧 English
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Lightbox -->
 <div id="imageModal" class="modal">
     <span class="close-modal">&times;</span>
-    <img class="modal-content" id="modalImage">
+    <img loading="lazy" class="modal-content" id="modalImage">
     <div class="modal-caption" id="modalCaption"></div>
-    
-    <!-- Toolbar Zoom -->
     <div class="zoom-toolbar">
         <button class="zoom-btn" id="zoomOutBtn" title="Perkecil">−</button>
         <button class="zoom-btn" id="zoomResetBtn" title="Reset">⟳</button>
@@ -887,18 +235,24 @@
 
 <nav class="navbar">
     <div class="container nav-container">
-        <div class="logo">Zharfan.</div>
+        <a href="#home" class="logo">Zharfan.</a>
         <ul class="nav-links">
-            <li><a href="#home">Beranda</a></li>
-            <li><a href="#about">Tentang</a></li>
-            <li><a href="#education">Pendidikan</a></li>
-            <li><a href="#experience">Pengalaman</a></li>
-            <li><a href="#organization">Organisasi</a></li>
-            <li><a href="#projects">Proyek</a></li>
-            <li><a href="#contact">Kontak</a></li>
+            <li><a href="#home" data-i18n="nav.home">Beranda</a></li>
+            <li><a href="#about" data-i18n="nav.about">Tentang</a></li>
+            <li><a href="#education" data-i18n="nav.education">Pendidikan</a></li>
+            <li><a href="#experience" data-i18n="nav.experience">Pengalaman</a></li>
+            <li><a href="#organization" data-i18n="nav.organization">Organisasi</a></li>
+            <li><a href="#projects" data-i18n="nav.projects">Proyek</a></li>
+            <li><a href="#contact" data-i18n="nav.contact">Kontak</a></li>
             <li><a href="./porto2.html">Porto V2</a></li>
-            <li><button class="dark-toggle" id="darkModeToggle"><i class="fas fa-moon"></i></button></li>
         </ul>
+        <div class="nav-controls">
+            <div class="lang-switch">
+                <button class="lang-switch-btn" id="langIdBtn" onclick="setLanguage('id')">ID</button>
+                <button class="lang-switch-btn" id="langEnBtn" onclick="setLanguage('en')">EN</button>
+            </div>
+            <button class="dark-toggle" id="darkModeToggle"><i class="fas fa-moon"></i></button>
+        </div>
     </div>
 </nav>
 
@@ -907,28 +261,28 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="badge-container">
-                <span class="hero-badge">Open to Work</span>
-                <span class="hero-badge">Fresh Graduate 2026</span>
-                <span class="hero-badge">🇮🇩 Yogyakarta, Indonesia</span>
+                <span class="hero-badge" data-i18n="hero.badge1">Open to Work</span>
+                <span class="hero-badge" data-i18n="hero.badge2">Fresh Graduate 2026</span>
+                <span class="hero-badge" data-i18n="hero.badge3">🇮🇩 Yogyakarta, Indonesia</span>
             </div>
             <h1>Muhammad Zharfan <br>Widyadana Hukmana</h1>
             <div class="typing-text" id="typingText"></div>
             <div class="stats-container">
                 <div class="stat-item">
                     <div class="stat-number">300+</div>
-                    <div class="stat-label">Bugs Reported</div>
+                    <div class="stat-label" data-i18n="hero.stat1">Bugs Reported</div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-number">6+</div>
-                    <div class="stat-label">Months Experience</div>
+                    <div class="stat-label" data-i18n="hero.stat2">Months Experience</div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-number">4</div>
-                    <div class="stat-label">Grants & Awards</div>
+                    <div class="stat-label" data-i18n="hero.stat3">Grants & Awards</div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-number">150+</div>
-                    <div class="stat-label">Students Taught</div>
+                    <div class="stat-label" data-i18n="hero.stat4">Students Taught</div>
                 </div>
             </div>
             <div class="contact-info-bar">
@@ -937,161 +291,118 @@
                 <a href="https://linktr.ee/zharfann" target="_blank"><i class="fas fa-link"></i> linktr.ee/zharfann</a>
             </div>
             <div style="margin-top: 30px;">
-                <a href="#experience" class="btn btn-primary"><i class="fas fa-briefcase"></i> Lihat Portofolio</a>
-                <a href="https://wa.me/6281215946218" target="_blank" class="btn btn-outline"><i class="fab fa-whatsapp"></i> Hubungi Saya</a>
+                <a href="#experience" class="btn btn-primary" data-i18n="hero.btn1"><i class="fas fa-briefcase"></i> Lihat Portofolio</a>
+                <a href="https://wa.me/6281215946218" target="_blank" class="btn btn-outline" data-i18n="hero.btn2"><i class="fab fa-whatsapp"></i> Hubungi Saya</a>
             </div>
         </div>
     </section>
 
     <!-- Tentang Saya -->
-<section id="about">
-    <div class="container">
-        <h2 class="section-title">Tentang Saya</h2>
-        <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center;">
-            <!-- FOTO PROFIL -->
-            <div style="flex: 1; min-width: 200px; text-align: center;">
-                <div style="
-                    width: 200px;
-                    height: 200px;
-                    margin: 0 auto;
-                    border-radius: 50%;
-                    overflow: hidden;
-                    border: 4px solid var(--accent);
-                    box-shadow: var(--shadow-lg);
-                    background: var(--bg-secondary);
-                ">
-                    <!-- GANTI 'foto-profil.jpg' dengan file foto Anda -->
-                    <img 
-                        src="./Asset/foto-profil.jpg" 
-                        alt="Muhammad Zharfan Widyadana Hukmana"
-                        style="width: 100%; height: 100%; object-fit: cover;object-position: 100% 20%;"
-                        onerror="this.src='https://via.placeholder.com/200x200?text=Zharfan'"
-                    >
-                </div>
-                <div style="margin-top: 16px;">
-                    <span class="skill-tag">Zharfan Widyadana</span>
-                </div>
-            </div>
-
-            <!-- DESKRIPSI DIRI -->
-            <div style="flex: 2; min-width: 250px;">
-                <p style="margin-bottom: 16px; font-size: 1.05rem;">Mahasiswa angkatan 2022 Program Studi Teknologi Informasi di <strong>Universitas Muhammadiyah Yogyakarta</strong> dengan IPK 3.4/4.0.</p>
-                <p style="margin-bottom: 16px;">Pernah menerima pendanaan hibah dalam bidang pengabdian masyarakat, penelitian <strong>Artificial Intelligence</strong>, serta pengembangan bisnis. Memiliki pengalaman sebagai Junior QA dengan temuan 300+ bugs dan sertifikasi <strong>BNSP Software Analysis and Requirement</strong>.</p>
-                <p style="margin-bottom: 16px;">Saat ini sedang mencari posisi <strong>QA / Junior Auditor</strong> untuk mengimplementasikan keahlian di bidang pengujian perangkat lunak, keamanan sistem, dan kepatuhan.</p>
-                
-                <div class="skills-wrapper" style="margin-top: 20px;">
-                    <span class="skill-tag">
-                        <i class="fas fa-graduation-cap" style="margin-right: 6px;"></i> S1 TI UMY - IPK 3.4
-                    </span>
-                    <span class="skill-tag">
-                        <i class="fas fa-certificate" style="margin-right: 6px;"></i> BNSP Software Analyst
-                    </span>
-                    <span class="skill-tag">
-                        <i class="fas fa-language" style="margin-right: 6px;"></i> TOEIC - 531
-                    </span>
-                    <span class="skill-tag">
-                        <i class="fas fa-microchip" style="margin-right: 6px;"></i> AI Research Grant
-                    </span>
-                    <span class="skill-tag">
-                        <i class="fas fa-file-alt" style="margin-right: 6px;"></i> HAKI
-                    </span>
-                    <span class="skill-tag">
-                        <i class="fas fa-rocket" style="margin-right: 6px;"></i> Awardee Inkubasi Bisnis
-                    </span>
-                </div>
-            </div>
-            <!-- TENTANG DIRI (Ringkasan) -->
-            <div style="flex: 1; min-width: 200px; background: var(--bg-secondary); border-radius: 20px; padding: 20px; text-align: center;">
-                <i class="fas fa-user-check" style="font-size: 1.5rem; color: var(--accent);"></i>
-                <p style="margin: 12px 0 0 0; font-size: 0.9rem;">
-                    Seorang <strong>fresh graduate</strong> yang teliti, proaktif, dan memiliki <strong>passion</strong> di bidang pengujian perangkat lunak serta audit sistem informasi.
-                </p>
-                <hr style="margin: 16px 0; border-color: var(--border);">
-                <p style="font-size: 0.85rem; color: var(--text-muted);">
-                    Siap berkontribusi dalam tim yang menghargai kualitas dan kepatuhan.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-    <!-- Pendidikan -->
-    <section id="education">
+    <section id="about">
         <div class="container">
-            <h2 class="section-title">Pendidikan</h2>
-            <div class="grid" style="grid-template-columns: repeat(auto-fill, minmax(300px,1fr));">
-                <div class="card">
-                    <h3>
-                        <i class="fas fa-university" style="color: var(--accent); margin-right: 10px;"></i>
-                        Universitas Muhammadiyah Yogyakarta</h3>
-                    <div class="date">2022 - 2026 | IPK 3.4/4.0</div>
-                    <p>Fakultas Teknik | Program Studi Sarjana Teknologi Informasi</p>
+            <h2 class="section-title" data-i18n="about.title">Tentang Saya</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center;">
+                <div style="flex: 1; min-width: 200px; text-align: center;">
+                    <div style="width: 200px; height: 200px; margin: 0 auto; border-radius: 50%; overflow: hidden; border: 4px solid var(--accent); box-shadow: var(--shadow-lg); background: var(--bg-secondary);">
+                        <img loading="lazy" src="./Asset/foto-profil.jpg" alt="Muhammad Zharfan Widyadana Hukmana" style="width: 100%; height: 100%; object-fit: cover; object-position: 100% 20%;" onerror="this.src='https://via.placeholder.com/200x200?text=Zharfan'">
+                    </div>
+                    <div style="margin-top: 16px;">
+                        <span class="skill-tag">Zharfan Widyadana</span>
+                    </div>
                 </div>
-                <div class="card">
-                    <h3>
-                        <i class="fas fa-school" style="color: var(--accent); margin-right: 10px;"></i>
-                        Madrasah Aliyah Mu'allimin Muhammadiyah Yogyakarta</h3>
-                    <div class="date">2019 - 2022</div>
-                    <p>Jurusan IPA</p>
+                <div style="flex: 2; min-width: 250px;">
+                    <p style="margin-bottom: 16px; font-size: 1.05rem;" data-i18n="about.p1">Mahasiswa angkatan 2022 Program Studi Teknologi Informasi di <strong>Universitas Muhammadiyah Yogyakarta</strong> dengan IPK 3.4/4.0.</p>
+                    <p style="margin-bottom: 16px;" data-i18n="about.p2">Pernah menerima pendanaan hibah dalam bidang pengabdian masyarakat, penelitian <strong>Artificial Intelligence</strong>, serta pengembangan bisnis. Memiliki pengalaman sebagai Junior QA dengan temuan 300+ bugs dan sertifikasi <strong>BNSP Software Analysis and Requirement</strong>.</p>
+                    <p style="margin-bottom: 16px;" data-i18n="about.p3">Saat ini sedang mencari posisi <strong>QA / Junior Auditor</strong> untuk mengimplementasikan keahlian di bidang pengujian perangkat lunak, keamanan sistem, dan kepatuhan.</p>
+                    <div class="skills-wrapper" style="margin-top: 20px;">
+                        <span class="skill-tag"><i class="fas fa-graduation-cap" style="margin-right: 6px;"></i> <span data-i18n="about.tag1">S1 TI UMY - IPK 3.4</span></span>
+                        <span class="skill-tag"><i class="fas fa-certificate" style="margin-right: 6px;"></i> <span data-i18n="about.tag2">BNSP Software Analyst</span></span>
+                        <span class="skill-tag"><i class="fas fa-language" style="margin-right: 6px;"></i> <span data-i18n="about.tag3">TOEIC - 531</span></span>
+                        <span class="skill-tag"><i class="fas fa-microchip" style="margin-right: 6px;"></i> <span data-i18n="about.tag4">AI Research Grant</span></span>
+                        <span class="skill-tag"><i class="fas fa-file-alt" style="margin-right: 6px;"></i> <span data-i18n="about.tag5">HAKI</span></span>
+                        <span class="skill-tag"><i class="fas fa-rocket" style="margin-right: 6px;"></i> <span data-i18n="about.tag6">Awardee Inkubasi Bisnis</span></span>
+                    </div>
+                </div>
+                <div style="flex: 1; min-width: 200px; background: var(--bg-secondary); border-radius: 20px; padding: 20px; text-align: center;">
+                    <i class="fas fa-user-check" style="font-size: 1.5rem; color: var(--accent);"></i>
+                    <p style="margin: 12px 0 0 0; font-size: 0.9rem;" data-i18n="about.summary">
+                        Seorang <strong>fresh graduate</strong> yang teliti, proaktif, dan memiliki <strong>passion</strong> di bidang pengujian perangkat lunak serta audit sistem informasi.
+                    </p>
+                    <hr style="margin: 16px 0; border-color: var(--border);">
+                    <p style="font-size: 0.85rem; color: var(--text-muted);" data-i18n="about.summary2">
+                        Siap berkontribusi dalam tim yang menghargai kualitas dan kepatuhan.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pengalaman Kerja -->
+    <!-- Pendidikan (konten tetap, hanya title yang berubah) -->
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title" data-i18n="education.title">Pendidikan</h2>
+            <div class="grid" style="grid-template-columns: repeat(auto-fill, minmax(300px,1fr));">
+                <div class="card">
+                    <h3><i class="fas fa-university" style="color: var(--accent); margin-right: 10px;"></i> <span data-i18n="edu.uni">Universitas Muhammadiyah Yogyakarta</span></h3>
+                    <div class="date" data-i18n="edu.uniDate">2022 - 2026 | IPK 3.4/4.0</div>
+                    <p data-i18n="edu.uniDesc">Fakultas Teknik | Program Studi Sarjana Teknologi Informasi</p>
+                </div>
+                <div class="card">
+                    <h3><i class="fas fa-school" style="color: var(--accent); margin-right: 10px;"></i> <span data-i18n="edu.ma">Madrasah Aliyah Mu'allimin Muhammadiyah Yogyakarta</span></h3>
+                    <div class="date" data-i18n="edu.maDate">2019 - 2022</div>
+                    <p data-i18n="edu.maDesc">Jurusan IPA</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pengalaman Kerja (konten tetap, hanya judul section yang berubah) -->
     <section id="experience">
         <div class="container">
-            <h2 class="section-title">Pengalaman Kerja</h2>
+            <h2 class="section-title" data-i18n="experience.title">Pengalaman Kerja</h2>
             <div class="grid">
                 <div class="card">
-                    <h3>
-                        <i class="fas fa-user-tie" style="color: var(--accent); margin-right: 10px;"></i>
-                        PT Rimba Ananta Vikasa Indonesia</h3>
-                    <div class="role">PWKT Junior Quality Assurance</div>
-                    <div class="date">Maret 2026 - Juni 2026</div>
+                    <h3><i class="fas fa-user-tie" style="color: var(--accent); margin-right: 10px;"></i> <span data-i18n="exp1.company">PT Rimba Ananta Vikasa Indonesia</span></h3>
+                    <div class="role" data-i18n="exp1.role">PWKT Junior Quality Assurance</div>
+                    <div class="date" data-i18n="exp1.date">Maret 2026 - Juni 2026</div>
                     <ul>
-                        <li>Bertanggung jawab penuh atas satu modul aplikasi secara mandiri</li>
-                        <li>Memimpin proses pengujian fitur baru dan pendampingan migrasi UI</li>
-                        <li>Menangani permasalahan teknis klien secara langsung sebagai frontline support</li>
-                        <li>Menyelesaikan rata-rata 10-15 task harian melalui ClickUp</li>
+                        <li data-i18n="exp1.l1">Bertanggung jawab penuh atas satu modul aplikasi secara mandiri</li>
+                        <li data-i18n="exp1.l2">Memimpin proses pengujian fitur baru dan pendampingan migrasi UI</li>
+                        <li data-i18n="exp1.l3">Menangani permasalahan teknis klien secara langsung sebagai frontline support</li>
+                        <li data-i18n="exp1.l4">Menyelesaikan rata-rata 10-15 task harian melalui ClickUp</li>
                     </ul>
                     <div class="project-links">
                         <a href="javascript:void(0)" onclick='openModal("#", "Bukti PWKT - Quality Assurance PT. Rimba Ananta Vikasa")'>
-                            <i class="fas fa-external-link-alt"></i> Lihat Sertifikat →
+                            <i class="fas fa-certificate"></i> <span data-i18n="cert.view">Lihat Sertifikat</span> →
                         </a>
                     </div>
                 </div>
                 <div class="card">
-                    <h3>
-                        <i class="fas fa-laptop-code" style="color: var(--accent); margin-right: 10px;"></i>
-                        PT Rimba Ananta Vikasa Indonesia</h3>
-                    <div class="role">Karyawan Magang - QA</div>
-                    <div class="date">November 2025 - Februari 2026</div>
+                    <h3><i class="fas fa-laptop-code" style="color: var(--accent); margin-right: 10px;"></i> <span data-i18n="exp2.company">PT Rimba Ananta Vikasa Indonesia</span></h3>
+                    <div class="role" data-i18n="exp2.role">Karyawan Magang - QA</div>
+                    <div class="date" data-i18n="exp2.date">November 2025 - Februari 2026</div>
                     <ul>
-                        <li>Merancang & mengeksekusi 200-300+ test case, aktif mendokumentasi bugs pada <em>Oaktree - An integrated freight forwarding system</em></li>
-                        <li>Melakukan end-to-end testing untuk klien besar seperti Hollywings Store (termasuk XSS testing)</li>
-                        <li>Mengusulkan standarisasi validasi input untuk perbaikan prosedur internal</li>
-                        <li>Koordinasi aktif dengan developer via ClickUp & Discord</li>
+                        <li data-i18n="exp2.l1">Merancang & mengeksekusi 200-300+ test case, aktif mendokumentasi bugs pada <em>Oaktree - An integrated freight forwarding system</em></li>
+                        <li data-i18n="exp2.l2">Melakukan end-to-end testing untuk klien besar seperti Hollywings Store (termasuk XSS testing)</li>
+                        <li data-i18n="exp2.l3">Mengusulkan standarisasi validasi input untuk perbaikan prosedur internal</li>
+                        <li data-i18n="exp2.l4">Koordinasi aktif dengan developer via ClickUp & Discord</li>
                     </ul>
                     <div class="project-links">
                         <a href="javascript:void(0)" onclick='openModal("./Asset/Sertif-MagangRimba.png", "Sertifikat Magang - Quality Assurance PT. Rimba Ananta Vikasa")'>
-                            <i class="fas fa-external-link-alt"></i> Lihat Sertifikat →
+                            <i class="fas fa-certificate"></i> <span data-i18n="cert.view">Lihat Sertifikat</span> →
                         </a>
                     </div>
                 </div>
                 <div class="card">
-                    <h3>
-                        <i class="fas fa-chalkboard-user" style="color: var(--accent); margin-right: 10px;"></i>
-                        Asisten Dosen Teknologi Informasi UMY
-                    </h3>
-                    <div class="date">3 Mata Kuliah (2023-2026)</div>
+                    <h3><i class="fas fa-chalkboard-user" style="color: var(--accent); margin-right: 10px;"></i> <span data-i18n="exp3.title">Asisten Dosen Teknologi Informasi UMY</span></h3>
+                    <div class="date" data-i18n="exp3.date">3 Mata Kuliah (2023-2026)</div>
                     <ul>
-                        <li><strong>Rekayasa Kebutuhan (RK)</strong> (2023/2024) - 40 mahasiswa, Design Thinking & PACT Framework</li>
-                        <li><strong>Pengujian & Penjaminan Mutu Perangkat Lunak (STQA)</strong> (2024/2025) - RTM, Katalon Studio, Jira</li>
-                        <li><strong>Probabilitas Statistika (Probstat)</strong> (2025/2026) - satu kelas 100+ mahasiswa</li>
+                        <li data-i18n="exp3.l1"><strong>Rekayasa Kebutuhan (RK)</strong> (2023/2024) - 40 mahasiswa, Design Thinking & PACT Framework</li>
+                        <li data-i18n="exp3.l2"><strong>Pengujian & Penjaminan Mutu Perangkat Lunak (STQA)</strong> (2024/2025) - RTM, Katalon Studio, Jira</li>
+                        <li data-i18n="exp3.l3"><strong>Probabilitas Statistika (Probstat)</strong> (2025/2026) - satu kelas 100+ mahasiswa</li>
                     </ul>
                     <div style="margin-top: 16px;">
-                        <strong><i class="fas fa-folder-open "></i> Materi Ajar:</strong>
+                        <strong><i class="fas fa-folder-open"></i> Materi Ajar:</strong>
                         <div class="project-links" style="margin-top: 8px;">
                             <a href="https://github.com/Zharfan0/rekayasa-kebutuhan" target="_blank" class="project-link">
                                 <i class="fas fa-clipboard-list"></i> Rekayasa Kebutuhan (RK) →
@@ -1112,92 +423,62 @@
         </div>
     </section>
 
-    <!-- Organisasi & Kepanitiaan -->
+    <!-- Organisasi & Kepanitiaan (konten tetap) -->
     <section id="organization">
         <div class="container">
-            <h2 class="section-title">Organisasi & Kepanitiaan</h2>
+            <h2 class="section-title" data-i18n="organization.title">Organisasi & Kepanitiaan</h2>
             <div class="org-grid">
                 <div class="org-card">
-                    <h3>
-                        <i class="fas fa-gavel"></i>
-                        Gubernur BEM KMFT UMY
-                    </h3>
-                    <div class="date">Periode 2024/2025</div>
-                    <p>Memimpin BEM Keluarga Mahasiswa Fakultas Teknik, mencetuskan channel informasi se-Fakultas, menyelenggarakan pelatihan PKM.</p>
+                    <h3><i class="fas fa-gavel"></i> <span data-i18n="org1.title">Gubernur BEM KMFT UMY</span></h3>
+                    <div class="date" data-i18n="org1.date">Periode 2024/2025</div>
+                    <p data-i18n="org1.desc">Memimpin BEM Keluarga Mahasiswa Fakultas Teknik, mencetuskan channel informasi se-Fakultas, menyelenggarakan pelatihan PKM.</p>
                     <div class="project-links">
                         <a href="javascript:void(0)" onclick='openModal("./Asset/Sertif-BEM.png", "Sertifikat Gubernur Badan Eksekutif Mahasiswa Fakultas Teknik")'>
-                            <i class="fas fa-external-link-alt"></i> Lihat Sertifikat →
+                            <i class="fas fa-certificate"></i> <span data-i18n="cert.view">Lihat Sertifikat</span> →
                         </a>
                     </div>
                 </div>
-                
                 <div class="org-card">
-                    <h3>
-                        <i class="fas fa-users"></i>
-                        Ketua Masa Ta'aruf Prodi TI
-                    </h3>
-                    <div class="date">2023</div>
-                    <p>Memimpin kepanitiaan penerimaan mahasiswa baru angkatan 2023 dengan 200+ peserta.</p>
+                    <h3><i class="fas fa-users"></i> <span data-i18n="org2.title">Ketua Masa Ta'aruf Prodi TI</span></h3>
+                    <div class="date" data-i18n="org2.date">2023</div>
+                    <p data-i18n="org2.desc">Memimpin kepanitiaan penerimaan mahasiswa baru angkatan 2023 dengan 200+ peserta.</p>
                 </div>
-                
                 <div class="org-card">
-                    <h3>
-                        <i class="fas fa-landmark"></i>
-                        Anggota Bidang Pengkajian IPM Bantul
-                    </h3>
-                    <div class="date">2023/2025</div>
-                    <p>Koordinasi ke Pimpinan Cabang se-Bantul, menjadi pemateri pelatihan keilmuan.</p>
+                    <h3><i class="fas fa-landmark"></i> <span data-i18n="org3.title">Anggota Bidang Pengkajian IPM Bantul</span></h3>
+                    <div class="date" data-i18n="org3.date">2023/2025</div>
+                    <p data-i18n="org3.desc">Koordinasi ke Pimpinan Cabang se-Bantul, menjadi pemateri pelatihan keilmuan.</p>
                 </div>
-                
                 <div class="org-card">
-                    <h3>
-                        <i class="fas fa-chart-line"></i>
-                        Steering Committee YSI UMY
-                    </h3>
-                    <div class="date">2024-2025</div>
-                    <p>Mengawal & mengevaluasi panitia program pengabdian masyarakat dengan dana hibah.</p>
+                    <h3><i class="fas fa-chart-line"></i> <span data-i18n="org4.title">Steering Committee YSI UMY</span></h3>
+                    <div class="date" data-i18n="org4.date">2024-2025</div>
+                    <p data-i18n="org4.desc">Mengawal & mengevaluasi panitia program pengabdian masyarakat dengan dana hibah.</p>
                 </div>
-                
                 <div class="org-card">
-                    <h3>
-                        <i class="fas fa-chalkboard-teacher"></i>
-                        Fasilitator Darul Arqam Madya
-                    </h3>
-                    <div class="date">2023</div>
-                    <p>Mendampingi pengembangan diri & diskusi santri Madrasah Mu'allimin.</p>
+                    <h3><i class="fas fa-chalkboard-teacher"></i> <span data-i18n="org5.title">Fasilitator Darul Arqam Madya</span></h3>
+                    <div class="date" data-i18n="org5.date">2023</div>
+                    <p data-i18n="org5.desc">Mendampingi pengembangan diri & diskusi santri Madrasah Mu'allimin.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Proyek & Penghargaan -->
+    <!-- Proyek & Penghargaan (konten tetap, hanya judul section yang berubah) -->
     <section id="projects">
         <div class="container">
-            <h2 class="section-title">Proyek & Penghargaan</h2>
+            <h2 class="section-title" data-i18n="projects.title">Proyek & Penghargaan</h2>
             <div class="grid">
-                <!-- 1. myHeartD AI -->
                 <div class="card">
-                    <h3>
-                        <i class="fas fa-heartbeat"></i>
-                        myHeartD v2 – Web AI Deteksi Jantung Koroner
-                    </h3>
-                    <div class="date">HAKI No. 000947021 (2025) | Hibah Penelitian AI</div>
-                    <p>Python, scikit-learn, Gradient Boosting. Model prediksi penyakit jantung dengan akurasi tinggi. Terdaftar di Direktorat Inovasi dan Hilirisasi UMY.</p>
+                    <h3><i class="fas fa-heartbeat"></i> <span data-i18n="proj1.title">myHeartD v2 – Web AI Deteksi Jantung Koroner</span></h3>
+                    <div class="date" data-i18n="proj1.date">HAKI No. 000947021 (2025) | Hibah Penelitian AI</div>
+                    <p data-i18n="proj1.desc">Python, scikit-learn, Gradient Boosting. Model prediksi penyakit jantung dengan akurasi tinggi. Terdaftar di Direktorat Inovasi dan Hilirisasi UMY.</p>
                     <div class="project-links">
-                        <a href="https://chd-main.vercel.app" target="_blank" class="project-link">
-                            <i class="fas fa-external-link-alt"></i> Live Demo →
-                        </a>
+                        <a href="https://chd-main.vercel.app" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo →</a>
                     </div>
                 </div>
-
-                <!-- 2. Automation Testing -->
                 <div class="card">
-                    <h3>
-                        <i class="fas fa-vial"></i>
-                        Automation Testing Portfolio - Katalon Studio
-                    </h3>
-                    <div class="date">2026 | Personal Project</div>
-                    <p>Membuat automation testing suite untuk e-commerce demo menggunakan Katalon Studio. Mencakup login, search, add to cart, dan checkout flow.</p>
+                    <h3><i class="fas fa-vial"></i> <span data-i18n="proj2.title">Automation Testing Portofolio - Katalon Studio</span></h3>
+                    <div class="date" data-i18n="proj2.date">2026 | Personal Project</div>
+                    <p data-i18n="proj2.desc">Membuat automation testing suite untuk e-commerce demo menggunakan Katalon Studio. Mencakup login, search, add to cart, dan checkout flow.</p>
                     <div class="skills-wrapper" style="margin-top: 12px;">
                         <span class="skill-tag">Katalon Studio</span>
                         <span class="skill-tag">Groovy Script</span>
@@ -1213,15 +494,10 @@
                         </a>
                     </div>
                 </div>
-
-                <!-- 3. Cybersecurity -->
                 <div class="card">
-                    <h3>
-                        <i class="fas fa-shield-alt"></i>
-                        Cybersecurity Portfolio - TryHackMe & Security Audit
-                    </h3>
-                    <div class="date">2026 | Self-Learning</div>
-                    <p>Mempelajari dasar-dasar keamanan siber melalui platform TryHackMe (Pre Security, OWASP Top 10, Security Engineer). Membuat sample security audit report untuk demo e-commerce.</p>
+                    <h3><i class="fas fa-shield-alt"></i> <span data-i18n="proj3.title">Cybersecurity Portofolio - TryHackMe & Security Audit</span></h3>
+                    <div class="date" data-i18n="proj3.date">2026 | Self-Learning</div>
+                    <p data-i18n="proj3.desc">Mempelajari dasar-dasar keamanan siber melalui platform TryHackMe (Pre Security, OWASP Top 10, Security Engineer). Membuat sample security audit report untuk demo e-commerce.</p>
                     <div class="skills-wrapper" style="margin-top: 12px;">
                         <span class="skill-tag">OWASP Top 10</span>
                         <span class="skill-tag">Burp Suite</span>
@@ -1235,19 +511,14 @@
                             <i class="fab fa-github"></i> GitHub Repository →
                         </a>
                         <a href="#projects" target="_blank" class="project-link">
-                            <i class="fas fa-certificate"></i> Certificate →
+                            <i class="fas fa-certificate"></i> <span data-i18n="cert.view">Sertifikat</span> →
                         </a>
                     </div>
                 </div>
-
-                <!-- 4. Nerveey -->
                 <div class="card">
-                    <h3>
-                        <i class="fas fa-brain"></i>
-                        Nerveey – Konsep AI Deteksi Parkinson
-                    </h3>
-                    <div class="date">Hibah Kompetisi Ide Kreatif 2024 (Tingkat Universitas)</div>
-                    <p>Inovasi ide perangkat lunak deteksi dini Parkinson dengan kombinasi CNN (analisis pergerakan mata) & NLP (diagnosis gejala). Meraih pendanaan kompetisi ide kreatif (belum implementasi aplikasi final).</p>
+                    <h3><i class="fas fa-brain"></i> <span data-i18n="proj4.title">Nerveey – Konsep AI Deteksi Parkinson</span></h3>
+                    <div class="date" data-i18n="proj4.date">Hibah Kompetisi Ide Kreatif 2024 (Tingkat Universitas)</div>
+                    <p data-i18n="proj4.desc">Inovasi ide perangkat lunak deteksi dini Parkinson dengan kombinasi CNN (analisis pergerakan mata) & NLP (diagnosis gejala). Meraih pendanaan kompetisi ide kreatif (belum implementasi aplikasi final).</p>
                     <div class="skills-wrapper" style="margin-top: 12px;">
                         <span class="skill-tag">CNN</span>
                         <span class="skill-tag">NLP</span>
@@ -1255,15 +526,10 @@
                         <span class="skill-tag">UI/UX Design</span>
                     </div>
                 </div>
-
-                <!-- 5. Verity Valor -->
                 <div class="card">
-                    <h3>
-                        <i class="fas fa-gamepad"></i>
-                        Verity Valor – Game Papan Edukasi
-                    </h3>
-                    <div class="date">Hibah Vessel Program - Inkubasi Bisnis UMY 2024</div>
-                    <p>Game edukasi literasi digital & integritas yang dikembangkan dalam program inkubasi bisnis.</p>
+                    <h3><i class="fas fa-gamepad"></i> <span data-i18n="proj5.title">Verity Valor – Game Papan Edukasi</span></h3>
+                    <div class="date" data-i18n="proj5.date">Hibah Vessel Program - Inkubasi Bisnis UMY 2024</div>
+                    <p data-i18n="proj5.desc">Game edukasi literasi digital & integritas yang dikembangkan dalam program inkubasi bisnis.</p>
                     <div class="skills-wrapper" style="margin-top: 12px;">
                         <span class="skill-tag">Game Design</span>
                         <span class="skill-tag">Educational Game</span>
@@ -1271,19 +537,14 @@
                     </div>
                     <div class="project-links">
                         <a href="javascript:void(0)" onclick='openModal("./Asset/Sertif-Vessel.png", "Sertifikat Vessel - Program Inkubasi Bisnis UMY")'>
-                            <i class="fas fa-external-link-alt"></i> Lihat Sertifikat →
+                            <i class="fas fa-certificate"></i> <span data-i18n="cert.view">Lihat Sertifikat</span> →
                         </a>
                     </div>
                 </div>
-
-                <!-- 6. Juara 1 Cloud Computing -->
                 <div class="card">
-                    <h3>
-                        <i class="fas fa-cloud"></i>
-                        Juara 1 Cloud Computing Club Competition
-                    </h3>
-                    <div class="date">AWS & Yayasan Sagasitas Indonesia (2021)</div>
-                    <p>Desain UI/UX website pariwisata dengan implementasi layanan AWS. Kompetisi tingkat regional D.I. Yogyakarta.</p>
+                    <h3><i class="fas fa-cloud"></i> <span data-i18n="proj6.title">Juara 1 Cloud Computing Club Competition</span></h3>
+                    <div class="date" data-i18n="proj6.date">AWS & Yayasan Sagasitas Indonesia (2021)</div>
+                    <p data-i18n="proj6.desc">Desain UI/UX website pariwisata dengan implementasi layanan AWS. Kompetisi tingkat regional D.I. Yogyakarta.</p>
                     <div class="skills-wrapper" style="margin-top: 12px;">
                         <span class="skill-tag">AWS</span>
                         <span class="skill-tag">UI/UX Design</span>
@@ -1291,19 +552,14 @@
                     </div>
                     <div class="project-links">
                         <a href="javascript:void(0)" onclick='openModal("./Asset/Sertif-CloudComputing.png", "Sertifikat Juara 1 CCC - Pembuatan Website berbasis AWS")'>
-                            <i class="fas fa-external-link-alt"></i> Lihat Sertifikat →
+                            <i class="fas fa-certificate"></i> <span data-i18n="cert.view">Lihat Sertifikat</span> →
                         </a>
                     </div>
                 </div>
-
-                <!-- 7. Graphic Design & Portfolio -->
                 <div class="card">
-                    <h3>
-                        <i class="fas fa-palette"></i>
-                        Graphic Design Portfolio
-                    </h3>
-                    <div class="date">2024 - 2026 | Karya Desain</div>
-                    <p>Kumpulan karya desain grafis meliputi logo, poster, product design, majalah, dan infografis. Digunakan untuk berbagai keperluan organisasi, lomba, dan materi ajar.</p>
+                    <h3><i class="fas fa-palette"></i> <span data-i18n="proj7.title">Graphic Design Portfolio</span></h3>
+                    <div class="date" data-i18n="proj7.date">2024 - 2026 | Karya Desain</div>
+                    <p data-i18n="proj7.desc">Kumpulan karya desain grafis meliputi logo, poster, product design, majalah, dan infografis. Digunakan untuk berbagai keperluan organisasi, lomba, dan materi ajar.</p>
                     <div class="skills-wrapper" style="margin-top: 12px;">
                         <span class="skill-tag">Logo Design</span>
                         <span class="skill-tag">Poster</span>
@@ -1316,23 +572,14 @@
                     </div>
                     <div class="project-links">
                         <a href="https://drive.google.com/drive/folders/1nUN7K1gYIfwta-ZS_xzJdbWp7e5_K1Bn?usp=drive_link" target="_blank" class="project-link">
-                            <i class="fab fa-google-drive"></i> Lihat Portfolio Desain →
+                            <i class="fab fa-google-drive"></i> <span data-i18n="port.view">Lihat Portofolio Desain</span> →
                         </a>
                     </div>
                 </div>
-
-                <!-- 8. OtoPrint - Vending Machine Dokumen Akademik -->
                 <div class="card">
-                    <h3>
-                        <i class="fas fa-print"></i>
-                        OtoPrint – Vending Machine Dokumen Akademik UMY
-                    </h3>
-                    <div class="date">Capstone Project (2025) | Sistem Digitalisasi Dokumen Mandiri</div>
-                    <p>
-                        Sistem vending machine dokumen akademik yang memungkinkan mahasiswa mencetak dokumen (Surat Aktif Kuliah, Transkrip, dll) 
-                        secara mandiri dengan integrasi QR Code verifikasi keaslian. Dilengkapi admin panel untuk manajemen template (.docx), 
-                        field dinamis, layout visual (drag & drop), serta maintenance printer dan stok kertas.
-                    </p>
+                    <h3><i class="fas fa-print"></i> <span data-i18n="proj8.title">OtoPrint – Vending Machine Dokumen Akademik UMY</span></h3>
+                    <div class="date" data-i18n="proj8.date">Capstone Project (2025) | Sistem Digitalisasi Dokumen Mandiri</div>
+                    <p data-i18n="proj8.desc">Sistem vending machine dokumen akademik yang memungkinkan mahasiswa mencetak dokumen (Surat Aktif Kuliah, Transkrip, dll) secara mandiri dengan integrasi QR Code verifikasi keaslian. Dilengkapi admin panel untuk manajemen template (.docx), field dinamis, layout visual (drag & drop), serta maintenance printer dan stok kertas.</p>
                     <div class="skills-wrapper" style="margin-top: 12px;">
                         <span class="skill-tag">Node.js</span>
                         <span class="skill-tag">Express</span>
@@ -1346,15 +593,9 @@
                         <span class="skill-tag">Touchscreen UI</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/Zharfan0/WEBAPP-OTOPRINT" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i> GitHub Repository →
-                        </a>
-                        <a href="https://drive.google.com/file/d/1_Dm-6LlE0WCNj07U_-bN14IJQh-qY-t1/view?usp=sharing" target="_blank" class="project-link">
-                            <i class="fas fa-play-circle"></i> Video Demo →
-                        </a>
-                        <a href="https://github.com/Zharfan0/WEBAPP-OTOPRINT/blob/main/README.md" target="_blank" class="project-link">
-                            <i class="fas fa-book"></i> Dokumentasi →
-                        </a>
+                        <a href="https://github.com/Zharfan0/WEBAPP-OTOPRINT" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub Repository →</a>
+                        <a href="https://drive.google.com/file/d/1_Dm-6LlE0WCNj07U_-bN14IJQh-qY-t1/view?usp=sharing" target="_blank" class="project-link"><i class="fas fa-play-circle"></i> Video Demo →</a>
+                        <a href="https://github.com/Zharfan0/WEBAPP-OTOPRINT/blob/main/README.md" target="_blank" class="project-link"><i class="fas fa-book"></i> <span data-i18n="documentation.view">Dokumentasi</span> →</a>
                     </div>
                 </div>
             </div>
@@ -1364,25 +605,25 @@
     <!-- Sertifikasi -->
     <section id="certifications">
         <div class="container">
-            <h2 class="section-title">Sertifikasi</h2>
+            <h2 class="section-title" data-i18n="cert.title">Sertifikasi</h2>
             <div class="grid" style="grid-template-columns: repeat(auto-fill, minmax(280px,1fr));">
                 <div class="card">
                     <i class="fas fa-certificate" style="font-size: 1.8rem;"></i>
-                    <h3 style="margin-top: 10px;">Badan Nasional Sertifikasi Profesi (BNSP)</h3>
-                    <p>Software Analysis and Requirement (2026)</p>
+                    <h3 style="margin-top: 10px;" data-i18n="cert1.name">Badan Nasional Sertifikasi Profesi (BNSP)</h3>
+                    <p data-i18n="cert1.desc">Software Analysis and Requirement (2026)</p>
                     <div class="project-links">
                         <a href="javascript:void(0)" onclick='openModal("./Asset/Sertif-BNSP.png", "Sertifikat BNSP - Software Analysis and Requirement")'>
-                            <i class="fas fa-external-link-alt"></i> Lihat Sertifikat →
+                            <i class="fas fa-certificate"></i> <span data-i18n="cert.view">Lihat Sertifikat</span> →
                         </a>
                     </div>
                 </div>
                 <div class="card">
                     <i class="fas fa-language"></i>
-                    <h3 style="margin-top: 10px;">TOEIC Model Test</h3>
-                    <p>Score 531 – Higher Objectives of Professional Education (HOPE) (2025)</p>
+                    <h3 style="margin-top: 10px;" data-i18n="cert2.name">TOEIC Model Test</h3>
+                    <p data-i18n="cert2.desc">Score 531 – Higher Objectives of Professional Education (HOPE) (2025)</p>
                     <div class="project-links">
                         <a href="javascript:void(0)" onclick='openModal("./Asset/Sertif-TOEIC.png", "Sertifikat TOEFL/TOEIC - Diselenggarakan oleh HOPE")'>
-                            <i class="fas fa-external-link-alt"></i> Lihat Sertifikat →
+                            <i class="fas fa-certificate"></i> <span data-i18n="cert.view">Lihat Sertifikat</span> →
                         </a>
                     </div>
                 </div>
@@ -1393,7 +634,7 @@
     <!-- Skills -->
     <section id="skills">
         <div class="container">
-            <h2 class="section-title">Keahlian</h2>
+            <h2 class="section-title" data-i18n="skills.title">Keahlian</h2>
             <div class="skills-wrapper">
                 <span class="skill-tag">Katalon Studio</span>
                 <span class="skill-tag">Postman</span>
@@ -1415,355 +656,567 @@
     <!-- Kontak & Media Sosial -->
     <section id="contact">
         <div class="container">
-            <h2 class="section-title">Hubungi Saya</h2>
+            <h2 class="section-title" data-i18n="contact.title">Hubungi Saya</h2>
             <div style="display: flex; flex-wrap: wrap; gap: 40px;">
                 <div style="flex:1; min-width: 240px;">
                     <p style="margin-bottom: 12px;"><i class="fas fa-envelope" style="width: 28px;"></i> <a href="mailto:zharfanwidyadana@gmail.com" style="color: var(--text-primary); text-decoration: none;">zharfanwidyadana@gmail.com</a></p>
                     <p style="margin-bottom: 12px;"><i class="fab fa-whatsapp" style="width: 28px;"></i> <a href="https://wa.me/6281215946218" target="_blank" style="color: var(--text-primary); text-decoration: none;">+62 812 1594 6218</a></p>
                     <div class="social-links">
                         <a href="https://linktr.ee/zharfann" target="_blank" aria-label="Linktree"><i class="fas fa-tree"></i></a>
-                        <a href="https://www.linkedin.com/in/zharfan-widyadana-a34600217/" target="_blank" aria-label="LinkedIn" id="linkedinPlaceholder"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/Zharfan0" target="_blank" aria-label="GitHub" id="githubPlaceholder"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/zharfan-widyadana-a34600217/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/Zharfan0" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
                     </div>
-                    <p style="margin-top: 20px;"><strong><i>Portofolio lain:</i></strong> <a href="https://linktr.ee/zharfann" target="_blank" class="project-link">linktr.ee/zharfann</a></p>
-<p><strong><i>CHD AI Web: </i></strong> <a href="https://chd-main.vercel.app" target="_blank" class="project-link">chd-main.vercel.app</a></p>
+                    <p style="margin-top: 20px;"><strong><i data-i18n="contact.portfolio">Portofolio lain:</i></strong> <a href="https://linktr.ee/zharfann" target="_blank" class="project-link">linktr.ee/zharfann</a></p>
+                    <p><strong><i>CHD AI Web: </i></strong> <a href="https://chd-main.vercel.app" target="_blank" class="project-link">chd-main.vercel.app</a></p>
                 </div>
                 <div style="flex:2;">
                     <form id="realContactForm" class="contact-form">
-                        <input type="text" placeholder="Nama Lengkap" id="formName" required>
-                        <input type="email" placeholder="Email" id="formEmail" required>
-                        <textarea rows="3" placeholder="Pesan / Tawaran Kerja / Kolaborasi..." id="formMsg" required></textarea>
-                        <button type="submit" class="btn btn-primary" id="submitBtn"><i class="fas fa-paper-plane"></i> Kirim Pesan</button>
+                        <input type="text" placeholder="Nama Lengkap" id="formName" required data-i18n-placeholder="form.name">
+                        <input type="email" placeholder="Email" id="formEmail" required data-i18n-placeholder="form.email">
+                        <textarea rows="3" placeholder="Pesan / Tawaran Kerja / Kolaborasi..." id="formMsg" required data-i18n-placeholder="form.message"></textarea>
+                        <button type="submit" class="btn btn-primary" id="submitBtn" data-i18n="form.send"><i class="fas fa-paper-plane"></i> Kirim Pesan</button>
                     </form>
-                    <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 12px;">*Pesan akan dibalas dengan waktu 1x24 jam</p>
+                    <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 12px;" data-i18n="form.note">*Pesan akan dibalas dengan waktu 1x24 jam</p>
                 </div>
             </div>
         </div>
     </section>
 </main>
 
-<!-- Floating Download CV Button -->
+<!-- Floating Download CV Button - FIX -->
 <div class="floating-cv">
-    <a href="https://drive.google.com/uc?export=download&id=1yeCnInBNKcxlVtLUA6KUbsPozvs-tSQL"
+    <a href="https://drive.google.com/uc?export=download&id=1yeCnInBNKcxlVtLUA6KUbsPozvs-tSQL" 
        download 
        target="_blank">
-        <i class="fas fa-download"></i> Download CV
+        <i class="fas fa-download"></i>
+        <span>Download CV</span>
     </a>
 </div>
 
 <footer>
-    <p>&copy; 2026 Muhammad Zharfan Widyadana Hukmana | Teknologi Informasi UMY | QA Engineer & Aspiring IT Auditor</p>
-    <p style="margin-top: 8px;">Terbuka untuk posisi Quality Assurance & Junior IT Auditor | Siap mulai segera</p>
+    <p data-i18n="footer.p1">&copy; 2026 Muhammad Zharfan Widyadana Hukmana | Teknologi Informasi UMY | QA Engineer & Aspiring IT Auditor</p>
+    <p style="margin-top: 8px;" data-i18n="footer.p2">Terbuka untuk posisi Quality Assurance & Junior IT Auditor | Siap mulai segera</p>
 </footer>
 
 <script>
-   // ==================== TYPING EFFECT ====================
-    const words = ["QA Engineer", "Aspiring IT Auditor", "Fresh Graduate TI UMY", "Bug Hunter", "AI Enthusiast"];
-    let i = 0;
-    let j = 0;
-    let isDeleting = false;
-    const typingElement = document.getElementById("typingText");
+// ==================== TRANSLATIONS OBJECT (LENGKAP) ====================
+const translations = {
+    id: {
+        // Navigation
+        'nav.home': 'Beranda',
+        'nav.about': 'Tentang',
+        'nav.education': 'Pendidikan',
+        'nav.experience': 'Pengalaman',
+        'nav.organization': 'Organisasi',
+        'nav.projects': 'Proyek',
+        'nav.contact': 'Kontak',
+        // Hero
+        'hero.badge1': 'Open to Work',
+        'hero.badge2': 'Fresh Graduate 2026',
+        'hero.badge3': '🇮🇩 Yogyakarta, Indonesia',
+        'hero.stat1': 'Bugs Reported',
+        'hero.stat2': 'Months Experience',
+        'hero.stat3': 'Grants & Awards',
+        'hero.stat4': 'Students Taught',
+        'hero.btn1': 'Lihat Portofolio',
+        'hero.btn2': 'Hubungi Saya',
+        // About
+        'about.title': 'Tentang Saya',
+        'about.p1': 'Mahasiswa angkatan 2022 Program Studi Teknologi Informasi di <strong>Universitas Muhammadiyah Yogyakarta</strong> dengan IPK 3.4/4.0.',
+        'about.p2': 'Pernah menerima pendanaan hibah dalam bidang pengabdian masyarakat, penelitian <strong>Artificial Intelligence</strong>, serta pengembangan bisnis. Memiliki pengalaman sebagai Junior QA dengan temuan 300+ bugs dan sertifikasi <strong>BNSP Software Analysis and Requirement</strong>.',
+        'about.p3': 'Saat ini sedang mencari posisi <strong>QA / Junior Auditor</strong> untuk mengimplementasikan keahlian di bidang pengujian perangkat lunak, keamanan sistem, dan kepatuhan.',
+        'about.tag1': 'S1 TI UMY - IPK 3.4',
+        'about.tag2': 'BNSP Software Analyst',
+        'about.tag3': 'TOEIC - 531',
+        'about.tag4': 'AI Research Grant',
+        'about.tag5': 'HAKI',
+        'about.tag6': 'Awardee Inkubasi Bisnis',
+        'about.summary': 'Seorang <strong>fresh graduate</strong> yang teliti, proaktif, dan memiliki <strong>passion</strong> di bidang pengujian perangkat lunak serta audit sistem informasi.',
+        'about.summary2': 'Siap berkontribusi dalam tim yang menghargai kualitas dan kepatuhan.',
+        // Education
+        'education.title': 'Pendidikan',
+        'edu.uni': 'Universitas Muhammadiyah Yogyakarta',
+        'edu.uniDate': '2022 - 2026 | IPK 3.4/4.0',
+        'edu.uniDesc': 'Fakultas Teknik | Program Studi Sarjana Teknologi Informasi',
+        'edu.ma': 'Madrasah Aliyah Mu\'allimin Muhammadiyah Yogyakarta',
+        'edu.maDate': '2019 - 2022',
+        'edu.maDesc': 'Jurusan IPA',
+        // Experience
+        'experience.title': 'Pengalaman Kerja',
+        'exp1.company': 'PT Rimba Ananta Vikasa Indonesia',
+        'exp1.role': 'PWKT Junior Quality Assurance',
+        'exp1.date': 'Maret 2026 - Juni 2026',
+        'exp1.l1': 'Bertanggung jawab penuh atas satu modul aplikasi secara mandiri',
+        'exp1.l2': 'Memimpin proses pengujian fitur baru dan pendampingan migrasi UI',
+        'exp1.l3': 'Menangani permasalahan teknis klien secara langsung sebagai frontline support',
+        'exp1.l4': 'Menyelesaikan rata-rata 10-15 task harian melalui ClickUp',
+        'exp2.company': 'PT Rimba Ananta Vikasa Indonesia',
+        'exp2.role': 'Karyawan Magang - QA',
+        'exp2.date': 'November 2025 - Februari 2026',
+        'exp2.l1': 'Merancang & mengeksekusi 200-300+ test case, aktif mendokumentasi bugs pada Oaktree',
+        'exp2.l2': 'Melakukan end-to-end testing untuk klien besar seperti Hollywings Store (termasuk XSS testing)',
+        'exp2.l3': 'Mengusulkan standarisasi validasi input untuk perbaikan prosedur internal',
+        'exp2.l4': 'Koordinasi aktif dengan developer via ClickUp & Discord',
+        'exp3.title': 'Asisten Dosen Teknologi Informasi UMY',
+        'exp3.date': '3 Mata Kuliah (2023-2026)',
+        'exp3.l1': '<strong>Rekayasa Kebutuhan (RK)</strong> (2023/2024) - 40 mahasiswa',
+        'exp3.l2': '<strong>Pengujian & Penjaminan Mutu PL (STQA)</strong> (2024/2025) - RTM, Katalon Studio, Jira',
+        'exp3.l3': '<strong>Probabilitas Statistika (Probstat)</strong> (2025/2026) - 100+ mahasiswa',
+        // Organization
+        'organization.title': 'Organisasi & Kepanitiaan',
+        'org1.title': 'Gubernur BEM KMFT UMY',
+        'org1.date': 'Periode 2024/2025',
+        'org1.desc': 'Memimpin BEM Keluarga Mahasiswa Fakultas Teknik, mencetuskan channel informasi se-Fakultas, menyelenggarakan pelatihan PKM.',
+        'org2.title': 'Ketua Masa Ta\'aruf Prodi TI',
+        'org2.date': '2023',
+        'org2.desc': 'Memimpin kepanitiaan penerimaan mahasiswa baru angkatan 2023 dengan 200+ peserta.',
+        'org3.title': 'Anggota Bidang Pengkajian IPM Bantul',
+        'org3.date': '2023/2025',
+        'org3.desc': 'Koordinasi ke Pimpinan Cabang se-Bantul, menjadi pemateri pelatihan keilmuan.',
+        'org4.title': 'Steering Committee YSI UMY',
+        'org4.date': '2024-2025',
+        'org4.desc': 'Mengawal & mengevaluasi panitia program pengabdian masyarakat dengan dana hibah.',
+        'org5.title': 'Fasilitator Darul Arqam Madya',
+        'org5.date': '2023',
+        'org5.desc': 'Mendampingi pengembangan diri & diskusi santri Madrasah Mu\'allimin.',
+        // Projects
+        'projects.title': 'Proyek & Penghargaan',
+        'proj1.title': 'myHeartD v2 – Web AI Deteksi Jantung Koroner',
+        'proj1.date': 'HAKI No. 000947021 (2025) | Hibah Penelitian AI',
+        'proj1.desc': 'Python, scikit-learn, Gradient Boosting. Model prediksi penyakit jantung dengan akurasi tinggi.',
+        'proj2.title': 'Automation Testing Portfolio - Katalon Studio',
+        'proj2.date': '2026 | Personal Project',
+        'proj2.desc': 'Membuat automation testing suite untuk e-commerce demo menggunakan Katalon Studio.',
+        'proj3.title': 'Cybersecurity Portfolio - TryHackMe & Security Audit',
+        'proj3.date': '2026 | Self-Learning',
+        'proj3.desc': 'Mempelajari dasar-dasar keamanan siber melalui platform TryHackMe.',
+        'proj4.title': 'Nerveey – Konsep AI Deteksi Parkinson',
+        'proj4.date': 'Hibah Kompetisi Ide Kreatif 2024 (Tingkat Universitas)',
+        'proj4.desc': 'Inovasi ide perangkat lunak deteksi dini Parkinson dengan kombinasi CNN & NLP.',
+        'proj5.title': 'Verity Valor – Game Papan Edukasi',
+        'proj5.date': 'Hibah Vessel Program - Inkubasi Bisnis UMY 2024',
+        'proj5.desc': 'Game edukasi literasi digital & integritas yang dikembangkan dalam program inkubasi bisnis.',
+        'proj6.title': 'Juara 1 Cloud Computing Club Competition',
+        'proj6.date': 'AWS & Yayasan Sagasitas Indonesia (2021)',
+        'proj6.desc': 'Desain UI/UX website pariwisata dengan implementasi layanan AWS.',
+        'proj7.title': 'Graphic Design Portfolio',
+        'proj7.date': '2024 - 2026 | Karya Desain',
+        'proj7.desc': 'Kumpulan karya desain grafis meliputi logo, poster, product design, majalah, dan infografis.',
+        'proj8.title': 'OtoPrint – Vending Machine Dokumen Akademik UMY',
+        'proj8.date': 'Capstone Project (2025)',
+        'proj8.desc': 'Sistem vending machine dokumen akademik dengan verifikasi QR Code.',
+        // Certifications
+        'cert.title': 'Sertifikasi',
+        'cert1.name': 'Badan Nasional Sertifikasi Profesi (BNSP)',
+        'cert1.desc': 'Software Analysis and Requirement (2026)',
+        'cert2.name': 'TOEIC Model Test',
+        'cert2.desc': 'Score 531 – Higher Objectives of Professional Education (HOPE) (2025)',
+        'cert.view': 'Sertifikat',
+        'port.view': 'Lihat Portofolio Desain',
+        'documentation.view': 'Dokumentasi',
+        // Skills
+        'skills.title': 'Keahlian',
+        // Contact
+        'contact.title': 'Hubungi Saya',
+        'contact.portfolio': 'Portofolio lain:',
+        'form.name': 'Nama Lengkap',
+        'form.email': 'Email',
+        'form.message': 'Pesan',
+        'form.send': 'Kirim Pesan',
+        'form.note': '*Pesan akan dibalas dengan waktu 1x24 jam',
+        'cv.download': 'Download CV',
+        'footer.p1': '© 2026 Muhammad Zharfan Widyadana Hukmana | Teknologi Informasi UMY | QA Engineer & Aspiring IT Auditor',
+        'footer.p2': 'Terbuka untuk posisi Quality Assurance & Junior IT Auditor | Siap mulai segera',
+        // Links
+        'sertif.link': 'Lihat Sertifikat'
+    },
+    en: {
+        // Navigation
+        'nav.home': 'Home',
+        'nav.about': 'About',
+        'nav.education': 'Education',
+        'nav.experience': 'Experience',
+        'nav.organization': 'Organization',
+        'nav.projects': 'Projects',
+        'nav.contact': 'Contact',
+        // Hero
+        'hero.badge1': 'Open to Work',
+        'hero.badge2': 'Fresh Graduate 2026',
+        'hero.badge3': '🇮🇩 Yogyakarta, Indonesia',
+        'hero.stat1': 'Bugs Reported',
+        'hero.stat2': 'Months Experience',
+        'hero.stat3': 'Grants & Awards',
+        'hero.stat4': 'Students Taught',
+        'hero.btn1': 'View Portfolio',
+        'hero.btn2': 'Contact Me',
+        // About
+        'about.title': 'About Me',
+        'about.p1': 'Information Technology undergraduate (Class of 2022) at <strong>Universitas Muhammadiyah Yogyakarta</strong> with GPA 3.4/4.0.',
+        'about.p2': 'Recipient of grant funding in community service, <strong>Artificial Intelligence</strong> research, and business development. Experienced as Junior QA with 300+ bugs found and <strong>BNSP Software Analysis and Requirement</strong> certification.',
+        'about.p3': 'Currently seeking a <strong>QA / Junior IT Auditor</strong> position to implement expertise in software testing, system security, and compliance.',
+        'about.tag1': 'IT UMY - GPA 3.4',
+        'about.tag2': 'BNSP Certified',
+        'about.tag3': 'TOEIC - 531',
+        'about.tag4': 'AI Grant',
+        'about.tag5': 'HAKI',
+        'about.tag6': 'Business Incubation',
+        'about.summary': 'A detail-oriented <strong>fresh graduate</strong> with passion for software testing and IT audit.',
+        'about.summary2': 'Ready to contribute to quality-driven teams.',
+        // Education
+        'education.title': 'Education',
+        'edu.uni': 'Universitas Muhammadiyah Yogyakarta',
+        'edu.uniDate': '2022 - 2026 | GPA 3.4/4.0',
+        'edu.uniDesc': 'Faculty of Engineering | Bachelor of Information Technology',
+        'edu.ma': 'Madrasah Aliyah Mu\'allimin Muhammadiyah Yogyakarta',
+        'edu.maDate': '2019 - 2022',
+        'edu.maDesc': 'Natural Science Major',
+        // Experience
+        'experience.title': 'Work Experience',
+        'exp1.company': 'PT Rimba Ananta Vikasa Indonesia',
+        'exp1.role': 'Junior Quality Assurance (PWKT)',
+        'exp1.date': 'Mar 2026 - Jun 2026',
+        'exp1.l1': 'Independently owned a full application module',
+        'exp1.l2': 'Led testing of new features and UI migration',
+        'exp1.l3': 'Handled client technical issues as frontline support',
+        'exp1.l4': 'Completed average 10-15 tasks daily via ClickUp',
+        'exp2.company': 'PT Rimba Ananta Vikasa Indonesia',
+        'exp2.role': 'Intern - Quality Assurance',
+        'exp2.date': 'Nov 2025 - Feb 2026',
+        'exp2.l1': 'Designed and executed 200-300+ test cases on Oaktree system',
+        'exp2.l2': 'Performed end-to-end testing including XSS security validation',
+        'exp2.l3': 'Proposed input validation standardization for QA procedures',
+        'exp2.l4': 'Coordinated with developers via ClickUp & Discord',
+        'exp3.title': 'Teaching Assistant - UMY',
+        'exp3.date': '3 Courses (2023-2026)',
+        'exp3.l1': '<strong>Requirements Engineering</strong> (2023/2024) - 40 students',
+        'exp3.l2': '<strong>Software Testing & QA</strong> (2024/2025) - RTM, Katalon Studio, Jira',
+        'exp3.l3': '<strong>Probability & Statistics</strong> (2025/2026) - 100+ students',
+        // Organization
+        'organization.title': 'Organizations',
+        'org1.title': 'Governor - BEM KMFT UMY',
+        'org1.date': '2024/2025',
+        'org1.desc': 'Led the Student Executive Board of the Faculty of Engineering.',
+        'org2.title': 'Head of Orientation Committee - IT Program',
+        'org2.date': '2023',
+        'org2.desc': 'Led orientation for incoming Class of 2023 with 200+ participants.',
+        'org3.title': 'Member - Knowledge Division IPM Bantul',
+        'org3.date': '2023/2025',
+        'org3.desc': 'Coordinated with branch IPM chapters across Bantul.',
+        'org4.title': 'Steering Committee - YSI UMY',
+        'org4.date': '2024-2025',
+        'org4.desc': 'Evaluated committee for community service program with grant funding.',
+        'org5.title': 'Facilitator - Darul Arqam Madya',
+        'org5.date': '2023',
+        'org5.desc': 'Accompanied students in self-development activities.',
+        // Projects
+        'projects.title': 'Projects & Awards',
+        'proj1.title': 'myHeartD v2 – AI Heart Disease Detection',
+        'proj1.date': 'HAKI No. 000947021 (2025) | AI Research Grant',
+        'proj1.desc': 'Python, scikit-learn, Gradient Boosting. High accuracy heart disease prediction model.',
+        'proj2.title': 'Automation Testing Portfolio - Katalon Studio',
+        'proj2.date': '2026 | Personal Project',
+        'proj2.desc': 'Automation test suite for e-commerce demo using Katalon Studio.',
+        'proj3.title': 'Cybersecurity Portfolio - TryHackMe',
+        'proj3.date': '2026 | Self-Learning',
+        'proj3.desc': 'Security learning through TryHackMe (OWASP Top 10, Security Engineer).',
+        'proj4.title': 'Nerveey – AI Parkinson Detection Concept',
+        'proj4.date': 'Creative Ideas Grant 2024 (University Level)',
+        'proj4.desc': 'Software concept for early Parkinson detection using CNN & NLP.',
+        'proj5.title': 'Verity Valor – Educational Board Game',
+        'proj5.date': 'Vessel Program - Business Incubation UMY 2024',
+        'proj5.desc': 'Educational game for digital literacy developed in incubation program.',
+        'proj6.title': '1st Place - Cloud Computing Competition',
+        'proj6.date': 'AWS & Yayasan Sagasitas Indonesia (2021)',
+        'proj6.desc': 'Tourism website UI/UX design with AWS implementation.',
+        'proj7.title': 'Graphic Design Portfolio',
+        'proj7.date': '2024 - 2026',
+        'proj7.desc': 'Collection of graphic design works including logos, posters, and infographics.',
+        'proj8.title': 'OtoPrint – Academic Document Vending Machine',
+        'proj8.date': 'Capstone Project (2025)',
+        'proj8.desc': 'Self-service document printing system with QR code verification.',
+        // Certifications
+        'cert.title': 'Certifications',
+        'cert1.name': 'BNSP Certification',
+        'cert1.desc': 'Software Analysis and Requirement (2026)',
+        'cert2.name': 'TOEIC Model Test',
+        'cert2.desc': 'Score 531 – HOPE (2025)',
+        'cert.view': 'Certificate',
+        'port.view': 'View Design Portfolio',
+        'documentation.view': 'Documentation',
+        
+        // Skills
+        'skills.title': 'Skills',
+        // Contact
+        'contact.title': 'Contact Me',
+        'contact.portfolio': 'Other portfolio:',
+        'form.name': 'Full Name',
+        'form.email': 'Email',
+        'form.message': 'Message',
+        'form.send': 'Send Message',
+        'form.note': '* Will be replied within 24 hours',
+        'cv.download': 'Download CV',
+        'footer.p1': '© 2026 Muhammad Zharfan Widyadana Hukmana | Information Technology UMY | QA Engineer & Aspiring IT Auditor',
+        'footer.p2': 'Open for Quality Assurance & Junior IT Auditor positions | Available immediately'
+    }
+};
 
-    if (typingElement) {
-        function typeEffect() {
-            const currentWord = words[i];
-            if (isDeleting) {
-                typingElement.textContent = currentWord.substring(0, j - 1);
-                j--;
-            } else {
-                typingElement.textContent = currentWord.substring(0, j + 1);
-                j++;
-            }
-            if (!isDeleting && j === currentWord.length) {
-                isDeleting = true;
-                setTimeout(typeEffect, 2000);
-            } else if (isDeleting && j === 0) {
-                isDeleting = false;
-                i = (i + 1) % words.length;
-                setTimeout(typeEffect, 500);
-            } else {
-                setTimeout(typeEffect, isDeleting ? 50 : 100);
-            }
+// ==================== TYPING EFFECT ====================
+const words = ["QA Engineer", "Aspiring IT Auditor", "Fresh Graduate TI UMY", "Bug Hunter", "AI Enthusiast"];
+let i = 0, j = 0, isDeleting = false;
+const typingElement = document.getElementById("typingText");
+
+if (typingElement) {
+    function typeEffect() {
+        const currentWord = words[i];
+        if (isDeleting) {
+            typingElement.textContent = currentWord.substring(0, j - 1);
+            j--;
+        } else {
+            typingElement.textContent = currentWord.substring(0, j + 1);
+            j++;
         }
-        typeEffect();
+        if (!isDeleting && j === currentWord.length) {
+            isDeleting = true;
+            setTimeout(typeEffect, 2000);
+        } else if (isDeleting && j === 0) {
+            isDeleting = false;
+            i = (i + 1) % words.length;
+            setTimeout(typeEffect, 500);
+        } else {
+            setTimeout(typeEffect, isDeleting ? 50 : 100);
+        }
     }
+    typeEffect();
+}
 
-    // ==================== DARK MODE ====================
-    const toggleBtn = document.getElementById('darkModeToggle');
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-        document.body.classList.add('dark');
-        if (toggleBtn) toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
-    } else {
-        if (toggleBtn) toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
-    }
-    if (toggleBtn) {
-        toggleBtn.addEventListener('click', () => {
-            document.body.classList.toggle('dark');
-            const isDark = document.body.classList.contains('dark');
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
-            toggleBtn.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
-        });
-    }
-
-    // ==================== SMOOTH SCROLL ====================
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            const href = this.getAttribute('href');
-            if (href === "#" || href === "") return;
-            const target = document.querySelector(href);
-            if (target) {
-                e.preventDefault();
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        });
+// ==================== DARK MODE ====================
+const toggleBtn = document.getElementById('darkModeToggle');
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+    document.body.classList.add('dark');
+    if (toggleBtn) toggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
+} else {
+    if (toggleBtn) toggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
+}
+if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        const isDark = document.body.classList.contains('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        toggleBtn.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
     });
+}
 
-    // ==================== FORM CONTACT HANDLER ====================
-    const contactForm = document.getElementById('realContactForm');
-    if (contactForm) {
-        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz5N_YLiNsI7ItE2p7XqSqBSph39ZBtnMAa7fGR4rz1ACYnpHAejQX9RJfmIb9_UYwP/exec';
-
-        contactForm.addEventListener('submit', async (e) => {
+// ==================== SMOOTH SCROLL ====================
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href === "#" || href === "") return;
+        const target = document.querySelector(href);
+        if (target) {
             e.preventDefault();
-
-            const name = document.getElementById('formName').value.trim();
-            const email = document.getElementById('formEmail').value.trim();
-            const message = document.getElementById('formMsg').value.trim();
-            const submitBtn = document.getElementById('submitBtn');
-            const originalText = submitBtn ? submitBtn.innerHTML : 'Kirim';
-
-            if (!name || !email || !message) {
-                showToast("Harap lengkapi semua field!", "error");
-                return;
-            }
-
-            if (!email.includes('@') || !email.includes('.')) {
-                showToast("Email tidak valid!", "error");
-                return;
-            }
-
-            if (submitBtn) {
-                submitBtn.disabled = true;
-                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Mengirim...';
-            }
-
-            try {
-                const formData = new URLSearchParams();
-                formData.append('name', name);
-                formData.append('email', email);
-                formData.append('message', message);
-
-                await fetch(GOOGLE_SCRIPT_URL, {
-                    method: 'POST',
-                    mode: 'no-cors',
-                    headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded',
-                    },
-                    body: formData.toString()
-                });
-
-                showToast(`Terima kasih ${name}! Pesan Anda telah terkirim.`, "success");
-                contactForm.reset();
-
-            } catch (error) {
-                console.error("Error:", error);
-                showToast("Gagal mengirim. Silakan kirim email langsung ke zharfanwidyadana@gmail.com", "error");
-            } finally {
-                if (submitBtn) {
-                    submitBtn.disabled = false;
-                    submitBtn.innerHTML = originalText;
-                }
-            }
-        });
-    }
-
-    // ==================== TOAST NOTIFICATION ====================
-    function showToast(message, type) {
-        const toast = document.createElement('div');
-        toast.className = 'toast-notif';
-        toast.style.backgroundColor = type === 'error' ? '#dc2626' : '#10b981';
-        toast.innerHTML = message;
-        document.body.appendChild(toast);
-
-        setTimeout(() => {
-            toast.remove();
-        }, 4000);
-    }
-
-    // ==================== DOWNLOAD CV BUTTON ====================
-    const downloadBtn = document.getElementById('downloadCVBtn');
-    if (downloadBtn) {
-        downloadBtn.addEventListener('click', (e) => {
-            // Link sudah langsung download, tidak perlu preventDefault
-            console.log("Download CV diklik");
-        });
-    }
-
-    // ==================== SOCIAL MEDIA (sudah pakai link asli, tidak perlu placeholder) ====================
-    // LinkedIn dan GitHub sudah menggunakan link asli, event listener tidak diperlukan lagi
-
-    // ==================== INTERSECTION OBSERVER (Fade In Animation) ====================
-    const observerOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = "1";
-                entry.target.style.transform = "translateY(0)";
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    document.querySelectorAll('.card, .org-card, .grid, .skills-wrapper, .contact-form').forEach(el => {
-        el.style.opacity = "0";
-        el.style.transform = "translateY(20px)";
-        el.style.transition = "all 0.5s ease";
-        observer.observe(el);
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
     });
+});
 
-    // ==================== LIGHTBOX / MODAL IMAGE WITH ZOOM ====================
-    const modal = document.getElementById('imageModal');
-    const modalImg = document.getElementById('modalImage');
-    const modalCaption = document.getElementById('modalCaption');
-    const closeModal = document.querySelector('.close-modal');
+// ==================== FORM CONTACT HANDLER ====================
+const contactForm = document.getElementById('realContactForm');
+if (contactForm) {
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz5N_YLiNsI7ItE2p7XqSqBSph39ZBtnMAa7fGR4rz1ACYnpHAejQX9RJfmIb9_UYwP/exec';
 
-    // Variabel untuk zoom
-    let currentZoom = 1;
-    let isPanning = false;
-    let startX, startY, translateX = 0, translateY = 0;
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const name = document.getElementById('formName').value.trim();
+        const email = document.getElementById('formEmail').value.trim();
+        const message = document.getElementById('formMsg').value.trim();
+        const submitBtn = document.getElementById('submitBtn');
+        const originalText = submitBtn ? submitBtn.innerHTML : 'Kirim';
 
-    // Fungsi untuk mereset transformasi
-    function resetTransform() {
-        currentZoom = 1;
-        translateX = 0;
-        translateY = 0;
-        updateTransform();
-    }
-
-    // Fungsi untuk update transformasi
-    function updateTransform() {
-        modalImg.style.transform = `translate(-50%, -50%) scale(${currentZoom}) translate(${translateX}px, ${translateY}px)`;
-    }
-
-    // Fungsi untuk membuka modal
-    window.openModal = function(imageSrc, caption) {
-        if (!modal || !modalImg || !modalCaption) {
-            console.error("Modal elements not found!");
-            window.open(imageSrc, '_blank');
+        if (!name || !email || !message) {
+            showToast("Harap lengkapi semua field!", "error");
             return;
         }
-        
+        if (!email.includes('@') || !email.includes('.')) {
+            showToast("Email tidak valid!", "error");
+            return;
+        }
+        if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Mengirim...';
+        }
         try {
-            modal.style.display = "block";
-            modalImg.src = imageSrc;
-            modalCaption.textContent = caption || "Sertifikat";
-            document.body.style.overflow = "hidden";
-            
-            // Reset zoom saat buka gambar baru
-            resetTransform();
-            
-            // Reset posisi gambar ke tengah
-            modalImg.style.position = "absolute";
-            modalImg.style.top = "50%";
-            modalImg.style.left = "50%";
-            
+            const formData = new URLSearchParams();
+            formData.append('name', name);
+            formData.append('email', email);
+            formData.append('message', message);
+            await fetch(GOOGLE_SCRIPT_URL, {
+                method: 'POST', mode: 'no-cors',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: formData.toString()
+            });
+            showToast(`Terima kasih ${name}! Pesan Anda telah terkirim.`, "success");
+            contactForm.reset();
         } catch (error) {
-            console.error("Error opening modal:", error);
-            window.open(imageSrc, '_blank');
-        }
-    };
-
-    // Fungsi Zoom In
-    function zoomIn() {
-        if (currentZoom < 3) {
-            currentZoom = Math.min(3, currentZoom + 0.2);
-            updateTransform();
-        }
-    }
-
-    // Fungsi Zoom Out
-    function zoomOut() {
-        if (currentZoom > 0.5) {
-            currentZoom = Math.max(0.5, currentZoom - 0.2);
-            updateTransform();
-        }
-    }
-
-    // Event handler untuk drag/pan
-    modalImg.addEventListener('mousedown', (e) => {
-        if (currentZoom > 1) {
-            isPanning = true;
-            startX = e.clientX - translateX;
-            startY = e.clientY - translateY;
-            modalImg.style.cursor = 'grabbing';
-            e.preventDefault();
-        }
-    });
-
-    document.addEventListener('mousemove', (e) => {
-        if (isPanning && currentZoom > 1) {
-            translateX = e.clientX - startX;
-            translateY = e.clientY - startY;
-            
-            // Batasi pergerakan agar gambar tidak keluar
-            const maxTranslateX = 200;
-            const maxTranslateY = 200;
-            translateX = Math.min(maxTranslateX, Math.max(-maxTranslateX, translateX));
-            translateY = Math.min(maxTranslateY, Math.max(-maxTranslateY, translateY));
-            
-            updateTransform();
-        }
-    });
-
-    document.addEventListener('mouseup', () => {
-        isPanning = false;
-        modalImg.style.cursor = 'grab';
-    });
-
-    // Zoom dengan wheel mouse
-    modalImg.addEventListener('wheel', (e) => {
-        if (e.deltaY < 0) {
-            zoomIn();
-        } else {
-            zoomOut();
-        }
-        e.preventDefault();
-    });
-
-    // Tombol zoom
-    document.getElementById('zoomInBtn')?.addEventListener('click', zoomIn);
-    document.getElementById('zoomOutBtn')?.addEventListener('click', zoomOut);
-    document.getElementById('zoomResetBtn')?.addEventListener('click', resetTransform);
-
-    // Tutup modal kalau klik tombol close
-    if (closeModal) {
-        closeModal.onclick = function() {
-            modal.style.display = "none";
-            document.body.style.overflow = "auto";
-            resetTransform();
-        };
-    }
-
-    // Tutup modal kalau klik di luar gambar
-    if (modal) {
-        modal.onclick = function(event) {
-            if (event.target === modal) {
-                modal.style.display = "none";
-                document.body.style.overflow = "auto";
-                resetTransform();
+            console.error("Error:", error);
+            showToast("Gagal mengirim. Silakan kirim email langsung ke zharfanwidyadana@gmail.com", "error");
+        } finally {
+            if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
             }
-        };
-    }
-
-    // Tutup modal dengan tombol ESC
-    document.addEventListener('keydown', function(event) {
-        if (event.key === "Escape" && modal && modal.style.display === "block") {
-            modal.style.display = "none";
-            document.body.style.overflow = "auto";
-            resetTransform();
         }
     });
+}
+
+function showToast(message, type) {
+    const toast = document.createElement('div');
+    toast.className = 'toast-notif';
+    toast.style.backgroundColor = type === 'error' ? '#dc2626' : '#10b981';
+    toast.innerHTML = message;
+    document.body.appendChild(toast);
+    setTimeout(() => toast.remove(), 4000);
+}
+
+// ==================== INTERSECTION OBSERVER ====================
+const observerOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+            observer.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+document.querySelectorAll('.card, .org-card, .grid, .skills-wrapper, .contact-form').forEach(el => {
+    el.style.opacity = "0";
+    el.style.transform = "translateY(20px)";
+    el.style.transition = "all 0.5s ease";
+    observer.observe(el);
+});
+
+// ==================== LIGHTBOX MODAL WITH ZOOM ====================
+const modal = document.getElementById('imageModal');
+const modalImg = document.getElementById('modalImage');
+const modalCaption = document.getElementById('modalCaption');
+const closeModal = document.querySelector('.close-modal');
+
+let currentZoom = 1, isPanning = false, startX, startY, translateX = 0, translateY = 0;
+
+function resetTransform() { currentZoom = 1; translateX = 0; translateY = 0; updateTransform(); }
+function updateTransform() { modalImg.style.transform = `translate(-50%, -50%) scale(${currentZoom}) translate(${translateX}px, ${translateY}px)`; }
+function zoomIn() { if (currentZoom < 3) { currentZoom = Math.min(3, currentZoom + 0.2); updateTransform(); } }
+function zoomOut() { if (currentZoom > 0.5) { currentZoom = Math.max(0.5, currentZoom - 0.2); updateTransform(); } }
+
+window.openModal = function(imageSrc, caption) {
+    if (!modal || !modalImg || !modalCaption) { window.open(imageSrc, '_blank'); return; }
+    modal.style.display = "block";
+    modalImg.src = imageSrc;
+    modalCaption.textContent = caption || "Sertifikat";
+    document.body.style.overflow = "hidden";
+    resetTransform();
+    modalImg.style.position = "absolute";
+    modalImg.style.top = "50%";
+    modalImg.style.left = "50%";
+};
+
+if (modalImg) {
+    modalImg.addEventListener('mousedown', (e) => {
+        if (currentZoom > 1) { isPanning = true; startX = e.clientX - translateX; startY = e.clientY - translateY; modalImg.style.cursor = 'grabbing'; e.preventDefault(); }
+    });
+}
+document.addEventListener('mousemove', (e) => {
+    if (isPanning && currentZoom > 1) {
+        translateX = e.clientX - startX;
+        translateY = e.clientY - startY;
+        translateX = Math.min(200, Math.max(-200, translateX));
+        translateY = Math.min(200, Math.max(-200, translateY));
+        updateTransform();
+    }
+});
+document.addEventListener('mouseup', () => { isPanning = false; if (modalImg) modalImg.style.cursor = 'grab'; });
+if (modalImg) modalImg.addEventListener('wheel', (e) => { e.deltaY < 0 ? zoomIn() : zoomOut(); e.preventDefault(); });
+
+document.getElementById('zoomInBtn')?.addEventListener('click', zoomIn);
+document.getElementById('zoomOutBtn')?.addEventListener('click', zoomOut);
+document.getElementById('zoomResetBtn')?.addEventListener('click', resetTransform);
+
+if (closeModal) closeModal.onclick = function() { modal.style.display = "none"; document.body.style.overflow = "auto"; resetTransform(); };
+if (modal) modal.onclick = function(e) { if (e.target === modal) { modal.style.display = "none"; document.body.style.overflow = "auto"; resetTransform(); } };
+document.addEventListener('keydown', function(e) { if (e.key === "Escape" && modal && modal.style.display === "block") { modal.style.display = "none"; document.body.style.overflow = "auto"; resetTransform(); } });
+
+// ==================== LANGUAGE SYSTEM (MENGGUNAKAN TRANSLATIONS OBJECT) ====================
+let currentLang = 'id';
+
+function applyLanguage(lang) {
+    currentLang = lang;
+    const t = translations[lang];
+    
+    // Update semua elemen dengan atribut data-i18n
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (t[key]) {
+            if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA' || el.tagName === 'BUTTON') {
+                // Untuk form elements, update value atau innerHTML
+                if (el.hasAttribute('data-i18n-placeholder')) {
+                    el.placeholder = t[key];
+                } else {
+                    el.innerHTML = t[key];
+                }
+            } else {
+                el.innerHTML = t[key];
+            }
+        }
+    });
+    
+    // Update placeholder untuk elemen dengan data-i18n-placeholder
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const key = el.getAttribute('data-i18n-placeholder');
+        if (t[key]) {
+            el.placeholder = t[key];
+        }
+    });
+    
+    // Update active state pada tombol language switch
+    const idBtn = document.getElementById('langIdBtn');
+    const enBtn = document.getElementById('langEnBtn');
+    if (idBtn && enBtn) {
+        if (lang === 'id') {
+            idBtn.classList.add('active');
+            enBtn.classList.remove('active');
+        } else {
+            idBtn.classList.remove('active');
+            enBtn.classList.add('active');
+        }
+    }
+    
+    localStorage.setItem('portfolioLang', lang);
+}
+
+function setLanguage(lang) {
+    applyLanguage(lang);
+    // Hide popup jika masih terlihat
+    const popup = document.getElementById('langPopup');
+    if (popup && popup.style.display !== 'none') {
+        popup.style.opacity = '0';
+        setTimeout(() => {
+            popup.style.display = 'none';
+        }, 400);
+    }
+}
+
+// Inisialisasi bahasa
+const savedLang = localStorage.getItem('portfolioLang');
+if (savedLang && (savedLang === 'id' || savedLang === 'en')) {
+    const popup = document.getElementById('langPopup');
+    if (popup) {
+        popup.style.display = 'none';
+    }
+    applyLanguage(savedLang);
+} else {
+    applyLanguage('id');
+}
 </script>
 </body>
 </html>
