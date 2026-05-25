@@ -2034,7 +2034,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     setLang(savedLang);
   } else {
     // Show popup with cycle greeting
-    const greetings = ['Welcome 👋', 'Selamat datang 🙏'];
+    const greetings = ['Welcome', 'Selamat datang'];
     let gi = 0;
     const gEl = document.getElementById('langGreeting');
     setInterval(() => { gi = (gi+1) % greetings.length; gEl.textContent = greetings[gi]; }, 2000);
