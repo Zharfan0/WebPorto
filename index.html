@@ -201,6 +201,123 @@
         .toast-notif { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); background: var(--accent); color: white; padding: 12px 24px; border-radius: 50px; font-weight: 500; z-index: 1000; animation: slideUp 0.3s ease; }
         @keyframes slideUp { from { opacity: 0; transform: translateX(-50%) translateY(20px); } to { opacity: 1; transform: translateX(-50%) translateY(0); } }
         @media (max-width: 768px) { .hero h1 { font-size: 2rem; } .nav-container { flex-direction: column; gap: 16px; } .nav-links { justify-content: center; gap: 18px; } .section-title { font-size: 1.8rem; } .grid { grid-template-columns: 1fr; } .stats-container { gap: 20px; } .stat-number { font-size: 1.4rem; } .floating-cv { bottom: 20px; right: 20px; } .floating-cv a { padding: 8px 16px; font-size: 0.8rem; } .nav-controls { margin-top: 10px; } }
+    
+        /* ==================== HAMBURGER MENU UNTUK HP ==================== */
+        .hamburger {
+            display: none;
+            background: var(--tag-bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 10px 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: var(--text-secondary);
+            margin: 4px 0;
+            transition: all 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .hamburger:hover {
+            background: var(--accent-glow);
+        }
+
+        /* Animasi hamburger menjadi X saat aktif */
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* Mobile navigation */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: row;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                position: relative;
+            }
+            
+            .hamburger {
+                display: block;
+                order: 1;
+            }
+            
+            .nav-controls {
+                order: 2;
+            }
+            
+            .logo {
+                order: 0;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 80%;
+                height: calc(100vh - 70px);
+                background: var(--bg-primary);
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 30px 24px;
+                gap: 20px;
+                transition: left 0.3s ease;
+                z-index: 1000;
+                box-shadow: 5px 0 20px rgba(0,0,0,0.1);
+                border-right: 1px solid var(--border);
+                overflow-y: auto;
+            }
+            
+            body.dark .nav-links {
+                background: var(--bg-primary);
+            }
+            
+            .nav-links.mobile-open {
+                left: 0;
+            }
+            
+            .nav-links li {
+                width: 100%;
+            }
+            
+            .nav-links a {
+                display: block;
+                padding: 12px 0;
+                font-size: 1.1rem;
+            }
+            
+            /* Overlay saat menu terbuka */
+            .menu-overlay {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: rgba(0,0,0,0.5);
+                z-index: 999;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+            }
+            
+            .menu-overlay.active {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    
     </style>
 </head>
 <body>
@@ -235,26 +352,37 @@
 
 <nav class="navbar">
     <div class="container nav-container">
-        <a href="#home" class="logo">Zharfan.</a>
-        <ul class="nav-links">
-            <li><a href="#home" data-i18n="nav.home">Beranda</a></li>
-            <li><a href="#about" data-i18n="nav.about">Tentang</a></li>
-            <li><a href="#education" data-i18n="nav.education">Pendidikan</a></li>
-            <li><a href="#experience" data-i18n="nav.experience">Pengalaman</a></li>
-            <li><a href="#organization" data-i18n="nav.organization">Organisasi</a></li>
-            <li><a href="#projects" data-i18n="nav.projects">Proyek</a></li>
-            <li><a href="#contact" data-i18n="nav.contact">Kontak</a></li>
-            <li><a href="./porto2.html">Porto V2</a></li>
-        </ul>
-        <div class="nav-controls">
-            <div class="lang-switch">
-                <button class="lang-switch-btn" id="langIdBtn" onclick="setLanguage('id')">ID</button>
-                <button class="lang-switch-btn" id="langEnBtn" onclick="setLanguage('en')">EN</button>
-            </div>
-            <button class="dark-toggle" id="darkModeToggle"><i class="fas fa-moon"></i></button>
+    <a href="#home" class="logo">Zharfan.</a>
+    
+    <!-- TAMBAHKAN TOMBOL HAMBURGER DI SINI -->
+    <button class="hamburger" id="hamburgerBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#home" data-i18n="nav.home">Beranda</a></li>
+        <li><a href="#about" data-i18n="nav.about">Tentang</a></li>
+        <li><a href="#education" data-i18n="nav.education">Pendidikan</a></li>
+        <li><a href="#experience" data-i18n="nav.experience">Pengalaman</a></li>
+        <li><a href="#organization" data-i18n="nav.organization">Organisasi</a></li>
+        <li><a href="#projects" data-i18n="nav.projects">Proyek</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Kontak</a></li>
+        <li><a href="./porto2.html">Porto V2</a></li>
+    </ul>
+    
+    <div class="nav-controls">
+        <div class="lang-switch">
+            <button class="lang-switch-btn" id="langIdBtn" onclick="setLanguage('id')">ID</button>
+            <button class="lang-switch-btn" id="langEnBtn" onclick="setLanguage('en')">EN</button>
         </div>
+        <button class="dark-toggle" id="darkModeToggle"><i class="fas fa-moon"></i></button>
     </div>
+</div>
 </nav>
+
+<div class="menu-overlay" id="menuOverlay"></div>
 
 <main>
     <!-- Hero Section -->
@@ -1217,6 +1345,57 @@ if (savedLang && (savedLang === 'id' || savedLang === 'en')) {
 } else {
     applyLanguage('id');
 }
+
+// ==================== HAMBURGER MENU ====================
+const hamburger = document.getElementById('hamburgerBtn');
+const navLinks = document.getElementById('navLinks');
+const menuOverlay = document.getElementById('menuOverlay');
+
+function toggleMenu() {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('mobile-open');
+    if (menuOverlay) {
+        menuOverlay.classList.toggle('active');
+    }
+    // Cegah scroll saat menu terbuka
+    if (navLinks.classList.contains('mobile-open')) {
+        document.body.style.overflow = 'hidden';
+    } else {
+        document.body.style.overflow = '';
+    }
+}
+
+function closeMenu() {
+    hamburger.classList.remove('active');
+    navLinks.classList.remove('mobile-open');
+    if (menuOverlay) {
+        menuOverlay.classList.remove('active');
+    }
+    document.body.style.overflow = '';
+}
+
+if (hamburger) {
+    hamburger.addEventListener('click', toggleMenu);
+}
+
+// Tutup menu saat klik overlay
+if (menuOverlay) {
+    menuOverlay.addEventListener('click', closeMenu);
+}
+
+// Tutup menu saat klik link di dalam nav
+if (navLinks) {
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+}
+
+// Tutup menu saat resize ke desktop
+window.addEventListener('resize', function() {
+    if (window.innerWidth > 768) {
+        closeMenu();
+    }
+});
 </script>
 </body>
 </html>
