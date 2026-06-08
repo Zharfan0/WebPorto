@@ -202,157 +202,6 @@
         @keyframes slideUp { from { opacity: 0; transform: translateX(-50%) translateY(20px); } to { opacity: 1; transform: translateX(-50%) translateY(0); } }
         @media (max-width: 768px) { .hero h1 { font-size: 2rem; } .nav-container { flex-direction: column; gap: 16px; } .nav-links { justify-content: center; gap: 18px; } .section-title { font-size: 1.8rem; } .grid { grid-template-columns: 1fr; } .stats-container { gap: 20px; } .stat-number { font-size: 1.4rem; } .floating-cv { bottom: 20px; right: 20px; } .floating-cv a { padding: 8px 16px; font-size: 0.8rem; } .nav-controls { margin-top: 10px; } }
     
-        /* Featured card border emas & efek */
-        .card.featured {
-            border: 1px solid #F5B041;
-            box-shadow: 0 0 8px rgba(245, 176, 65, 0.3);
-            position: relative;
-            overflow: visible;
-            background: linear-gradient(135deg, var(--card-bg) 0%, #fff8e6 100%);
-        }
-
-        body.dark .card.featured {
-            background: linear-gradient(135deg, var(--card-bg) 0%, #2a2415 100%);
-        }
-
-        .card.featured::before {
-            /* hilangkan garis biru di kiri untuk featured card */
-            display: none;
-        }
-
-        /* Badge di pojok kanan atas */
-        .featured-badge {
-            position: absolute;
-            top: -8px;
-            right: -8px;
-            background: linear-gradient(135deg, #F5B041, #E67E22);
-            color: white;
-            font-size: 0.7rem;
-            font-weight: 600;
-            padding: 4px 10px;
-            border-radius: 20px;
-            z-index: 10;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .card.featured::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 150px;
-            height: 150px;
-            background: radial-gradient(circle, rgba(245,176,65,0.15) 0%, transparent 70%);
-            pointer-events: none;
-            border-radius: 0 20px 0 100%;
-        }
-
-        .featured-badge i {
-            font-size: 0.7rem;
-        }
-
-        /* Style skill tags di dalam card featured */
-        .card.featured .skill-tag {
-            background: linear-gradient(135deg, #F5B041, #E67E22) !important;  /* emas tua */
-            color: #fff8e7 !important;
-            border: 1px solid #d4a017;
-        }
-
-        .card.featured .skill-tag i {
-            color: #fff8e7 !important;
-        }
-
-        /* Untuk dark mode, tetapi biar konsisten */
-        body.dark .card.featured .skill-tag {
-            background: linear-gradient(135deg, #F5B041, #E67E22) !important;
-            color: #0f172a !important;
-            border-color: #f0c040;
-        }
-
-        .card.featured .skill-tag:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.2), 0 0 0 2px #F5B041, 0 0 15px rgba(245, 176, 65, 0.6);
-            transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-            border-color: #F5B041;
-        }
-
-
-        .card.featured:hover {
-            transform: translateY(-8px) scale(1.03);
-            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.2), 0 0 0 2px #F5B041, 0 0 15px rgba(245, 176, 65, 0.6);
-            transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-            border-color: #F5B041;
-        }
-
-        /* Animasi glow saat load (hanya untuk .card.featured) */
-        @keyframes featuredGlow {
-            0% {
-                box-shadow: 0 0 0 0 rgba(245, 176, 65, 0.7);
-                border-color: #F5B041;
-            }
-            50% {
-                box-shadow: 0 0 0 6px rgba(245, 176, 65, 0.3);
-                border-color: #F5B041;
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(245, 176, 65, 0);
-                border-color: #F5B041;
-            }
-        }
-
-        .card.featured {
-            animation: featuredGlow 0.8s ease-out 1;
-        }
-        
-        /* Navigasi multiple images di modal */
-        .modal-nav {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 40px;
-            height: 40px;
-            background: rgba(0,0,0,0.6);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            color: white;
-            font-size: 1.2rem;
-            transition: all 0.2s;
-            z-index: 10002;
-        }
-        .modal-nav:hover {
-            background: var(--accent);
-        }
-        .modal-prev {
-            left: 20px;
-        }
-        .modal-next {
-            right: 20px;
-        }
-        .modal-counter {
-            position: absolute;
-            bottom: 80px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(0,0,0,0.6);
-            color: white;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            z-index: 10002;
-        }
-        @media (max-width: 768px) {
-            .modal-nav { width: 32px; height: 32px; font-size: 0.9rem; }
-            .modal-prev { left: 8px; }
-            .modal-next { right: 8px; }
-        }
-
         /* ==================== HAMBURGER MENU UNTUK HP ==================== */
         .hamburger {
             display: none;
@@ -494,12 +343,6 @@
     <span class="close-modal">&times;</span>
     <img loading="lazy" class="modal-content" id="modalImage">
     <div class="modal-caption" id="modalCaption"></div>
-    
-    <!-- Navigasi untuk multiple images (prev/next) -->
-    <div class="modal-nav modal-prev" id="modalPrev"><i class="fas fa-chevron-left"></i></div>
-    <div class="modal-nav modal-next" id="modalNext"><i class="fas fa-chevron-right"></i></div>
-    <div class="modal-counter" id="modalCounter"></div>
-    
     <div class="zoom-toolbar">
         <button class="zoom-btn" id="zoomOutBtn" title="Perkecil">−</button>
         <button class="zoom-btn" id="zoomResetBtn" title="Reset">⟳</button>
@@ -752,8 +595,7 @@
         <div class="container">
             <h2 class="section-title" data-i18n="projects.title">Proyek & Penghargaan</h2>
             <div class="grid">
-                <div class="card featured">
-                    <div class="featured-badge"><i class="fas fa-star"></i> Featured</div>
+                <div class="card">
                     <h3><i class="fas fa-heartbeat"></i> <span data-i18n="proj1.title">myHeartD v2 – Web AI Deteksi Jantung Koroner</span></h3>
                     <div class="date" data-i18n="proj1.date">HAKI No. 000947021 (2025) | Hibah Penelitian AI</div>
                     <p data-i18n="proj1.desc">Python, scikit-learn, Gradient Boosting. Model prediksi penyakit jantung dengan akurasi tinggi. Terdaftar di Direktorat Inovasi dan Hilirisasi UMY.</p>
@@ -761,8 +603,7 @@
                         <a href="https://chd-main.vercel.app" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo →</a>
                     </div>
                 </div>
-                <div class="card featured">
-                    <div class="featured-badge"><i class="fas fa-star"></i> Featured</div>
+                <div class="card">
                     <h3><i class="fas fa-vial"></i> <span data-i18n="proj2.title">Automation Testing Portofolio - Katalon Studio</span></h3>
                     <div class="date" data-i18n="proj2.date">2026 | Personal Project</div>
                     <p data-i18n="proj2.desc">Membuat automation testing suite untuk e-commerce demo menggunakan Katalon Studio. Mencakup login, search, add to cart, dan checkout flow.</p>
@@ -781,12 +622,10 @@
                         </a>
                     </div>
                 </div>
-                <!-- Cybersecurity card yang sudah dimodifikasi dengan 2 sertifikat Cisco -->
-                <div class="card featured">
-                    <div class="featured-badge"><i class="fas fa-star"></i> Featured</div>
-                    <h3><i class="fas fa-shield-alt"></i> <span data-i18n="proj3.title">Cybersecurity Portofolio</span></h3>
+                <div class="card">
+                    <h3><i class="fas fa-shield-alt"></i> <span data-i18n="proj3.title">Cybersecurity Portofolio - TryHackMe & Security Audit</span></h3>
                     <div class="date" data-i18n="proj3.date">2026 | Self-Learning</div>
-                    <p data-i18n="proj3.desc">Mempelajari dasar-dasar keamanan siber melalui platform CISCO & TryHackMe (Pre Security, OWASP Top 10, Security Engineer). Membuat sample security audit report untuk demo e-commerce.</p>
+                    <p data-i18n="proj3.desc">Mempelajari dasar-dasar keamanan siber melalui platform TryHackMe (Pre Security, OWASP Top 10, Security Engineer). Membuat sample security audit report untuk demo e-commerce.</p>
                     <div class="skills-wrapper" style="margin-top: 12px;">
                         <span class="skill-tag">OWASP Top 10</span>
                         <span class="skill-tag">Burp Suite</span>
@@ -799,12 +638,8 @@
                         <a href="https://github.com/Zharfan0/cybersecurity-portfolio" target="_blank" class="project-link">
                             <i class="fab fa-github"></i> GitHub Repository →
                         </a>
-                        <a href="javascript:void(0)" onclick='openImageSet(
-                            ["./Asset/sertifikat-Cisco-Certified-Support-Technician-Cybersecurity.png", 
-                            "./Asset/sertifikat-Cisco-Hasil-Cybersecurity.png"],
-                            "Sertifikat Cisco Cybersecurity"
-                        )' class="project-link">
-                            <i class="fas fa-certificate"></i> <span data-i18n="cert.view">Sertifikat Cisco</span> →
+                        <a href="#projects" target="_blank" class="project-link">
+                            <i class="fas fa-certificate"></i> <span data-i18n="cert.view">Sertifikat</span> →
                         </a>
                     </div>
                 </div>
@@ -1080,9 +915,9 @@ const translations = {
         'proj2.title': 'Automation Testing Portfolio - Katalon Studio',
         'proj2.date': '2026 | Personal Project',
         'proj2.desc': 'Membuat automation testing suite untuk e-commerce demo menggunakan Katalon Studio.',
-        'proj3.title': 'Cybersecurity Portfolio',
+        'proj3.title': 'Cybersecurity Portfolio - TryHackMe & Security Audit',
         'proj3.date': '2026 | Self-Learning',
-        'proj3.desc': 'Mempelajari dasar-dasar keamanan siber melalui platform CISCO & TryHackMe.',
+        'proj3.desc': 'Mempelajari dasar-dasar keamanan siber melalui platform TryHackMe.',
         'proj4.title': 'Nerveey – Konsep AI Deteksi Parkinson',
         'proj4.date': 'Hibah Kompetisi Ide Kreatif 2024 (Tingkat Universitas)',
         'proj4.desc': 'Inovasi ide perangkat lunak deteksi dini Parkinson dengan kombinasi CNN & NLP.',
@@ -1209,9 +1044,9 @@ const translations = {
         'proj2.title': 'Automation Testing Portfolio - Katalon Studio',
         'proj2.date': '2026 | Personal Project',
         'proj2.desc': 'Automation test suite for e-commerce demo using Katalon Studio.',
-        'proj3.title': 'Cybersecurity Portfolio',
+        'proj3.title': 'Cybersecurity Portfolio - TryHackMe',
         'proj3.date': '2026 | Self-Learning',
-        'proj3.desc': 'Security learning through CISCO & TryHackMe (OWASP Top 10, Security Engineer).',
+        'proj3.desc': 'Security learning through TryHackMe (OWASP Top 10, Security Engineer).',
         'proj4.title': 'Nerveey – AI Parkinson Detection Concept',
         'proj4.date': 'Creative Ideas Grant 2024 (University Level)',
         'proj4.desc': 'Software concept for early Parkinson detection using CNN & NLP.',
@@ -1498,74 +1333,6 @@ function setLanguage(lang) {
         }, 400);
     }
 }
-
-// ==================== MULTIPLE IMAGES MODAL ====================
-let currentImageSet = [];      // array of image src
-let currentImageIndex = 0;
-let currentSetCaption = '';
-
-function openImageSet(images, caption) {
-    if (!images || images.length === 0) return;
-    currentImageSet = images;
-    currentImageIndex = 0;
-    currentSetCaption = caption;
-    
-    // Tampilkan gambar pertama
-    modalImg.src = currentImageSet[0];
-    modalCaption.textContent = currentSetCaption + (currentImageSet.length > 1 ? ` (1/${currentImageSet.length})` : '');
-    
-    // Tampilkan/munculkan tombol navigasi jika lebih dari 1 gambar
-    const modalPrev = document.getElementById('modalPrev');
-    const modalNext = document.getElementById('modalNext');
-    const modalCounter = document.getElementById('modalCounter');
-    
-    if (currentImageSet.length > 1) {
-        modalPrev.style.display = 'flex';
-        modalNext.style.display = 'flex';
-        modalCounter.style.display = 'block';
-        modalCounter.textContent = `1 / ${currentImageSet.length}`;
-    } else {
-        modalPrev.style.display = 'none';
-        modalNext.style.display = 'none';
-        modalCounter.style.display = 'none';
-    }
-    
-    modal.style.display = 'block';
-    document.body.style.overflow = 'hidden';
-    resetTransform();
-}
-
-function nextImage() {
-    if (currentImageIndex < currentImageSet.length - 1) {
-        currentImageIndex++;
-        modalImg.src = currentImageSet[currentImageIndex];
-        modalCaption.textContent = currentSetCaption + ` (${currentImageIndex + 1}/${currentImageSet.length})`;
-        const modalCounter = document.getElementById('modalCounter');
-        if (modalCounter) modalCounter.textContent = `${currentImageIndex + 1} / ${currentImageSet.length}`;
-        resetTransform();
-    }
-}
-
-function prevImage() {
-    if (currentImageIndex > 0) {
-        currentImageIndex--;
-        modalImg.src = currentImageSet[currentImageIndex];
-        modalCaption.textContent = currentSetCaption + ` (${currentImageIndex + 1}/${currentImageSet.length})`;
-        const modalCounter = document.getElementById('modalCounter');
-        if (modalCounter) modalCounter.textContent = `${currentImageIndex + 1} / ${currentImageSet.length}`;
-        resetTransform();
-    }
-}
-
-// Event listener untuk tombol navigasi
-document.getElementById('modalPrev')?.addEventListener('click', (e) => {
-    e.stopPropagation();
-    prevImage();
-});
-document.getElementById('modalNext')?.addEventListener('click', (e) => {
-    e.stopPropagation();
-    nextImage();
-});
 
 // Inisialisasi bahasa
 const savedLang = localStorage.getItem('portfolioLang');
