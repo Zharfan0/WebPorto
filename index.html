@@ -582,12 +582,12 @@ body.dark .card.coming-soon .coming-soon-overlay {
     </button>
     
     <ul class="nav-links" id="navLinks">
-        <li><a href="#home" data-i18n="nav.home">Beranda</a></li>
         <li><a href="#about" data-i18n="nav.about">Tentang</a></li>
         <li><a href="#education" data-i18n="nav.education">Pendidikan</a></li>
+        <li><a href="#certifications" data-i18n="nav.certifications">Sertifikasi</a></li>
         <li><a href="#experience" data-i18n="nav.experience">Pengalaman</a></li>
-        <li><a href="#organization" data-i18n="nav.organization">Organisasi</a></li>
         <li><a href="#projects" data-i18n="nav.projects">Proyek</a></li>
+        <li><a href="#organization" data-i18n="nav.organization">Organisasi</a></li>
         <li><a href="#contact" data-i18n="nav.contact">Kontak</a></li>
     </ul>
     
@@ -762,7 +762,11 @@ body.dark .card.coming-soon .coming-soon-overlay {
                         <li data-i18n="exp1.l4">Membangun <em>automation test script</em> Katalon Studio (Groovy) untuk 4 alur bisnis kritis ERP</li>
                     </ul>
                     <div class="project-links">
-                        <a href="javascript:void(0)" onclick='openModal("#", "Bukti PWKT - Quality Assurance PT. Rimba Ananta Vikasa")'>
+                        <a href="javascript:void(0)" onclick='openImageSet(
+                            ["./Asset/PWKT-Rimba-Lembar1-Censor.png",
+                            "./Asset/PWKT-Rimba-Lembar2-Censor.png"],
+                            "CCST Cybersecurity Certificate & Score Report"
+                        )' class="project-link">
                             <i class="fas fa-certificate"></i> <span data-i18n="cert.view">Lihat Sertifikat</span> →
                         </a>
                     </div>
@@ -1069,6 +1073,7 @@ const translations = {
         'nav.home': 'Beranda',
         'nav.about': 'Tentang',
         'nav.education': 'Pendidikan',
+        'nav.certifications': 'Sertifikasi',
         'nav.experience': 'Pengalaman',
         'nav.organization': 'Organisasi',
         'nav.projects': 'Proyek',
@@ -1200,6 +1205,7 @@ const translations = {
         'nav.home': 'Home',
         'nav.about': 'About',
         'nav.education': 'Education',
+        'nav.certifications': 'certifications',
         'nav.experience': 'Experience',
         'nav.organization': 'Organization',
         'nav.projects': 'Projects',
