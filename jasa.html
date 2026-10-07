@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="Jasa QA & software testing: les privat Katalon & STLC, setup automation dasar, dan pengecekan QA untuk aplikasi Anda. Oleh Muhammad Zharfan Widyadana Hukmana.">
+<meta name="author" content="Muhammad Zharfan Widyadana Hukmana">
+<meta property="og:title" content="Jasa QA & Les Software Testing | Zharfan">
+<meta property="og:description" content="Les privat Katalon & STLC, Automation Starter, dan Cek Cepat QA.">
+<meta property="og:type" content="website">
+<title>Jasa QA & Les Software Testing | Zharfan</title>
+<link rel="icon" type="image/png" href="./Asset/favicon-badgecheck.png" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/e8191d8eec.js" crossorigin="anonymous"></script>
+<style>
+
+        /* ==================== SEMUA CSS SAMA PERSIS DENGAN KODE LAMA ==================== */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8fafc;
+            --bg-tertiary: #f1f5f9;
+            --text-primary: #0f172a;
+            --text-secondary: #334155;
+            --text-muted: #64748b;
+            --accent: #0f3b5c;
+            --accent-light: #1e4a6e;
+            --accent-lighter: #2c6288;
+            --accent-glow: rgba(15, 59, 92, 0.1);
+            --border: #e2e8f0;
+            --card-bg: #ffffff;
+            --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+            --shadow-lg: 0 20px 25px -12px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 25px 35px -12px rgba(0, 0, 0, 0.15);
+            --tag-bg: #eef2ff;
+            --tag-text: #1e3a5f;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --input-bg: #ffffff;
+            --input-border: #e2e8f0;
+            --input-text: #0f172a;
+            --input-placeholder: #64748b;
+        }
+        body { font-family: 'Inter', 'Poppins', sans-serif; background-color: var(--bg-primary); color: var(--text-primary); line-height: 1.5; scroll-behavior: smooth; transition: background-color 0.3s, color 0.2s; }
+        body.dark {
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --bg-tertiary: #0f172a;
+            --text-primary: #f1f5f9;
+            --text-secondary: #cbd5e1;
+            --text-muted: #94a3b8;
+            --accent: #2c7da0;
+            --accent-light: #3b8db0;
+            --accent-lighter: #4a9ec4;
+            --accent-glow: rgba(44, 125, 160, 0.15);
+            --border: #334155;
+            --card-bg: #1e293b;
+            --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+            --shadow-lg: 0 20px 25px -12px rgba(0, 0, 0, 0.4);
+            --shadow-xl: 0 25px 35px -12px rgba(0, 0, 0, 0.5);
+            --tag-bg: #2d3a5e;
+            --tag-text: #bbd7fb;
+            --input-bg: #1e293b;
+            --input-border: #334155;
+            --input-text: #f1f5f9;
+            --input-placeholder: #94a3b8;
+        }
+        /* Dark mode fixes (sama persis dengan kode lama) */
+        body.dark .card h3, body.dark .org-card h3, body.dark .org-card h3 i, body.dark .card h3 i { color: #f1f5f9 !important; }
+        body.dark .card .date, body.dark .card .role, body.dark .org-card .date { color: #90cdf4 !important; }
+        body.dark .card p, body.dark .card li, body.dark .org-card p, body.dark .skills-wrapper .skill-tag { color: #cbd5e1 !important; }
+        body.dark .skill-tag { background: #2d3a5e !important; color: #f1f5f9 !important; }
+        body.dark .skill-tag i { color: #f1f5f9 !important; }
+        body.dark .project-link, body.dark .project-links a { color: #90cdf4 !important; }
+        body.dark .project-link:hover, body.dark .project-links a:hover { color: #ffffff !important; }
+        body.dark .org-card { background: var(--card-bg); border-left-color: #2c7da0; }
+        body.dark .hero-badge { background: #2d3a5e; color: #f1f5f9; }
+        body.dark .contact-info-bar i { color: #90cdf4; }
+        body.dark .contact-info-bar a { color: #cbd5e1; }
+        body.dark .contact-info-bar a:hover { color: #ffffff; }
+        body.dark .stat-number { color: #90cdf4; }
+        body.dark .typing-text { color: #90cdf4; }
+        body.dark .section-title { color: #f1f5f9; }
+        body.dark .section-title:after { background: linear-gradient(90deg, #2c7da0, #4a9ec4); }
+        body.dark .logo { background: linear-gradient(135deg, #2c7da0, #4a9ec4, #6bb5d8); -webkit-background-clip: text; background-clip: text; }
+        body.dark .btn-outline { border-color: #2c7da0; color: #90cdf4; }
+        body.dark .btn-outline:hover { background: rgba(44, 125, 160, 0.2); color: #ffffff; }
+        body.dark .floating-cv a { background: linear-gradient(135deg, #2c7da0, #4a9ec4); }
+        body.dark .contact-form input, body.dark .contact-form textarea { background: #1e293b; border-color: #334155; color: #f1f5f9; }
+        body.dark .contact-form input:focus, body.dark .contact-form textarea:focus { border-color: #2c7da0; box-shadow: 0 0 0 3px rgba(44, 125, 160, 0.3); }
+        body.dark footer { color: #94a3b8; }
+        body.dark .contact-section a, body.dark #contact a { color: #90cdf4 !important; }
+        body.dark .contact-section a:hover, body.dark #contact a:hover { color: #ffffff !important; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-secondary); }
+        ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 10px; }
+        /* Language Popup Styles */
+        .lang-popup-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); backdrop-filter: blur(12px); z-index: 10000; display: flex; align-items: center; justify-content: center; transition: opacity 0.4s ease; }
+        .lang-popup-container { background: var(--bg-primary); border-radius: 32px; padding: 48px 40px; text-align: center; max-width: 440px; width: 90%; box-shadow: var(--shadow-xl); border: 1px solid var(--border); animation: popupFadeIn 0.5s cubic-bezier(0.34,1.56,0.64,1); }
+        @keyframes popupFadeIn { from { opacity: 0; transform: translateY(30px) scale(0.96); } to { opacity: 1; transform: translateY(0) scale(1); } }
+        .lang-popup-container h2 { font-size: 2rem; margin-bottom: 12px; color: var(--text-primary); }
+        .lang-popup-container p { color: var(--text-muted); margin-bottom: 32px; }
+        .lang-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+        .lang-btn-popup { padding: 14px 32px; border-radius: 50px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease; border: none; font-family: inherit; }
+        .lang-btn-primary { background: linear-gradient(135deg, var(--accent), var(--accent-light)); color: white; }
+        .lang-btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 20px var(--accent-glow); }
+        .lang-btn-secondary { background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border); }
+        .lang-btn-secondary:hover { transform: translateY(-3px); background: var(--accent); color: white; border-color: var(--accent); }
+        /* Language Switch di Navbar */
+        .nav-controls { display: flex; align-items: center; gap: 12px; }
+        .lang-switch { background: var(--tag-bg); border: 1px solid var(--border); border-radius: 40px; padding: 4px; display: flex; gap: 4px; }
+        .lang-switch-btn { padding: 6px 14px; border-radius: 30px; border: none; background: transparent; font-size: 0.8rem; font-weight: 600; cursor: pointer; transition: all 0.2s; color: var(--text-secondary); }
+        .lang-switch-btn.active { background: var(--accent); color: white; }
+        .lang-switch-btn:hover:not(.active) { background: var(--accent-glow); color: var(--accent); }
+        /* Navbar */
+        .navbar { position: sticky; top: 0; background: var(--bg-primary); backdrop-filter: blur(12px); background-color: rgba(var(--bg-primary-rgb,255,255,255),0.85); border-bottom: 1px solid var(--border); z-index: 1000; padding: 16px 0; transition: all 0.3s; }
+        body.dark .navbar { background-color: rgba(15,23,42,0.9); }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .logo { font-size: 1.6rem; font-weight: 800; background: linear-gradient(135deg, var(--accent), var(--accent-light), var(--accent-lighter)); background-size: 200% 200%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: gradientShift 3s ease infinite; text-decoration: none; }
+        @keyframes gradientShift { 0%,100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+        .nav-links { display: flex; gap: 28px; list-style: none; align-items: center; flex-wrap: wrap; }
+        .nav-links a { text-decoration: none; color: var(--text-secondary); font-weight: 500; transition: all 0.2s; position: relative; }
+        .nav-links a:after { content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px; background: var(--accent); transition: width 0.3s; }
+        .nav-links a:hover:after { width: 100%; }
+        .nav-links a:hover { color: var(--accent); }
+        .dark-toggle { background: var(--tag-bg); border: none; font-size: 1.2rem; cursor: pointer; padding: 8px 12px; border-radius: 40px; color: var(--accent); transition: all 0.2s; }
+        .dark-toggle:hover { transform: scale(1.05); }
+        .btn { display: inline-block; padding: 12px 28px; border-radius: 40px; font-weight: 600; text-decoration: none; transition: all 0.3s ease; margin: 6px 8px 6px 0; border: 1px solid transparent; cursor: pointer; }
+        .btn-primary { background: linear-gradient(135deg, var(--accent), var(--accent-light)); color: white; box-shadow: 0 4px 12px var(--accent-glow); }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 20px var(--accent-glow); }
+        .btn-outline { border: 1px solid var(--accent); color: var(--accent); background: transparent; }
+        .btn-outline:hover { background: var(--accent-glow); transform: translateY(-3px); }
+        .hero { padding: 80px 0 60px; text-align: center; position: relative; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 30% 50%, var(--accent-glow) 0%, transparent 50%); pointer-events: none; }
+        .hero h1 { font-size: 3.2rem; font-weight: 800; margin-bottom: 16px; background: linear-gradient(135deg, var(--text-primary), var(--accent-light)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .hero .badge-container { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
+        .hero-badge { background: var(--tag-bg); color: var(--tag-text); padding: 6px 16px; border-radius: 40px; font-size: 0.8rem; font-weight: 500; }
+        .typing-text { font-size: 1.3rem; color: var(--accent); font-weight: 600; min-height: 60px; margin-bottom: 20px; }
+        .stats-container { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin: 40px 0 20px; }
+        .stat-item { text-align: center; }
+        .stat-number { font-size: 1.8rem; font-weight: 800; color: var(--accent); }
+        .stat-label { font-size: 0.8rem; color: var(--text-muted); }
+        .contact-info-bar { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-top: 20px; font-size: 0.9rem; color: var(--text-secondary); }
+        .contact-info-bar a { color: var(--text-secondary); text-decoration: none; transition: color 0.2s; }
+        .contact-info-bar a:hover { color: var(--accent); }
+        .contact-info-bar i { margin-right: 8px; color: var(--accent); }
+        section { padding: 70px 0; border-bottom: 1px solid var(--border); }
+        .section-title { font-size: 2rem; font-weight: 700; margin-bottom: 40px; position: relative; display: inline-block; }
+        .section-title:after { content: ''; position: absolute; bottom: -10px; left: 0; width: 60px; height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light)); border-radius: 4px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 28px; }
+        .card { background: var(--card-bg); border-radius: 20px; padding: 24px; box-shadow: var(--shadow); border: 1px solid var(--border); transition: all 0.5s cubic-bezier(0.4,0,0.2,1); position: relative; overflow: hidden; }
+        .card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 0; background: linear-gradient(180deg, var(--accent), var(--accent-light)); transition: height 0.3s; }
+        .card:hover::before { height: 100%; }
+        .card:hover { transform: translateY(-8px) scale(1.02); box-shadow: var(--shadow-xl); }
+        .card h3 { font-size: 1.35rem; margin-bottom: 12px; color: var(--text-primary); }
+        .card .date, .card .role { font-size: 0.8rem; color: var(--accent); font-weight: 600; margin-bottom: 12px; }
+        .card ul { margin-left: 18px; color: var(--text-secondary); }
+        .card li { margin-bottom: 8px; }
+        .skill-tag { display: inline-block; background: var(--tag-bg); color: var(--tag-text); padding: 6px 14px; border-radius: 40px; font-size: 0.75rem; font-weight: 500; margin: 6px 6px 0 0; transition: all 0.2s ease; cursor: default; }
+        .skill-tag:hover { transform: translateY(-2px); background: var(--accent) !important; color: #ffffff !important; }
+        .skill-tag:hover i { color: #ffffff !important; }
+        body.dark .skill-tag:hover { background: var(--accent) !important; color: #ffffff !important; }
+        body.dark .skill-tag:hover i { color: #ffffff !important; }
+        .project-links { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 20px; }
+        .project-links a { color: var(--accent); text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: all 0.2s; }
+        .project-links a:hover { margin-left: 5px; }
+        .skills-wrapper { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 12px; }
+        .org-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+        .org-card { background: var(--card-bg); border-radius: 16px; padding: 20px; border-left: 4px solid var(--accent); box-shadow: var(--shadow); transition: all 0.3s; }
+        .org-card:hover { transform: translateX(5px); box-shadow: var(--shadow-lg); }
+        .org-card h3 i { color: var(--accent); margin-right: 12px; width: 28px; }
+        .project-link { display: inline-flex; align-items: center; gap: 6px; color: var(--accent); text-decoration: none; font-weight: 500; font-size: 0.9rem; transition: transform 0.2s ease; }
+        .project-link:hover { transform: translateX(5px); }
+        .contact-form { display: flex; flex-direction: column; gap: 20px; max-width: 600px; margin-top: 30px; }
+        .contact-form input, .contact-form textarea { padding: 14px 18px; border-radius: 16px; border: 2px solid var(--border); background: var(--bg-primary); color: var(--text-primary); font-family: inherit; transition: all 0.2s; }
+        .contact-form input::placeholder, .contact-form textarea::placeholder { color: var(--input-placeholder); }
+        .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-glow); }
+        .contact-form button { width: fit-content; background: linear-gradient(135deg, var(--accent), var(--accent-light)); color: white; border: none; cursor: pointer; transition: all 0.2s; }
+        .contact-form button:disabled { opacity: 0.6; cursor: not-allowed; }
+        .social-links { display: flex; gap: 24px; margin-top: 24px; flex-wrap: wrap; }
+        .social-links a { color: var(--text-secondary); font-size: 1.6rem; transition: all 0.2s; }
+        .social-links a:hover { color: var(--accent); transform: translateY(-5px) scale(1.1); }
+        .floating-cv { position: fixed; bottom: 30px; right: 30px; z-index: 999; }
+        .floating-cv a { display: flex; align-items: center; gap: 10px; background: linear-gradient(135deg, var(--accent), var(--accent-light)); color: white; padding: 12px 24px; border-radius: 50px; text-decoration: none; font-weight: 600; box-shadow: var(--shadow-lg); transition: all 0.3s; }
+        .floating-cv a:hover { transform: translateY(-5px); box-shadow: var(--shadow-xl); }
+        footer { text-align: center; padding: 32px; color: var(--text-muted); font-size: 0.85rem; }
+        .modal { display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9); backdrop-filter: blur(5px); cursor: pointer; }
+        .modal-content { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); max-width: 90%; max-height: 90%; object-fit: contain; border-radius: 12px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); transition: transform 0.1s ease; cursor: grab; }
+        .modal-content:active { cursor: grabbing; }
+        .close-modal { position: absolute; top: 20px; right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold; transition: 0.3s; cursor: pointer; z-index: 10000; }
+        .close-modal:hover { color: var(--accent); }
+        .modal-caption { position: absolute; bottom: 20px; left: 0; right: 0; text-align: center; color: white; font-size: 14px; background: rgba(0,0,0,0.6); padding: 8px; margin: 0 auto; width: fit-content; border-radius: 20px; }
+        .zoom-toolbar { position: fixed; bottom: 30px; right: 30px; display: flex; gap: 12px; background: rgba(0,0,0,0.7); padding: 12px 18px; border-radius: 60px; z-index: 10001; backdrop-filter: blur(8px); box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+        .zoom-btn { background: var(--accent); border: none; color: white; font-size: 1.3rem; font-weight: bold; width: 42px; height: 42px; border-radius: 50%; cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; justify-content: center; }
+        .zoom-btn:hover { background: var(--accent-light); transform: scale(1.08); }
+        .reset-btn { background: #dc2626; }
+        .reset-btn:hover { background: #b91c1c; }
+        @media (max-width: 768px) { .zoom-toolbar { bottom: 20px; right: 20px; padding: 8px 14px; gap: 8px; } .zoom-btn { width: 36px; height: 36px; font-size: 1.1rem; } }
+        .toast-notif { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); background: var(--accent); color: white; padding: 12px 24px; border-radius: 50px; font-weight: 500; z-index: 1000; animation: slideUp 0.3s ease; }
+        @keyframes slideUp { from { opacity: 0; transform: translateX(-50%) translateY(20px); } to { opacity: 1; transform: translateX(-50%) translateY(0); } }
+        @media (max-width: 768px) { .hero h1 { font-size: 2rem; } .nav-container { flex-direction: column; gap: 16px; } .nav-links { justify-content: center; gap: 18px; } .section-title { font-size: 1.8rem; } .grid { grid-template-columns: 1fr; } .stats-container { gap: 20px; } .stat-number { font-size: 1.4rem; } .floating-cv { bottom: 20px; right: 20px; } .floating-cv a { padding: 8px 16px; font-size: 0.8rem; } .nav-controls { margin-top: 10px; } }
+    
+        /* Modal CV */
+        .cv-modal {
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(4px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .cv-modal-content {
+            background: var(--bg-primary);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 420px;
+            width: 90%;
+            text-align: center;
+            box-shadow: var(--shadow-xl);
+            border: 1px solid var(--border);
+            position: relative;
+        }
+        .cv-modal-close {
+            position: absolute;
+            top: 12px;
+            right: 20px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--text-muted);
+        }
+        .cv-modal-close:hover { color: var(--text-primary); }
+        .cv-modal-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+            font-family: var(--serif, 'Inter');
+        }
+        .cv-modal-content p {
+            color: var(--text-muted);
+            margin-bottom: 24px;
+            font-size: 0.9rem;
+        }
+        .cv-modal-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .cv-modal-buttons .btn {
+            width: 100%;
+            justify-content: center;
+            padding: 14px;
+            font-size: 0.95rem;
+        }
+
+
+        /* Featured card border emas & efek */
+        .card.featured {
+            border: 1px solid #F5B041;
+            box-shadow: 0 0 8px rgba(245, 176, 65, 0.3);
+            position: relative;
+            overflow: visible;
+            background: linear-gradient(135deg, var(--card-bg) 0%, #fff8e6 100%);
+        }
+
+        body.dark .card.featured {
+            background: linear-gradient(135deg, var(--card-bg) 0%, #2a2415 100%);
+        }
+
+        .card.featured::before {
+            /* hilangkan garis biru di kiri untuk featured card */
+            display: none;
+        }
+
+        /* Badge di pojok kanan atas */
+        .featured-badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: linear-gradient(135deg, #F5B041, #E67E22);
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 20px;
+            z-index: 10;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .card.featured::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, rgba(245,176,65,0.15) 0%, transparent 70%);
+            pointer-events: none;
+            border-radius: 0 20px 0 100%;
+        }
+
+        .featured-badge i {
+            font-size: 0.7rem;
+        }
+
+        /* Style skill tags di dalam card featured */
+        .card.featured .skill-tag {
+            background: linear-gradient(135deg, #F5B041, #E67E22) !important;  /* emas tua */
+            color: #fff8e7 !important;
+            border: 1px solid #d4a017;
+        }
+
+        .card.featured .skill-tag i {
+            color: #fff8e7 !important;
+        }
+
+        /* Untuk dark mode, tetapi biar konsisten */
+        body.dark .card.featured .skill-tag {
+            background: linear-gradient(135deg, #F5B041, #E67E22) !important;
+            color: #0f172a !important;
+            border-color: #f0c040;
+        }
+
+        .card.featured .skill-tag:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.2), 0 0 0 2px #F5B041, 0 0 15px rgba(245, 176, 65, 0.6);
+            transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            border-color: #F5B041;
+        }
+
+
+        .card.featured:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.2), 0 0 0 2px #F5B041, 0 0 15px rgba(245, 176, 65, 0.6);
+            transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            border-color: #F5B041;
+        }
+
+        /* Animasi glow saat load (hanya untuk .card.featured) */
+        @keyframes featuredGlow {
+            0% {
+                box-shadow: 0 0 0 0 rgba(245, 176, 65, 0.7);
+                border-color: #F5B041;
+            }
+            50% {
+                box-shadow: 0 0 0 6px rgba(245, 176, 65, 0.3);
+                border-color: #F5B041;
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(245, 176, 65, 0);
+                border-color: #F5B041;
+            }
+        }
+
+        .card.featured {
+            animation: featuredGlow 0.8s ease-out 1;
+        }
+        
+        /* Navigasi multiple images di modal */
+        .modal-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background: rgba(0,0,0,0.6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: white;
+            font-size: 1.2rem;
+            transition: all 0.2s;
+            z-index: 10002;
+        }
+        .modal-nav:hover {
+            background: var(--accent);
+        }
+        .modal-prev {
+            left: 20px;
+        }
+        .modal-next {
+            right: 20px;
+        }
+        .modal-counter {
+            position: absolute;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.6);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            z-index: 10002;
+        }
+        @media (max-width: 768px) {
+            .modal-nav { width: 32px; height: 32px; font-size: 0.9rem; }
+            .modal-prev { left: 8px; }
+            .modal-next { right: 8px; }
+        }
+
+        /* ==================== HAMBURGER MENU UNTUK HP ==================== */
+        .hamburger {
+            display: none;
+            background: var(--tag-bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 10px 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: var(--text-secondary);
+            margin: 4px 0;
+            transition: all 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .hamburger:hover {
+            background: var(--accent-glow);
+        }
+
+        /* Animasi hamburger menjadi X saat aktif */
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* Mobile navigation */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: row;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                position: relative;
+            }
+            
+            .hamburger {
+                display: block;
+                order: 1;
+            }
+            
+            .nav-controls {
+                order: 2;
+            }
+            
+            .logo {
+                order: 0;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 80%;
+                height: calc(100vh - 70px);
+                background: var(--bg-primary);
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 30px 24px;
+                gap: 20px;
+                transition: left 0.3s ease;
+                z-index: 1000;
+                box-shadow: 5px 0 20px rgba(0,0,0,0.1);
+                border-right: 1px solid var(--border);
+                overflow-y: auto;
+            }
+            
+            body.dark .nav-links {
+                background: var(--bg-primary);
+            }
+            
+            .nav-links.mobile-open {
+                left: 0;
+            }
+            
+            .nav-links li {
+                width: 100%;
+            }
+            
+            .nav-links a {
+                display: block;
+                padding: 12px 0;
+                font-size: 1.1rem;
+            }
+            
+            /* Overlay saat menu terbuka */
+            .menu-overlay {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: rgba(0,0,0,0.5);
+                z-index: 999;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+            }
+            
+            .menu-overlay.active {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        /*_____________________Comingsoon__________________________*/
+        /* Card with "coming soon" effect */
+.card.coming-soon {
+    position: relative;
+    overflow: hidden;
+}
+
+.card.coming-soon .card-content {
+    filter: blur(3px);
+    transition: filter 0.3s;
+    pointer-events: none;
+    user-select: none;
+}
+
+.card.coming-soon:hover .card-content {
+    filter: blur(2px);
+}
+
+.card.coming-soon .coming-soon-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(4px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    z-index: 5;
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.card.coming-soon:hover .coming-soon-overlay {
+    opacity: 1;
+}
+
+.coming-soon-overlay i {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.coming-soon-overlay span {
+    font-size: 0.85rem;
+    font-weight: 600;
+    background: rgba(0,0,0,0.7);
+    padding: 6px 12px;
+    border-radius: 30px;
+}
+
+/* Dark mode adjustment */
+body.dark .card.coming-soon .coming-soon-overlay {
+    background: rgba(0,0,0,0.7);
+}
+
+/*----------------------- Comingsoon-------------------- */
+    
+    
+
+/* ==================== KHUSUS HALAMAN JASA ==================== */
+.svc-hero { padding: 80px 0 50px; text-align: center; }
+.svc-hero h1 { font-size: 2.6rem; font-weight: 800; line-height: 1.2; margin-bottom: 16px; }
+.svc-hero p.lead { max-width: 680px; margin: 0 auto 28px; color: var(--text-secondary); font-size: 1.1rem; }
+.trust-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 28px; }
+.trust-chip { background: var(--tag-bg); color: var(--tag-text); padding: 8px 16px; border-radius: 40px; font-size: 0.8rem; font-weight: 500; }
+.trust-chip i { margin-right: 6px; color: var(--accent); }
+body.dark .trust-chip { background: #2d3a5e; color: #f1f5f9; }
+body.dark .trust-chip i { color: #90cdf4; }
+.svc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; align-items: stretch; }
+.svc-card { display: flex; flex-direction: column; }
+.svc-card .svc-tag { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+.svc-card.main { border: 2px solid var(--accent); }
+.svc-card .svc-for { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 14px; }
+.svc-card h4 { font-size: 0.85rem; margin: 14px 0 6px; color: var(--text-primary); }
+.svc-card ul { margin-left: 18px; color: var(--text-secondary); font-size: 0.92rem; }
+.svc-card li { margin-bottom: 5px; }
+.svc-card .svc-limit { background: var(--bg-secondary); border-radius: 12px; padding: 10px 14px; font-size: 0.85rem; color: var(--text-secondary); margin-top: 12px; }
+.svc-card .svc-foot { margin-top: auto; padding-top: 18px; }
+.svc-price { font-weight: 700; font-size: 1.05rem; margin-bottom: 10px; color: var(--text-primary); }
+.svc-card .btn { margin: 0; width: 100%; text-align: center; }
+body.dark .svc-card h4, body.dark .svc-card .svc-price { color: #f1f5f9 !important; }
+body.dark .svc-card .svc-tag { color: #90cdf4; }
+body.dark .svc-card ul, body.dark .svc-card .svc-limit { color: #cbd5e1 !important; }
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+.step { background: var(--card-bg); border: 1px solid var(--border); border-radius: 20px; padding: 22px; box-shadow: var(--shadow); }
+.step .num { width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent-light)); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; margin-bottom: 12px; }
+.step h3 { font-size: 1.05rem; margin-bottom: 6px; }
+.step p { font-size: 0.9rem; color: var(--text-secondary); }
+body.dark .step h3 { color: #f1f5f9; }
+body.dark .step p { color: #cbd5e1; }
+.proof { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+.proof .card h3 i { color: var(--accent); margin-right: 8px; }
+.faq details { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 16px 20px; margin-bottom: 12px; }
+.faq summary { cursor: pointer; font-weight: 600; color: var(--text-primary); }
+.faq details p { margin-top: 10px; color: var(--text-secondary); font-size: 0.95rem; }
+body.dark .faq summary { color: #f1f5f9; }
+body.dark .faq details p { color: #cbd5e1; }
+.contact-form select { padding: 14px 18px; border-radius: 16px; border: 2px solid var(--border); background: var(--bg-primary); color: var(--text-primary); font-family: inherit; }
+.contact-form select:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-glow); }
+body.dark .contact-form select { background: #1e293b; border-color: #334155; color: #f1f5f9; }
+.back-link { display: inline-block; margin-top: 10px; color: var(--accent); text-decoration: none; font-weight: 600; }
+body.dark .back-link { color: #90cdf4; }
+@media (max-width: 768px) { .svc-hero h1 { font-size: 1.9rem; } .svc-hero { padding: 50px 0 30px; } }
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container nav-container">
+    <a href="index.html" class="logo">Zharfan.</a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#layanan" data-i18n="nav.services">Layanan</a></li>
+      <li><a href="#cara-kerja" data-i18n="nav.how">Cara Kerja</a></li>
+      <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
+      <li><a href="#pesan" data-i18n="nav.order">Pesan</a></li>
+      <li><a href="index.html" data-i18n="nav.portfolio">Portofolio</a></li>
+    </ul>
+    <div class="nav-controls">
+      <div class="lang-switch">
+        <button class="lang-switch-btn" id="langIdBtn" onclick="setLanguage('id')">ID</button>
+        <button class="lang-switch-btn" id="langEnBtn" onclick="setLanguage('en')">EN</button>
+      </div>
+      <button class="dark-toggle" id="darkModeToggle"><i class="fas fa-moon"></i></button>
+    </div>
+  </div>
+</nav>
+<div class="menu-overlay" id="menuOverlay"></div>
+
+<main>
+  <section class="svc-hero">
+    <div class="container">
+      <h1 data-i18n="hero.title">Jasa QA &amp; Les Software Testing</h1>
+      <p class="lead" data-i18n="hero.lead">Bantu tim kecil memastikan aplikasinya bekerja dengan benar, dan bantu Anda belajar software testing dari praktisi yang mengajarkannya di kampus.</p>
+      <div class="trust-row">
+        <span class="trust-chip"><i class="fas fa-chalkboard-teacher"></i><span data-i18n="trust.1">Asisten dosen Pengujian &amp; Penjaminan Mutu Perangkat Lunak (2 semester)</span></span>
+        <span class="trust-chip"><i class="fas fa-bug"></i><span data-i18n="trust.2">QA aplikasi ERP: 160+ task Agile, 22 bug klien diselesaikan</span></span>
+        <span class="trust-chip"><i class="fas fa-tools"></i><span data-i18n="trust.3">Katalon Studio · Selenium · Maestro · Jira</span></span>
+      </div>
+      <a href="#layanan" class="btn btn-primary" data-i18n="hero.btn1"><i class="fas fa-list"></i> Lihat Layanan</a>
+      <a href="#" class="btn btn-outline" id="heroWa" target="_blank" rel="noopener" data-i18n="hero.btn2"><i class="fab fa-whatsapp"></i> Tanya via WhatsApp</a>
+    </div>
+  </section>
+
+  <section id="layanan">
+    <div class="container">
+      <h2 class="section-title" data-i18n="svc.title">Layanan</h2>
+      <div class="svc-grid" id="svcGrid"></div>
+    </div>
+  </section>
+
+  <section id="cara-kerja">
+    <div class="container">
+      <h2 class="section-title" data-i18n="how.title">Cara Kerja</h2>
+      <div class="steps" id="stepsGrid"></div>
+    </div>
+  </section>
+
+  <section id="bukti">
+    <div class="container">
+      <h2 class="section-title" data-i18n="proof.title">Latar Belakang</h2>
+      <div class="proof" id="proofGrid"></div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="container">
+      <h2 class="section-title" data-i18n="faq.title">Pertanyaan Umum</h2>
+      <div class="faq" id="faqList"></div>
+    </div>
+  </section>
+
+  <section id="pesan">
+    <div class="container">
+      <h2 class="section-title" data-i18n="order.title">Pesan / Konsultasi</h2>
+      <p style="color: var(--text-secondary); max-width: 640px;" data-i18n="order.lead">Isi singkat kebutuhan Anda. Saya balas dalam 1x24 jam untuk menjadwalkan konsultasi awal (15-20 menit, gratis).</p>
+      <form id="orderForm" class="contact-form">
+        <input type="text" id="oName" required data-i18n-placeholder="form.name" placeholder="Nama lengkap">
+        <input type="text" id="oContact" required data-i18n-placeholder="form.contact" placeholder="Email atau nomor WhatsApp">
+        <select id="oService" required></select>
+        <textarea rows="4" id="oMsg" required data-i18n-placeholder="form.msg" placeholder="Ceritakan kebutuhan Anda secara singkat"></textarea>
+        <button type="submit" class="btn btn-primary" id="oSubmit"><i class="fas fa-paper-plane"></i> <span data-i18n="form.send">Kirim</span></button>
+      </form>
+      <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 12px;">
+        <span data-i18n="order.or">Lebih suka langsung chat?</span>
+        <a href="#" id="formWa" target="_blank" rel="noopener" class="project-link" data-i18n="order.wa">Buka WhatsApp</a> ·
+        <a href="mailto:zharfanwidyadana@gmail.com" class="project-link">zharfanwidyadana@gmail.com</a>
+      </p>
+      <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> <span data-i18n="back">Kembali ke portofolio</span></a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2026 Muhammad Zharfan Widyadana Hukmana</p>
+</footer>
+
+<script>
+// ==================== KONFIGURASI (EDIT DI SINI) ====================
+const WA_NUMBER = '6281215946218';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz5N_YLiNsI7ItE2p7XqSqBSph39ZBtnMAa7fGR4rz1ACYnpHAejQX9RJfmIb9_UYwP/exec';
+// Isi harga setelah survei pasar, contoh: 'Rp 400.000'. Kosong = tampil "tanyakan harga via WhatsApp".
+const PRICES = { tutor: '', automation: '', quickqa: '' };
+
+// ==================== KONTEN BILINGUAL ====================
+const T = {
+  id: {
+    'nav.services':'Layanan','nav.how':'Cara Kerja','nav.faq':'FAQ','nav.order':'Pesan','nav.portfolio':'Portofolio',
+    'hero.title':'Jasa QA & Les Software Testing',
+    'hero.lead':'Bantu tim kecil memastikan aplikasinya bekerja dengan benar, dan bantu Anda belajar software testing dari praktisi yang mengajarkannya di kampus.',
+    'trust.1':'Asisten dosen Pengujian & Penjaminan Mutu Perangkat Lunak (2 semester)',
+    'trust.2':'QA aplikasi ERP: 160+ task Agile, 22 bug klien diselesaikan',
+    'trust.3':'Katalon Studio · Selenium · Maestro · Jira',
+    'hero.btn1':'<i class="fas fa-list"></i> Lihat Layanan','hero.btn2':'<i class="fab fa-whatsapp"></i> Tanya via WhatsApp',
+    'svc.title':'Layanan','how.title':'Cara Kerja','proof.title':'Latar Belakang','faq.title':'Pertanyaan Umum',
+    'order.title':'Pesan / Konsultasi',
+    'order.lead':'Isi singkat kebutuhan Anda. Saya balas dalam 1x24 jam untuk menjadwalkan konsultasi awal (15-20 menit, gratis).',
+    'order.or':'Lebih suka langsung chat?','order.wa':'Buka WhatsApp','back':'Kembali ke portofolio',
+    'form.name':'Nama lengkap','form.contact':'Email atau nomor WhatsApp','form.msg':'Ceritakan kebutuhan Anda secara singkat','form.send':'Kirim',
+    'cta.order':'Pesan layanan ini','price.from':'Mulai dari ','price.ask':'Harga: tanyakan via WhatsApp',
+    'incl':'Yang Anda dapat','limit':'Batasan','pick':'Pilih layanan'
+  },
+  en: {
+    'nav.services':'Services','nav.how':'How It Works','nav.faq':'FAQ','nav.order':'Order','nav.portfolio':'Portfolio',
+    'hero.title':'QA Services & Software Testing Lessons',
+    'hero.lead':'Helping small teams make sure their apps work correctly, and helping you learn software testing from a practitioner who teaches it at university.',
+    'trust.1':'Teaching assistant, Software Testing & Quality Assurance (2 semesters)',
+    'trust.2':'ERP QA: 160+ Agile tasks, 22 client bugs resolved',
+    'trust.3':'Katalon Studio · Selenium · Maestro · Jira',
+    'hero.btn1':'<i class="fas fa-list"></i> View Services','hero.btn2':'<i class="fab fa-whatsapp"></i> Ask on WhatsApp',
+    'svc.title':'Services','how.title':'How It Works','proof.title':'Background','faq.title':'FAQ',
+    'order.title':'Order / Consultation',
+    'order.lead':'Briefly describe what you need. I will reply within 24 hours to schedule a free 15-20 minute intro call.',
+    'order.or':'Prefer to chat directly?','order.wa':'Open WhatsApp','back':'Back to portfolio',
+    'form.name':'Full name','form.contact':'Email or WhatsApp number','form.msg':'Briefly describe what you need','form.send':'Send',
+    'cta.order':'Order this service','price.from':'Starting from ','price.ask':'Price: ask via WhatsApp',
+    'incl':'What you get','limit':'Limits','pick':'Choose a service'
+  }
+};
+
+const SERVICES = [
+  { key:'tutor', main:true, icon:'fa-chalkboard-teacher',
+    id:{ tag:'Paling diminati', name:'Les Privat Katalon & STLC',
+      who:'Untuk mahasiswa TI dan fresh graduate yang ingin masuk dunia QA.',
+      inc:['4 sesi 1-on-1, 60-90 menit per sesi, via Google Meet','Sesi 1: STLC, penulisan test case, dan test plan','Sesi 2: instalasi Katalon dan test otomatis pertama','Sesi 3: data-driven testing dan Page Object Model','Sesi 4: bug report di Jira dan mini project test suite'],
+      limit:'Jadwal malam hari atau akhir pekan (WIB). Silabus bisa disesuaikan dengan tugas kuliah atau kebutuhan Anda.',
+      wa:'Halo Zharfan, saya tertarik dengan Les Privat Katalon & STLC.' },
+    en:{ tag:'Most popular', name:'Katalon & STLC Private Lessons',
+      who:'For IT students and fresh graduates who want to start a QA career.',
+      inc:['4 one-on-one sessions, 60-90 minutes each, via Google Meet','Session 1: STLC, writing test cases and test plans','Session 2: installing Katalon and your first automated test','Session 3: data-driven testing and Page Object Model','Session 4: Jira bug reports and a mini test-suite project'],
+      limit:'Evenings or weekends (WIB). The syllabus can be adjusted to your coursework or goals.',
+      wa:'Hi Zharfan, I am interested in the Katalon & STLC Private Lessons.' } },
+  { key:'automation', icon:'fa-robot',
+    id:{ tag:'Automation', name:'Automation Starter',
+      who:'Untuk tim yang sudah punya test case dan ingin mulai regression otomatis.',
+      inc:['Setup project Katalon Studio yang rapi','3-5 skenario otomatis dari test case Anda','Struktur Page Object Model dan data-driven sederhana','Panduan singkat cara menjalankan dan merawat script'],
+      limit:'Syarat: test case dan dokumentasi aplikasi sudah tersedia. Belum termasuk CI/CD dan dashboard reporting khusus. Fokus aplikasi web.',
+      wa:'Halo Zharfan, saya tertarik dengan paket Automation Starter.' },
+    en:{ tag:'Automation', name:'Automation Starter',
+      who:'For teams that already have test cases and want to start automated regression.',
+      inc:['Clean Katalon Studio project setup','3-5 automated scenarios built from your test cases','Page Object Model structure and simple data-driven tests','A short guide to running and maintaining the scripts'],
+      limit:'Requires existing test cases and app documentation. CI/CD and custom reporting dashboards are not included. Web applications only.',
+      wa:'Hi Zharfan, I am interested in the Automation Starter package.' } },
+  { key:'quickqa', icon:'fa-bug',
+    id:{ tag:'Manual QA', name:'Cek Cepat QA',
+      who:'Untuk startup atau UMKM yang ingin tahu apakah satu alur utama aplikasinya bermasalah.',
+      inc:['Brief 20 menit untuk memahami alur bisnis','Pengujian 1 alur utama di 1 environment (staging disarankan)','Laporan bug: langkah reproduksi, severity, dan screenshot','Bonus: daftar test case dari alur yang diuji'],
+      limit:'Estimasi 3 hari kerja setelah brief. Cakupan terbatas pada 1 alur; alur tambahan dihitung terpisah.',
+      wa:'Halo Zharfan, saya tertarik dengan layanan Cek Cepat QA.' },
+    en:{ tag:'Manual QA', name:'Quick QA Check',
+      who:'For startups and small businesses that want to know if one key flow in their app has problems.',
+      inc:['20-minute brief to understand the business flow','Testing of 1 key flow in 1 environment (staging preferred)','Bug report: reproduction steps, severity, and screenshots','Bonus: a list of test cases for the tested flow'],
+      limit:'About 3 working days after the brief. Scope is limited to one flow; extra flows are quoted separately.',
+      wa:'Hi Zharfan, I am interested in the Quick QA Check service.' } }
+];
+
+const STEPS = {
+  id:[['Brief','Isi form atau chat WhatsApp. Ceritakan kebutuhan dan target Anda.'],['Konsultasi 15-20 menit','Gratis. Kita pastikan cakupan kerja sebelum ada biaya.'],['Kesepakatan tertulis','Cakupan, harga, tenggat, dan jumlah revisi disepakati. Proyek: DP di awal. Les: bayar per paket.'],['Pengerjaan & serah terima','Hasil dikirim lengkap dengan penjelasan. Setelahnya saya minta masukan atau testimoni singkat.']],
+  en:[['Brief','Fill in the form or chat on WhatsApp. Tell me your needs and goals.'],['15-20 min consultation','Free. We confirm the scope before any cost.'],['Written agreement','Scope, price, deadline, and revision rounds are agreed. Projects: down payment upfront. Lessons: pay per package.'],['Delivery & handover','Results are delivered with an explanation. Afterward I will ask for brief feedback or a testimonial.']]
+};
+
+const PROOF = {
+  id:[['fa-chalkboard-teacher','Mengajar','Dua kali menjadi asisten dosen Pengujian & Penjaminan Mutu Perangkat Lunak, membimbing 40 mahasiswa per kelas pada STLC, Test Plan, RTM, Katalon Studio, dan Jira.'],
+      ['fa-bug','Pengalaman QA','QA pada aplikasi ERP freight forwarding: 160+ task Agile dan 22 bug klien diselesaikan, termasuk memimpin regression testing satu modul.'],
+      ['fa-code','Automation','Membangun script Katalon Studio untuk alur bisnis ERP lengkap dengan custom keyword reusable.']],
+  en:[['fa-chalkboard-teacher','Teaching','Twice a teaching assistant for Software Testing & Quality Assurance, mentoring 40 students per class on STLC, Test Plans, RTM, Katalon Studio, and Jira.'],
+      ['fa-bug','QA experience','QA on a freight-forwarding ERP: 160+ Agile tasks and 22 client bugs resolved, including leading regression testing for one module.'],
+      ['fa-code','Automation','Built Katalon Studio scripts for ERP business flows with reusable custom keywords.']]
+};
+
+const FAQ = {
+  id:[['Apakah data dan aplikasi saya aman?','Data dan akses hanya dipakai untuk pekerjaan Anda. Saya bersedia menandatangani NDA sebelum pengerjaan dimulai.'],
+      ['Kapan jadwal pengerjaan dan sesi les?','Saya bekerja penuh waktu, jadi sesi les dan pengerjaan proyek dilakukan malam hari dan akhir pekan (WIB). Tenggat disepakati di awal.'],
+      ['Apa yang belum Anda kerjakan?','Saat ini belum menerima: pipeline CI/CD, dashboard reporting khusus, penetration/security testing, serta pengujian aplikasi perbankan atau fintech.'],
+      ['Bagaimana dengan revisi?','Paket proyek mencakup 1 putaran revisi untuk hasil yang sudah dikirim. Perubahan cakupan dihitung terpisah.'],
+      ['Bagaimana cara pembayarannya?','Transfer bank. Proyek: DP di awal, pelunasan saat serah terima. Les: pembayaran di awal per paket.']],
+  en:[['Is my data and app safe?','Data and access are used only for your work. I am happy to sign an NDA before starting.'],
+      ['When do you work and teach?','I work full-time, so lessons and project work happen on evenings and weekends (WIB). Deadlines are agreed upfront.'],
+      ['What do you not do yet?','Currently not offered: CI/CD pipelines, custom reporting dashboards, penetration/security testing, and testing of banking or fintech apps.'],
+      ['What about revisions?','Project packages include 1 revision round for delivered work. Scope changes are quoted separately.'],
+      ['How do I pay?','Bank transfer. Projects: down payment upfront, balance on handover. Lessons: paid per package upfront.']]
+};
+
+// ==================== RENDER ====================
+let lang = 'id';
+function waLink(text){ return 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(text); }
+function priceText(key){ const p = (PRICES[key]||'').trim(); return p ? T[lang]['price.from'] + p : T[lang]['price.ask']; }
+
+function render(){
+  const t = T[lang];
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-i18n]').forEach(el => { if (t[el.dataset.i18n] !== undefined) el.innerHTML = t[el.dataset.i18n]; });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => { const k = el.dataset.i18nPlaceholder; if (t[k]) el.placeholder = t[k]; });
+
+  document.getElementById('svcGrid').innerHTML = SERVICES.map(s => {
+    const c = s[lang];
+    return '<div class="card svc-card' + (s.main ? ' main' : '') + '">' +
+      '<span class="svc-tag">' + c.tag + '</span>' +
+      '<h3><i class="fas ' + s.icon + '" style="margin-right:8px;"></i>' + c.name + '</h3>' +
+      '<p class="svc-for">' + c.who + '</p>' +
+      '<h4>' + t['incl'] + '</h4><ul>' + c.inc.map(i => '<li>' + i + '</li>').join('') + '</ul>' +
+      '<div class="svc-limit"><strong>' + t['limit'] + ':</strong> ' + c.limit + '</div>' +
+      '<div class="svc-foot"><div class="svc-price">' + priceText(s.key) + '</div>' +
+      '<a class="btn btn-primary" target="_blank" rel="noopener" href="' + waLink(c.wa) + '"><i class="fab fa-whatsapp"></i> ' + t['cta.order'] + '</a></div></div>';
+  }).join('');
+
+  document.getElementById('stepsGrid').innerHTML = STEPS[lang].map((s,i) =>
+    '<div class="step"><div class="num">' + (i+1) + '</div><h3>' + s[0] + '</h3><p>' + s[1] + '</p></div>').join('');
+  document.getElementById('proofGrid').innerHTML = PROOF[lang].map(p =>
+    '<div class="card"><h3><i class="fas ' + p[0] + '"></i>' + p[1] + '</h3><p style="color:var(--text-secondary);font-size:0.92rem;">' + p[2] + '</p></div>').join('');
+  document.getElementById('faqList').innerHTML = FAQ[lang].map(f =>
+    '<details><summary>' + f[0] + '</summary><p>' + f[1] + '</p></details>').join('');
+
+  const sel = document.getElementById('oService');
+  const cur = sel.value;
+  sel.innerHTML = '<option value="" disabled' + (cur ? '' : ' selected') + '>' + t['pick'] + '</option>' +
+    SERVICES.map(s => '<option value="' + s.key + '"' + (cur === s.key ? ' selected' : '') + '>' + s[lang].name + '</option>').join('');
+
+  const generic = lang === 'id' ? 'Halo Zharfan, saya ingin bertanya soal layanan Anda.' : 'Hi Zharfan, I would like to ask about your services.';
+  document.getElementById('heroWa').href = waLink(generic);
+  document.getElementById('formWa').href = waLink(generic);
+
+  document.getElementById('langIdBtn').classList.toggle('active', lang === 'id');
+  document.getElementById('langEnBtn').classList.toggle('active', lang === 'en');
+}
+
+function setLanguage(l){
+  lang = l; render();
+  try { localStorage.setItem('portfolioLang', l); } catch(e) {}
+}
+
+// ==================== DARK MODE ====================
+const toggleBtn = document.getElementById('darkModeToggle');
+let savedTheme = null; try { savedTheme = localStorage.getItem('theme'); } catch(e) {}
+if (savedTheme === 'dark') document.body.classList.add('dark');
+toggleBtn.innerHTML = document.body.classList.contains('dark') ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+toggleBtn.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+  const d = document.body.classList.contains('dark');
+  try { localStorage.setItem('theme', d ? 'dark' : 'light'); } catch(e) {}
+  toggleBtn.innerHTML = d ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+});
+
+// ==================== MENU MOBILE ====================
+const hamburger = document.getElementById('hamburgerBtn');
+const navLinks = document.getElementById('navLinks');
+const menuOverlay = document.getElementById('menuOverlay');
+function closeMenu(){ hamburger.classList.remove('active'); navLinks.classList.remove('mobile-open'); menuOverlay.classList.remove('active'); document.body.style.overflow = ''; }
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active'); navLinks.classList.toggle('mobile-open'); menuOverlay.classList.toggle('active');
+  document.body.style.overflow = navLinks.classList.contains('mobile-open') ? 'hidden' : '';
+});
+menuOverlay.addEventListener('click', closeMenu);
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+window.addEventListener('resize', () => { if (window.innerWidth > 768) closeMenu(); });
+
+// ==================== FORM ====================
+function showToast(msg, type){
+  const el = document.createElement('div');
+  el.className = 'toast-notif';
+  el.style.backgroundColor = type === 'error' ? '#dc2626' : '#10b981';
+  el.textContent = msg;
+  document.body.appendChild(el);
+  setTimeout(() => el.remove(), 4000);
+}
+document.getElementById('orderForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const name = document.getElementById('oName').value.trim();
+  const contact = document.getElementById('oContact').value.trim();
+  const svcKey = document.getElementById('oService').value;
+  const msg = document.getElementById('oMsg').value.trim();
+  const btn = document.getElementById('oSubmit');
+  if (!name || !contact || !svcKey || !msg) { showToast(lang === 'id' ? 'Harap lengkapi semua field.' : 'Please fill in all fields.', 'error'); return; }
+  const svc = SERVICES.find(s => s.key === svcKey);
+  const original = btn.innerHTML;
+  btn.disabled = true; btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+  try {
+    const body = new URLSearchParams();
+    body.append('name', name);
+    body.append('email', contact);
+    body.append('message', '[JASA: ' + svc.id.name + ']\nKontak: ' + contact + '\n\n' + msg);
+    await fetch(GOOGLE_SCRIPT_URL, { method:'POST', mode:'no-cors', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body: body.toString() });
+    showToast(lang === 'id' ? 'Terima kasih ' + name + '! Pesanan Anda terkirim.' : 'Thank you ' + name + '! Your request was sent.', 'success');
+    e.target.reset(); render();
+  } catch (err) {
+    showToast(lang === 'id' ? 'Gagal mengirim. Silakan chat via WhatsApp.' : 'Failed to send. Please chat via WhatsApp.', 'error');
+  } finally { btn.disabled = false; btn.innerHTML = original; }
+});
+
+// ==================== INIT ====================
+let initLang = 'id'; try { const s = localStorage.getItem('portfolioLang'); if (s === 'id' || s === 'en') initLang = s; } catch(e) {}
+lang = initLang; render();
+</script>
+</body>
+</html>

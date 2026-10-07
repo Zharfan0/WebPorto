@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="description" content="Portfolio Muhammad Zharfan Widyadana Hukmana - QA Engineer & IT Auditor dengan pengalaman 300+ bugs, sertifikasi BNSP, dan penerima hibah AI. Fresh graduate Teknologi Informasi UMY.">
+    <meta name="description" content="Portfolio Muhammad Zharfan Widyadana Hukmana - QA Engineer berpengalaman menguji Oaktree ERP, 300+ bugs teridentifikasi, automation testing Katalon Studio, HAKI AI, sertifikasi BNSP & CCST Cybersecurity. Fresh Graduate TI UMY 2026.">
     <meta name="keywords" content="Zharfan, IT Auditor, QA Engineer, Quality Assurance, Portfolio, UMY, myHeartD, AI, BNSP, Sertifikasi, Software Testing, Katalon, Postman, Jira">
     <meta name="author" content="Muhammad Zharfan Widyadana Hukmana">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="Zharfan | QA Engineer & IT Auditor Portfolio">
-    <meta property="og:description" content="Fresh graduate Teknologi Informasi UMY dengan pengalaman QA 6 bulan, 300+ bugs ditemukan, dan sertifikasi BNSP.">
+    <meta property="og:description" content="Lulusan Teknologi Informasi UMY dengan pengalaman QA 6 bulan, 100+ Tasks diselesaikan, dan sertifikasi BNSP.">
     <meta property="og:type" content="website">
     <title>Zharfan | QA Engineer & IT Auditor Portfolio</title>
     <link rel="icon" type="image/png" href="./Asset/favicon-badgecheck.png" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://kit.fontawesome.com/e8191d8eec.js" crossorigin="anonymous"></script>
     <style>
         /* ==================== SEMUA CSS SAMA PERSIS DENGAN KODE LAMA ==================== */
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -202,6 +202,63 @@
         @keyframes slideUp { from { opacity: 0; transform: translateX(-50%) translateY(20px); } to { opacity: 1; transform: translateX(-50%) translateY(0); } }
         @media (max-width: 768px) { .hero h1 { font-size: 2rem; } .nav-container { flex-direction: column; gap: 16px; } .nav-links { justify-content: center; gap: 18px; } .section-title { font-size: 1.8rem; } .grid { grid-template-columns: 1fr; } .stats-container { gap: 20px; } .stat-number { font-size: 1.4rem; } .floating-cv { bottom: 20px; right: 20px; } .floating-cv a { padding: 8px 16px; font-size: 0.8rem; } .nav-controls { margin-top: 10px; } }
     
+        /* Modal CV */
+        .cv-modal {
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(4px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .cv-modal-content {
+            background: var(--bg-primary);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 420px;
+            width: 90%;
+            text-align: center;
+            box-shadow: var(--shadow-xl);
+            border: 1px solid var(--border);
+            position: relative;
+        }
+        .cv-modal-close {
+            position: absolute;
+            top: 12px;
+            right: 20px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--text-muted);
+        }
+        .cv-modal-close:hover { color: var(--text-primary); }
+        .cv-modal-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+            font-family: var(--serif, 'Inter');
+        }
+        .cv-modal-content p {
+            color: var(--text-muted);
+            margin-bottom: 24px;
+            font-size: 0.9rem;
+        }
+        .cv-modal-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .cv-modal-buttons .btn {
+            width: 100%;
+            justify-content: center;
+            padding: 14px;
+            font-size: 0.95rem;
+        }
+
+
         /* Featured card border emas & efek */
         .card.featured {
             border: 1px solid #F5B041;
@@ -570,6 +627,23 @@ body.dark .card.coming-soon .coming-soon-overlay {
     </div>
 </div>
 
+<!-- Modal Pilih CV -->
+<div id="cvModal" class="cv-modal" style="display:none;">
+    <div class="cv-modal-content">
+        <span class="cv-modal-close" onclick="closeCvModal()">&times;</span>
+        <h3  data-i18n="cv.modal">Pilih Bahasa CV</h3>
+        <p data-i18n="cv.optdesc">Silakan pilih versi CV yang ingin diunduh:</p>
+        <div class="cv-modal-buttons">
+            <a href="https://drive.google.com/uc?export=download&id=1yeCnInBNKcxlVtLUA6KUbsPozvs-tSQL" download class="btn btn-primary">
+                <i class="fas fa-file-pdf"></i> Bahasa Indonesia
+            </a> 
+            <a href="https://drive.google.com/uc?export=download&id=1UgfOi7g4KtKVdnTr2KuZJ-a5sOJrEoQm" download class="btn btn-primary">
+                <i class="fas fa-file-pdf"></i> English Language
+            </a>
+        </div>
+    </div>
+</div>
+
 <nav class="navbar">
     <div class="container nav-container">
     <a href="#home" class="logo">Zharfan.</a>
@@ -582,13 +656,14 @@ body.dark .card.coming-soon .coming-soon-overlay {
     </button>
     
     <ul class="nav-links" id="navLinks">
-        <li><a href="#home" data-i18n="nav.home">Beranda</a></li>
         <li><a href="#about" data-i18n="nav.about">Tentang</a></li>
         <li><a href="#education" data-i18n="nav.education">Pendidikan</a></li>
+        <li><a href="#certifications" data-i18n="nav.certifications">Sertifikasi</a></li>
         <li><a href="#experience" data-i18n="nav.experience">Pengalaman</a></li>
-        <li><a href="#organization" data-i18n="nav.organization">Organisasi</a></li>
         <li><a href="#projects" data-i18n="nav.projects">Proyek</a></li>
+        <li><a href="#organization" data-i18n="nav.organization">Organisasi</a></li>
         <li><a href="#contact" data-i18n="nav.contact">Kontak</a></li>
+        <li><a href="jasa.html" data-i18n="nav.services">Jasa</a></li>
     </ul>
     
     <div class="nav-controls">
@@ -609,22 +684,22 @@ body.dark .card.coming-soon .coming-soon-overlay {
         <div class="container">
             <div class="badge-container">
                 <span class="hero-badge" data-i18n="hero.badge1">Open to Work</span>
-                <span class="hero-badge" data-i18n="hero.badge2">Fresh Graduate 2026</span>
+                <span class="hero-badge" data-i18n="hero.badge2">Expected Graduate 2026</span>
                 <span class="hero-badge" data-i18n="hero.badge3">🇮🇩 Yogyakarta, Indonesia</span>
             </div>
             <h1>Muhammad Zharfan <br>Widyadana Hukmana</h1>
             <div class="typing-text" id="typingText"></div>
             <div class="stats-container">
                 <div class="stat-item">
-                    <div class="stat-number">300+</div>
-                    <div class="stat-label" data-i18n="hero.stat1">Bugs Reported</div>
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label" data-i18n="hero.stat1">Tasks Completed</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">6+</div>
+                    <div class="stat-number">9+</div>
                     <div class="stat-label" data-i18n="hero.stat2">Months Experience</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">4</div>
+                    <div class="stat-number">5</div>
                     <div class="stat-label" data-i18n="hero.stat3">Grants & Awards</div>
                 </div>
                 <div class="stat-item">
@@ -638,8 +713,9 @@ body.dark .card.coming-soon .coming-soon-overlay {
                 <a href="https://linktr.ee/zharfann" target="_blank"><i class="fas fa-link"></i> linktr.ee/zharfann</a>
             </div>
             <div style="margin-top: 30px;">
-                <a href="#experience" class="btn btn-primary" data-i18n="hero.btn1"><i class="fas fa-briefcase"></i> Lihat Portofolio</a>
+                <a href="#projects" class="btn btn-primary" data-i18n="hero.btn1"><i class="fas fa-briefcase"></i> Lihat Portofolio</a>
                 <a href="https://wa.me/6281215946218" target="_blank" class="btn btn-outline" data-i18n="hero.btn2"><i class="fab fa-whatsapp"></i> Hubungi Saya</a>
+                <a href="jasa.html" class="btn btn-outline" data-i18n="hero.btn3"><i class="fas fa-handshake"></i> Pakai Jasa Saya</a>
             </div>
         </div>
     </section>
@@ -651,33 +727,33 @@ body.dark .card.coming-soon .coming-soon-overlay {
             <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center;">
                 <div style="flex: 1; min-width: 200px; text-align: center;">
                     <div style="width: 200px; height: 200px; margin: 0 auto; border-radius: 50%; overflow: hidden; border: 4px solid var(--accent); box-shadow: var(--shadow-lg); background: var(--bg-secondary);">
-                        <img loading="lazy" src="./Asset/foto-profil.jpg" alt="Muhammad Zharfan Widyadana Hukmana" style="width: 100%; height: 100%; object-fit: cover; object-position: 100% 20%;" onerror="this.src='https://via.placeholder.com/200x200?text=Zharfan'">
+                        <img loading="lazy" src="./Asset/foto-profil-update-3.jpg" alt="Muhammad Zharfan Widyadana Hukmana" style="width: 100%; height: 100%; object-fit: cover; object-position: 100% 20%;" onerror="this.src='https://via.placeholder.com/200x200?text=Zharfan'">
                     </div>
                     <div style="margin-top: 16px;">
                         <span class="skill-tag">Zharfan Widyadana</span>
                     </div>
                 </div>
                 <div style="flex: 2; min-width: 250px;">
-                    <p style="margin-bottom: 16px; font-size: 1.05rem;" data-i18n="about.p1">Mahasiswa angkatan 2022 Program Studi Teknologi Informasi di <strong>Universitas Muhammadiyah Yogyakarta</strong> dengan IPK 3.4/4.0.</p>
-                    <p style="margin-bottom: 16px;" data-i18n="about.p2">Pernah menerima pendanaan hibah dalam bidang pengabdian masyarakat, penelitian <strong>Artificial Intelligence</strong>, serta pengembangan bisnis. Memiliki pengalaman sebagai Junior QA dengan temuan 300+ bugs dan sertifikasi <strong>BNSP Software Analysis and Requirement</strong>.</p>
-                    <p style="margin-bottom: 16px;" data-i18n="about.p3">Saat ini sedang mencari posisi <strong>QA / Junior Auditor</strong> untuk mengimplementasikan keahlian di bidang pengujian perangkat lunak, keamanan sistem, dan kepatuhan.</p>
+                    <p style="margin-bottom: 16px; font-size: 1.05rem;" data-i18n="about.p1">Lulusan S1 Teknologi Informasi angkatan 2022 dari <strong>Universitas Muhammadiyah Yogyakarta</strong> dengan IPK 3.53/4.0 <i>(cum laude)</i>. Saat ini berperan sebagai Automation Test Engineer pada proyek pengujian sistem <strong>perbankan (BNI)</strong>, sebelumnya menguji aplikasi ERP <em>freight forwarding</em> terintegrasi Accurate.</p>
+                    <p style="margin-bottom: 16px;" data-i18n="about.p2">Fokus pada penjaminan mutu di ranah <strong>fintech & enterprise system</strong> — merancang, mengevaluasi, dan meningkatkan efisiensi automation framework menggunakan <strong>Katalon Studio</strong> dan <strong>Maestro</strong>, dengan pendekatan Page Object Model (POM) dan integrasi reporting otomatis.</p>
+                    <p style="margin-bottom: 16px;" data-i18n="about.p3">Aktif mencari peran lanjutan sebagai <strong>QA Engineer</strong> di ranah keuangan/fintech untuk berkontribusi dalam tim yang mengutamakan kualitas sistem, keamanan, dan kepatuhan prosedur.</p>
                     <div class="skills-wrapper" style="margin-top: 20px;">
-                        <span class="skill-tag"><i class="fas fa-graduation-cap" style="margin-right: 6px;"></i> <span data-i18n="about.tag1">S1 TI UMY - IPK 3.4</span></span>
-                        <span class="skill-tag"><i class="fas fa-certificate" style="margin-right: 6px;"></i> <span data-i18n="about.tag2">BNSP Software Analyst</span></span>
-                        <span class="skill-tag"><i class="fas fa-language" style="margin-right: 6px;"></i> <span data-i18n="about.tag3">TOEIC - 531</span></span>
+                        <span class="skill-tag"><i class="fas fa-graduation-cap" style="margin-right: 6px;"></i> <span data-i18n="about.tag1">S1 TI UMY - IPK 3.53 (cum laude)</span></span>
+                        <span class="skill-tag"><i class="fa-brands fa-cash-app" style="margin-right: 6px;"></i> <span data-i18n="about.tag2">QA Fintech - BNI Project</span></span>
+                        <span class="skill-tag"><i class="fas fa-certificate" style="margin-right: 6px;"></i> <span data-i18n="about.tagBnsp">BNSP Software Analyst</span></span>
+                        <span class="skill-tag"><i class="fas fa-shield-alt" style="margin-right: 6px;"></i> <span data-i18n="about.tagCisco">CCST Cybersecurity</span></span>
                         <span class="skill-tag"><i class="fas fa-microchip" style="margin-right: 6px;"></i> <span data-i18n="about.tag4">AI Research Grant</span></span>
                         <span class="skill-tag"><i class="fas fa-file-alt" style="margin-right: 6px;"></i> <span data-i18n="about.tag5">HAKI</span></span>
-                        <span class="skill-tag"><i class="fas fa-rocket" style="margin-right: 6px;"></i> <span data-i18n="about.tag6">Awardee Inkubasi Bisnis</span></span>
                     </div>
                 </div>
                 <div style="flex: 1; min-width: 200px; background: var(--bg-secondary); border-radius: 20px; padding: 20px; text-align: center;">
                     <i class="fas fa-user-check" style="font-size: 1.5rem; color: var(--accent);"></i>
                     <p style="margin: 12px 0 0 0; font-size: 0.9rem;" data-i18n="about.summary">
-                        Seorang <strong>fresh graduate</strong> yang teliti, proaktif, dan memiliki <strong>passion</strong> di bidang pengujian perangkat lunak serta audit sistem informasi.
+                        QA Engineer dengan keahlian <em>manual & automation testing</em> pada sistem ERP enterprise, serta <strong>passion</strong> di bidang keamanan sistem dan audit TI.
                     </p>
                     <hr style="margin: 16px 0; border-color: var(--border);">
                     <p style="font-size: 0.85rem; color: var(--text-muted);" data-i18n="about.summary2">
-                        Siap berkontribusi dalam tim yang menghargai kualitas dan kepatuhan.
+                        Terbiasa bekerja dalam metodologi Agile — siap berkontribusi dan tumbuh bersama tim.
                     </p>
                 </div>
             </div>
@@ -709,7 +785,8 @@ body.dark .card.coming-soon .coming-soon-overlay {
             <h2 class="section-title" data-i18n="cert.title">Sertifikasi</h2>
             <div class="grid" style="grid-template-columns: repeat(auto-fill, minmax(280px,1fr));">
                  <div class="card">
-                    <i class="fas fa-shield-alt" style="font-size: 1.8rem;"></i>
+
+                    <i class="fa-solid fa-file-shield" style="font-size: 1.8rem;"></i>
                     <h3 style="margin-top: 10px;" data-i18n="cert3.name">Cisco Certified Support Technician (CCST) – Cybersecurity</h3>
                     <p data-i18n="cert3.desc">Score 744 – Cisco Networking Academy (2026)</p>
                     <div class="project-links">
@@ -752,30 +829,42 @@ body.dark .card.coming-soon .coming-soon-overlay {
             <h2 class="section-title" data-i18n="experience.title">Pengalaman Kerja</h2>
             <div class="grid">
                 <div class="card">
-                    <h3><i class="fas fa-user-tie" style="color: var(--accent); margin-right: 10px;"></i> <span data-i18n="exp1.company">PT Rimba Ananta Vikasa Indonesia</span></h3>
-                    <div class="role" data-i18n="exp1.role">PWKT Junior Quality Assurance</div>
-                    <div class="date" data-i18n="exp1.date">Maret 2026 - Juni 2026</div>
+                    <h3><i class="fa-brands fa-cash-app" style="color: var(--accent); margin-right: 10px;"></i> <span data-i18n="exp0.company">PT Adi Data Informatika | BNI Avatar Project</span></h3>
+                    <div class="role" data-i18n="exp0.role">Automation Test Engineer</div>
+                    <div class="date" data-i18n="exp0.date">September 2026 - Maret 2027 | Onsite, Jakarta</div>
                     <ul>
-                        <li data-i18n="exp1.l1">Bertanggung jawab penuh atas satu modul aplikasi secara mandiri</li>
-                        <li data-i18n="exp1.l2">Memimpin proses pengujian fitur baru dan pendampingan migrasi UI</li>
-                        <li data-i18n="exp1.l3">Menangani permasalahan teknis klien secara langsung sebagai frontline support</li>
-                        <li data-i18n="exp1.l4">Menyelesaikan rata-rata 10-15 task harian melalui ClickUp</li>
+                        <li data-i18n="exp0.l1">Melakukan enhancement pada 150+ test case mobile automation test script (Maestro/YAML)</li>
+                        <li data-i18n="exp0.l2">Membangun automation framework mobile berbasis Katalon Studio dengan pola Page Object Model (POM), serta mengintegrasikan reporting ke TARS (internal REST API tool)</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3><i class="fas fa-user-tie" style="color: var(--accent); margin-right: 10px;"></i> <span data-i18n="exp1.company">PT Rimba Ananta Vikasa Indonesia</span></h3>
+                    <div class="role" data-i18n="exp1.role">Junior Quality Assurance</div>
+                    <div class="date" data-i18n="exp1.date">Maret 2026 - Juni 2026 | Hybrid, Yogyakarta</div>
+                   <ul>
+                        <li data-i18n="exp1.l1">Membangun automation test script menggunakan Katalon Studio (Groovy) untuk 4 alur bisnis: OAuth token ke Accurate, Create Jobfile, Jobfile-Buying, dan Master Customer</li>
+                        <li data-i18n="exp1.l2">Menguji end-to-end modul Oaktree ERP lintas Operational, Marketing, Master, dan Reporting, termasuk memimpin regression testing modul Marketing selama migrasi UI baru</li>
+                        <li data-i18n="exp1.l3">Menguji fitur AI Oaktree (sAIns) untuk auto-generate Jobfile/Item dari unggahan invoice</li>
+                        <li data-i18n="exp1.l4">Menyelesaikan 100+ task pengujian di ClickUp dengan pendekatan Agile, analisis user story, acceptance criteria, kondisi true/false, dan edge cases</li>
                     </ul>
                     <div class="project-links">
-                        <a href="javascript:void(0)" onclick='openModal("#", "Bukti PWKT - Quality Assurance PT. Rimba Ananta Vikasa")'>
+                        <a href="javascript:void(0)" onclick='openImageSet(
+                            ["./Asset/PWKT-Rimba-Lembar1-Censor.png",
+                            "./Asset/PWKT-Rimba-Lembar2-Censor.png"],
+                            "Dokumen PWKT - Junior QA PT. Rimba Ananta Vikasa"
+                        )' class="project-link">
                             <i class="fas fa-certificate"></i> <span data-i18n="cert.view">Lihat Sertifikat</span> →
                         </a>
                     </div>
                 </div>
                 <div class="card">
                     <h3><i class="fas fa-laptop-code" style="color: var(--accent); margin-right: 10px;"></i> <span data-i18n="exp2.company">PT Rimba Ananta Vikasa Indonesia</span></h3>
-                    <div class="role" data-i18n="exp2.role">Karyawan Magang - QA</div>
-                    <div class="date" data-i18n="exp2.date">November 2025 - Februari 2026</div>
+                    <div class="role" data-i18n="exp2.role">Quality Assurance Intern</div>
+                    <div class="date" data-i18n="exp2.date">November 2025 - Februari 2026 | Remote</div>
                     <ul>
-                        <li data-i18n="exp2.l1">Merancang & mengeksekusi 200-300+ test case, aktif mendokumentasi bugs pada <em>Oaktree - An integrated freight forwarding system</em></li>
-                        <li data-i18n="exp2.l2">Melakukan end-to-end testing untuk klien besar seperti Hollywings Store (termasuk XSS testing)</li>
-                        <li data-i18n="exp2.l3">Mengusulkan standarisasi validasi input untuk perbaikan prosedur internal</li>
-                        <li data-i18n="exp2.l4">Koordinasi aktif dengan developer via ClickUp & Discord</li>
+                        <li data-i18n="exp2.l1">Menggunakan Chrome DevTools dan HeidiSQL untuk debugging analisis request/response, error console, dan query database</li>
+                        <li data-i18n="exp2.l2">Melakukan security testing dasar (XSS & SQL injection) pada form input aplikasi</li>
+                        <li data-i18n="exp2.l3">Melakukan manual testing modul Marketing, Operational, dan Master</li>
                     </ul>
                     <div class="project-links">
                         <a href="javascript:void(0)" onclick='openModal("./Asset/Sertif-MagangRimba.png", "Sertifikat Magang - Quality Assurance PT. Rimba Ananta Vikasa")'>
@@ -784,29 +873,29 @@ body.dark .card.coming-soon .coming-soon-overlay {
                     </div>
                 </div>
                 <div class="card">
-                    <h3><i class="fas fa-chalkboard-user" style="color: var(--accent); margin-right: 10px;"></i> <span data-i18n="exp3.title">Asisten Dosen Teknologi Informasi UMY</span></h3>
-                    <div class="date" data-i18n="exp3.date">3 Mata Kuliah (2023-2026)</div>
+                    <h3><i class="fas fa-chalkboard-user" style="color: var(--accent); margin-right: 10px;"></i> <span data-i18n="exp3.title">Asisten Dosen & Praktikum — Teknologi Informasi UMY</span></h3>
+                    <div class="date" data-i18n="exp3.date">3 Mata Kuliah (2023–2026)</div>
                     <ul>
-                        <li data-i18n="exp3.l1"><strong>Rekayasa Kebutuhan (RK)</strong> (2023/2024) - 40 mahasiswa, Design Thinking & PACT Framework</li>
-                        <li data-i18n="exp3.l2"><strong>Pengujian & Penjaminan Mutu Perangkat Lunak (STQA)</strong> (2024/2025) - RTM, Katalon Studio, Jira</li>
-                        <li data-i18n="exp3.l3"><strong>Probabilitas Statistika (Probstat)</strong> (2025/2026) - satu kelas 100+ mahasiswa</li>
+                        <li data-i18n="exp3.l1"><strong>Pengujian & Penjaminan Mutu PL (STQA)</strong> (2024/2025 & 2025/2026) — membimbing 40 mahasiswa dalam STLC, RTM, Automation Testing Katalon Studio, dan Jira</li>
+                        <li data-i18n="exp3.l2"><strong>Probabilitas Statistika (Probstat)</strong> (2025/2026) — mengampu kelas 100+ mahasiswa untuk proyek akhir artikel ilmiah</li>
+                        <li data-i18n="exp3.l3"><strong>Rekayasa Kebutuhan (RK)</strong> (2023/2024) — mendampingi 40 mahasiswa dengan Design Thinking & PACT Framework</li>
                     </ul>
                     <div style="margin-top: 16px;">
-                        <strong><i class="fas fa-folder-open"></i> Materi Ajar:</strong>
-                        <div class="project-links" style="margin-top: 8px;">
-                            <a href="https://github.com/Zharfan0/rekayasa-kebutuhan" target="_blank" class="project-link">
+                        <strong><i class="fas fa-certificate"></i> <span data-i18n="cert.view">Lihat Sertifikat</span> :</strong>
+                        <div class="project-links" style="margin-top: 8px;"> 
+                            <a  href="javascript:void(0)" onclick='openModal("./Asset/sertifAsdos-RK.png", "Sertifikat Asisten Dosen - Rekayasa Kebutuhan")'>
                                 <i class="fas fa-clipboard-list"></i> Rekayasa Kebutuhan (RK) →
                             </a>
-                            <a href="https://github.com/Zharfan0/stqa-automation" target="_blank" class="project-link">
+                           <a  href="javascript:void(0)" onclick='openModal("./Asset/sertifAsdos-STQA.png", "Sertifikat Asisten Dosen - STQA")'>
                                 <i class="fas fa-bug"></i> Pengujian & Penjaminan Mutu (STQA) →
                             </a>
-                            <a href="https://github.com/Zharfan0/probstat" target="_blank" class="project-link">
+                            <!-- <a href="https://github.com/Zharfan0/probstat" target="_blank" class="project-link">
                                 <i class="fas fa-calculator"></i> Probabilitas Statistika (Probstat) →
-                            </a>
+                            </a> -->
                         </div>
-                        <p style="font-size: 0.7rem; color: var(--text-muted); margin-top: 8px;">
+                        <!-- <p style="font-size: 0.7rem; color: var(--text-muted); margin-top: 8px;">
                             *Berisi ringkasan materi, template pembelajaran, dan contoh proyek mahasiswa
-                        </p>
+                        </p> -->
                     </div>
                 </div>
             </div>
@@ -820,29 +909,36 @@ body.dark .card.coming-soon .coming-soon-overlay {
             <div class="grid">
                 <div class="card featured">
                     <div class="featured-badge"><i class="fas fa-star"></i> Featured</div>
-                    <h3><i class="fas fa-heartbeat"></i> <span data-i18n="proj1.title">myHeartD v2 – Web AI Deteksi Jantung Koroner</span></h3>
-                    <div class="date" data-i18n="proj1.date">HAKI No. 000947021 (2025) | Hibah Penelitian AI</div>
-                    <p data-i18n="proj1.desc">Python, scikit-learn, Gradient Boosting. Model prediksi penyakit jantung dengan akurasi tinggi. Terdaftar di Direktorat Inovasi dan Hilirisasi UMY.</p>
+                    <h3><i class="fas fa-heartbeat"></i> <span data-i18n="proj1.title">myHeartD – Deteksi Dini Penyakit Jantung Koroner Berbasis AI</span></h3>
+                    <div class="date" data-i18n="proj1.date">HAKI No. 000947021 (2025) dan No. 001378477 (2026) | Hibah Penelitian AI</div> 
+                    <p data-i18n="proj1.desc">Next.js, TypeScript, FastAPI, Python, TensorFlow, PostgreSQL. Aplikasi web full stack dengan model CNN-LSTM 3 konfigurasi fitur dari dataset BRFSS CDC. Terdaftar di Direktorat Inovasi dan Hilirisasi UMY.</p>
                     <div class="project-links">
                         <a href="https://chd-main.vercel.app" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo →</a>
+                        <a href="javascript:void(0)" onclick='openImageSet(
+                            ["./Asset/sertifikat-HC_Slamet Riyadi-1.png",
+                            "./Asset/sertifikat-HC_Slamet Riyadi-2.png"],
+                            "Surat Pencatatan Ciptaan"
+                        )' class="project-link">
+                            <i class="fas fa-certificate"></i> <span data-i18n="cert.view">Lihat Sertifikat</span> →
+                        </a>
                     </div>
                 </div>
                  <div class="card featured">
                     <div class="featured-badge"><i class="fas fa-star"></i> Featured</div>
-                    <h3><i class="fas fa-vial"></i> <span data-i18n="proj2.title">Automation Testing Portofolio - Katalon Studio</span></h3>
+                    <h3><i class="fas fa-vial"></i> <span data-i18n="proj2.title">Automation Testing – Oaktree ERP (Katalon Studio)</span></h3>
                     <div class="date" data-i18n="proj2.date">2026 | Personal Project</div>
-                    <p data-i18n="proj2.desc">Membuat automation testing suite untuk e-commerce demo menggunakan Katalon Studio. Mencakup login, search, add to cart, dan checkout flow.</p>
+                    <p data-i18n="proj2.desc">Membangun 4 automated test case ERP: integrasi OAuth token Accurate Online dan 3 alur bisnis (Create Jobfile, Buying, Customer). Mengembangkan 3 custom keyword reusable dan Data-Driven Testing berbasis Excel.</p>
                     <div class="skills-wrapper" style="margin-top: 12px;">
                         <span class="skill-tag">Katalon Studio</span>
                         <span class="skill-tag">Groovy Script</span>
-                        <span class="skill-tag">Test Suite</span>
-                        <span class="skill-tag">Object Repository</span>
+                        <span class="skill-tag">Data-Driven Testing</span>
+                        <span class="skill-tag">Custom Keywords</span>
                     </div>
                     <div class="project-links">
                         <a href="https://github.com/Zharfan0/Oak-Test-Automation" target="_blank" class="project-link">
                             <i class="fab fa-github"></i> GitHub Repository →
                         </a>
-                        <a href="#projects" target="_blank" class="project-link">
+                        <a href="https://drive.google.com/file/d/1DKe3fGh5OrwXwy7nPFEAoYw9rO5w5C0l/view?usp=sharing" target="_blank" class="project-link">
                             <i class="fas fa-play-circle"></i> Video Demo →
                         </a>
                     </div>
@@ -851,22 +947,31 @@ body.dark .card.coming-soon .coming-soon-overlay {
                     <h3><i class="fas fa-print"></i> <span data-i18n="proj8.title">OtoPrint – Vending Machine Dokumen Akademik UMY</span></h3>
                     <div class="date" data-i18n="proj8.date">Capstone Project (2025) | Sistem Digitalisasi Dokumen Mandiri</div>
                     <p data-i18n="proj8.desc">Sistem vending machine dokumen akademik yang memungkinkan mahasiswa mencetak dokumen (Surat Aktif Kuliah, Transkrip, dll) secara mandiri dengan integrasi QR Code verifikasi keaslian. Dilengkapi admin panel untuk manajemen template (.docx), field dinamis, layout visual (drag & drop), serta maintenance printer dan stok kertas.</p>
-                    <div class="skills-wrapper" style="margin-top: 12px;">
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">Express</span>
-                        <span class="skill-tag">SQLite3</span>
-                        <span class="skill-tag">Bootstrap 5</span>
-                        <span class="skill-tag">pdf-lib</span>
-                        <span class="skill-tag">QR Code</span>
-                        <span class="skill-tag">LibreOffice</span>
-                        <span class="skill-tag">REST API</span>
-                        <span class="skill-tag">Session Auth</span>
-                        <span class="skill-tag">Touchscreen UI</span>
+                    <div class="skills-wrapper">
+                        <span class="skill-tag">Katalon Studio</span>
+                        <span class="skill-tag">Selenium</span>
+                        <span class="skill-tag">Appium/UiAutomator2</span>
+                        <span class="skill-tag">Maestro</span>
+                        <span class="skill-tag">TARS</span>
+                        <span class="skill-tag">Page Object Model (POM)</span>
+                        <span class="skill-tag">Postman</span>
+                        <span class="skill-tag">ClickUp</span>
+                        <span class="skill-tag">Jira</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Groovy</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                        <span class="skill-tag">Microsoft Office</span>
+                        <span class="skill-tag">Microsoft Excel</span>
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">Canva</span>
+                        <span class="skill-tag">CorelDraw</span>
                     </div>
                     <div class="project-links">
                         <a href="https://github.com/Zharfan0/WEBAPP-OTOPRINT" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub Repository →</a>
-                        <a href="https://drive.google.com/file/d/1_Dm-6LlE0WCNj07U_-bN14IJQh-qY-t1/view?usp=sharing" target="_blank" class="project-link"><i class="fas fa-play-circle"></i> Video Demo →</a>
-                        <a href="https://github.com/Zharfan0/WEBAPP-OTOPRINT/blob/main/README.md" target="_blank" class="project-link"><i class="fas fa-book"></i> <span data-i18n="documentation.view">Dokumentasi</span> →</a>
+                        <a href="https://drive.google.com/file/d/13EKNcyNi_kEIrZnnzaiNc8BxfO51hH3I/view?usp=sharing" target="_blank" class="project-link"><i class="fas fa-play-circle"></i> Video Demo →</a>
+                        <!-- <a href="https://github.com/Zharfan0/WEBAPP-OTOPRINT/blob/main/README.md" target="_blank" class="project-link"><i class="fas fa-book"></i> <span data-i18n="documentation.view">Dokumentasi</span> →</a> -->
                     </div>
                 </div>
                 <div class="card">
@@ -892,7 +997,7 @@ body.dark .card.coming-soon .coming-soon-overlay {
                 <div class="card coming-soon">
                     <div class="coming-soon-overlay">
                         <i class="fas fa-code-branch"></i>
-                        <span>Coming Soon • Q3 2026</span>
+                        <span>Coming Soon</span>
                     </div>
                     <div class="card-content">
                         <h3><i class="fas fa-shield-alt"></i> Cybersecurity Portfolio – TryHackMe & Audit</h3>
@@ -1048,17 +1153,15 @@ body.dark .card.coming-soon .coming-soon-overlay {
 
 <!-- Floating Download CV Button - FIX -->
 <div class="floating-cv">
-    <a href="https://drive.google.com/uc?export=download&id=1yeCnInBNKcxlVtLUA6KUbsPozvs-tSQL" 
-       download 
-       target="_blank">
+    <a href="javascript:void(0)" onclick="openCvModal()" class="btn-cv-download">
         <i class="fas fa-download"></i>
         <span>Download CV</span>
     </a>
 </div>
 
 <footer>
-    <p data-i18n="footer.p1">&copy; 2026 Muhammad Zharfan Widyadana Hukmana | Teknologi Informasi UMY | QA Engineer & Aspiring IT Auditor</p>
-    <p style="margin-top: 8px;" data-i18n="footer.p2">Terbuka untuk posisi Quality Assurance & Junior IT Auditor | Siap mulai segera</p>
+    <p data-i18n="footer.p1">&copy; 2026 Muhammad Zharfan Widyadana Hukmana | S1 Teknologi Informasi UMY | QA Engineer & Aspiring IT Auditor</p>
+    <p style="margin-top: 8px;" data-i18n="footer.p2">Terbuka untuk posisi QA Engineer & Junior IT Auditor</p>
 </footer>
 
 <script>
@@ -1069,62 +1172,69 @@ const translations = {
         'nav.home': 'Beranda',
         'nav.about': 'Tentang',
         'nav.education': 'Pendidikan',
+        'nav.certifications': 'Sertifikasi',
         'nav.experience': 'Pengalaman',
         'nav.organization': 'Organisasi',
         'nav.projects': 'Proyek',
         'nav.contact': 'Kontak',
+        'nav.services': 'Jasa',
         // Hero
         'hero.badge1': 'Open to Work',
-        'hero.badge2': 'Fresh Graduate 2026',
+        'hero.badge2': 'Graduate of 2026',
         'hero.badge3': '🇮🇩 Yogyakarta, Indonesia',
-        'hero.stat1': 'Bugs Reported',
+        'hero.stat1': 'Tasks Completed',
         'hero.stat2': 'Months Experience',
         'hero.stat3': 'Grants & Awards',
         'hero.stat4': 'Students Taught',
         'hero.btn1': 'Lihat Portofolio',
         'hero.btn2': 'Hubungi Saya',
+        'hero.btn3': '<i class="fas fa-handshake"></i> Pakai Jasa Saya',
         // About
         'about.title': 'Tentang Saya',
-        'about.p1': 'Mahasiswa angkatan 2022 Program Studi Teknologi Informasi di <strong>Universitas Muhammadiyah Yogyakarta</strong> dengan IPK 3.4/4.0.',
-        'about.p2': 'Pernah menerima pendanaan hibah dalam bidang pengabdian masyarakat, penelitian <strong>Artificial Intelligence</strong>, serta pengembangan bisnis. Memiliki pengalaman sebagai Junior QA dengan temuan 300+ bugs dan sertifikasi <strong>BNSP Software Analysis and Requirement</strong>.',
-        'about.p3': 'Saat ini sedang mencari posisi <strong>QA / Junior Auditor</strong> untuk mengimplementasikan keahlian di bidang pengujian perangkat lunak, keamanan sistem, dan kepatuhan.',
-        'about.tag1': 'S1 TI UMY - IPK 3.4',
-        'about.tag2': 'BNSP Software Analyst',
-        'about.tag3': 'TOEIC - 531',
+        'about.p1': 'Lulusan S1 Teknologi Informasi angkatan 2022 dari <strong>Universitas Muhammadiyah Yogyakarta</strong> dengan IPK 3.53/4.0 <i>(cum laude)</i>. Saat ini berperan sebagai Automation Test Engineer pada proyek pengujian sistem <strong>perbankan (BNI)</strong>, sebelumnya menguji aplikasi ERP <em>freight forwarding</em> terintegrasi Accurate.',
+        'about.p2': 'Fokus pada penjaminan mutu di ranah <strong>fintech & enterprise system</strong> — merancang, mengevaluasi, dan meningkatkan efisiensi automation framework menggunakan <strong>Katalon Studio</strong> dan <strong>Maestro</strong>, dengan pendekatan Page Object Model (POM) dan integrasi reporting otomatis.',
+        'about.p3': 'Aktif mencari peran lanjutan sebagai <strong>QA Engineer</strong> di ranah keuangan/fintech untuk berkontribusi dalam tim yang mengutamakan kualitas sistem, keamanan, dan kepatuhan prosedur.',
+        'about.tag1': 'S1 TI UMY - IPK 3.53 (cum laude)',
+        'about.tag2': 'QA Fintech - BNI Project',
+        'about.tagBnsp': 'BNSP Software Analyst',
+        'about.tagCisco': 'CCST Cybersecurity',
         'about.tag4': 'AI Research Grant',
         'about.tag5': 'HAKI',
-        'about.tag6': 'Awardee Inkubasi Bisnis',
-        'about.summary': 'Seorang <strong>fresh graduate</strong> yang teliti, proaktif, dan memiliki <strong>passion</strong> di bidang pengujian perangkat lunak serta audit sistem informasi.',
-        'about.summary2': 'Siap berkontribusi dalam tim yang menghargai kualitas dan kepatuhan.',
+        'about.summary': 'QA Engineer dengan fokus <em>quality assurance fintech & enterprise system</em>, terbiasa bekerja end-to-end dari manual testing hingga automation di lingkungan Agile.',
+        'about.summary2': 'Berpengalaman menguji sistem enterprise skala besar — dari ERP hingga mobile banking.',
         // Education
         'education.title': 'Pendidikan',
         'edu.uni': 'Universitas Muhammadiyah Yogyakarta',
-        'edu.uniDate': '2022 - 2026 | IPK 3.4/4.0',
+        'edu.uniDate': '2022 - 2026 | IPK 3.53/4.0 <i>(cum laude)</i>',
         'edu.uniDesc': 'Fakultas Teknik | Program Studi Sarjana Teknologi Informasi',
         'edu.ma': 'Madrasah Aliyah Mu\'allimin Muhammadiyah Yogyakarta',
         'edu.maDate': '2019 - 2022',
         'edu.maDesc': 'Jurusan IPA',
         // Experience
         'experience.title': 'Pengalaman Kerja',
+        'exp0.company': 'PT Adi Data Informatika | BNI Avatar Project',
+        'exp0.role': 'Automation Test Engineer',
+        'exp0.date': 'September 2026 - Maret 2027 | Onsite, Jakarta',
+        'exp0.l1': 'Melakukan enhancement pada 150+ test case mobile automation test script (Maestro/YAML)',
+        'exp0.l2': 'Membangun automation framework mobile berbasis Katalon Studio dengan pola Page Object Model (POM), serta mengintegrasikan reporting ke TARS (internal REST API tool)',
         'exp1.company': 'PT Rimba Ananta Vikasa Indonesia',
-        'exp1.role': 'PWKT Junior Quality Assurance',
-        'exp1.date': 'Maret 2026 - Juni 2026',
-        'exp1.l1': 'Bertanggung jawab penuh atas satu modul aplikasi secara mandiri',
-        'exp1.l2': 'Memimpin proses pengujian fitur baru dan pendampingan migrasi UI',
-        'exp1.l3': 'Menangani permasalahan teknis klien secara langsung sebagai frontline support',
-        'exp1.l4': 'Menyelesaikan rata-rata 10-15 task harian melalui ClickUp',
+        'exp1.role': 'Junior Quality Assurance',
+        'exp1.date': 'Maret 2026 - Juni 2026 | Hybrid, Yogyakarta',
+        'exp1.l1': 'Membangun automation test script menggunakan Katalon Studio (Groovy) untuk 4 alur bisnis: OAuth token ke Accurate, Create Jobfile, Jobfile-Buying, dan Master Customer',
+        'exp1.l2': 'Menguji end-to-end modul Oaktree ERP lintas Operational, Marketing, Master, dan Reporting, termasuk memimpin regression testing modul Marketing selama migrasi UI baru',
+        'exp1.l3': 'Menguji fitur AI Oaktree (sAIns) untuk auto-generate Jobfile/Item dari unggahan invoice',
+        'exp1.l4': 'Menyelesaikan 100+ task pengujian di ClickUp dengan pendekatan Agile, analisis user story, acceptance criteria, kondisi true/false, dan edge cases',
         'exp2.company': 'PT Rimba Ananta Vikasa Indonesia',
-        'exp2.role': 'Karyawan Magang - QA',
-        'exp2.date': 'November 2025 - Februari 2026',
-        'exp2.l1': 'Merancang & mengeksekusi 200-300+ test case, aktif mendokumentasi bugs pada Oaktree',
-        'exp2.l2': 'Melakukan end-to-end testing untuk klien besar seperti Hollywings Store (termasuk XSS testing)',
-        'exp2.l3': 'Mengusulkan standarisasi validasi input untuk perbaikan prosedur internal',
-        'exp2.l4': 'Koordinasi aktif dengan developer via ClickUp & Discord',
-        'exp3.title': 'Asisten Dosen Teknologi Informasi UMY',
-        'exp3.date': '3 Mata Kuliah (2023-2026)',
-        'exp3.l1': '<strong>Rekayasa Kebutuhan (RK)</strong> (2023/2024) - 40 mahasiswa',
-        'exp3.l2': '<strong>Pengujian & Penjaminan Mutu PL (STQA)</strong> (2024/2025) - RTM, Katalon Studio, Jira',
-        'exp3.l3': '<strong>Probabilitas Statistika (Probstat)</strong> (2025/2026) - 100+ mahasiswa',
+        'exp2.role': 'Quality Assurance Intern',
+        'exp2.date': 'November 2025 - Februari 2026 | Remote',
+        'exp2.l1': 'Menggunakan Chrome DevTools dan HeidiSQL untuk debugging analisis request/response, error console, dan query database',
+        'exp2.l2': 'Melakukan security testing dasar (XSS & SQL injection) pada form input aplikasi',
+        'exp2.l3': 'Melakukan manual testing modul Marketing, Operational, dan Master',
+        'exp3.title': 'Asisten Dosen & Praktikum — Teknologi Informasi UMY',
+        'exp3.date': '3 Mata Kuliah (2023–2026)',
+        'exp3.l1': '<strong>Pengujian & Penjaminan Mutu PL (STQA)</strong> (2024/2025 & 2025/2026) — membimbing 40 mahasiswa dalam STLC, RTM, Automation Testing Katalon Studio, dan Jira',
+        'exp3.l2': '<strong>Probabilitas Statistika (Probstat)</strong> (2025/2026) — mengampu kelas 100+ mahasiswa untuk proyek akhir artikel ilmiah',
+        'exp3.l3': '<strong>Rekayasa Kebutuhan (RK)</strong> (2023/2024) — mendampingi 40 mahasiswa dengan Design Thinking & PACT Framework',
         // Organization
         'organization.title': 'Organisasi & Kepanitiaan',
         'org1.title': 'Gubernur BEM KMFT UMY',
@@ -1144,12 +1254,12 @@ const translations = {
         'org5.desc': 'Mendampingi pengembangan diri & diskusi santri Madrasah Mu\'allimin.',
         // Projects
         'projects.title': 'Proyek & Penghargaan',
-        'proj1.title': 'myHeartD v2 – Web AI Deteksi Jantung Koroner',
-        'proj1.date': 'HAKI No. 000947021 (2025) | Hibah Penelitian AI',
-        'proj1.desc': 'Python, scikit-learn, Gradient Boosting. Model prediksi penyakit jantung dengan akurasi tinggi.',
-        'proj2.title': 'Automation Testing Portfolio - Katalon Studio',
+        'proj1.title': 'myHeartD v2 – Deteksi Dini Penyakit Jantung Koroner Berbasis AI',
+        'proj1.date': 'HAKI No. 000947021 (2025) dan No. 001378477 (2026) | Hibah Penelitian AI',
+        'proj1.desc': 'Next.js, TypeScript, FastAPI, Python, TensorFlow, PostgreSQL. Aplikasi web full stack dengan model CNN-LSTM 3 konfigurasi fitur dari dataset BRFSS CDC. Terdaftar di Direktorat Inovasi dan Hilirisasi UMY.',
+        'proj2.title': 'Automation Testing – Oaktree ERP (Katalon Studio)',
         'proj2.date': '2026 | Personal Project',
-        'proj2.desc': 'Membuat automation testing suite untuk e-commerce demo menggunakan Katalon Studio.',
+        'proj2.desc': 'Membangun 4 automated test case ERP: integrasi OAuth token Accurate Online dan 3 alur bisnis (Create Jobfile, Buying, Customer). Mengembangkan 3 custom keyword reusable dan Data-Driven Testing berbasis Excel.',
         'proj3.title': 'Cybersecurity Portfolio',
         'proj3.date': '2026 | Self-Learning',
         'proj3.desc': 'Cisco Certified Support Technician (CCST) Cybersecurity.',
@@ -1190,8 +1300,10 @@ const translations = {
         'form.send': 'Kirim Pesan',
         'form.note': '*Pesan akan dibalas dengan waktu 1x24 jam',
         'cv.download': 'Download CV',
-        'footer.p1': '© 2026 Muhammad Zharfan Widyadana Hukmana | Teknologi Informasi UMY | QA Engineer & Aspiring IT Auditor',
-        'footer.p2': 'Terbuka untuk posisi Quality Assurance & Junior IT Auditor | Siap mulai segera',
+        'footer.p1': '© 2026 Muhammad Zharfan Widyadana Hukmana | S1 Teknologi Informasi UMY | QA Engineer & Aspiring IT Auditor',
+        'footer.p2': 'Terbuka untuk posisi QA Engineer & Junior IT Auditor | Tersedia segera',
+        'cv.modal' : 'Pilih Bahasa CV',
+        'cv.optdesc' : 'Silakan pilih versi CV yang ingin diunduh:',
         // Links
         'sertif.link': 'Lihat Sertifikat'
     },
@@ -1200,62 +1312,69 @@ const translations = {
         'nav.home': 'Home',
         'nav.about': 'About',
         'nav.education': 'Education',
+        'nav.certifications': 'certifications',
         'nav.experience': 'Experience',
         'nav.organization': 'Organization',
         'nav.projects': 'Projects',
         'nav.contact': 'Contact',
+        'nav.services': 'Services',
         // Hero
         'hero.badge1': 'Open to Work',
-        'hero.badge2': 'Fresh Graduate 2026',
+        'hero.badge2': 'Graduate of 2026',
         'hero.badge3': '🇮🇩 Yogyakarta, Indonesia',
-        'hero.stat1': 'Bugs Reported',
+        'hero.stat1': 'Tasks Completed',
         'hero.stat2': 'Months Experience',
         'hero.stat3': 'Grants & Awards',
         'hero.stat4': 'Students Taught',
         'hero.btn1': 'View Portfolio',
         'hero.btn2': 'Contact Me',
+        'hero.btn3': '<i class="fas fa-handshake"></i> Hire My Services',
         // About
         'about.title': 'About Me',
-        'about.p1': 'Information Technology undergraduate (Class of 2022) at <strong>Universitas Muhammadiyah Yogyakarta</strong> with GPA 3.4/4.0.',
-        'about.p2': 'Recipient of grant funding in community service, <strong>Artificial Intelligence</strong> research, and business development. Experienced as Junior QA with 300+ bugs found and <strong>BNSP Software Analysis and Requirement</strong> certification.',
-        'about.p3': 'Currently seeking a <strong>QA / Junior IT Auditor</strong> position to implement expertise in software testing, system security, and compliance.',
-        'about.tag1': 'IT UMY - GPA 3.4',
-        'about.tag2': 'BNSP Certified',
-        'about.tag3': 'TOEIC - 531',
+        'about.p1': 'Information Technology graduate (Class of 2022) from <strong>Universitas Muhammadiyah Yogyakarta</strong> with GPA 3.53/4.0 <i>(cum laude)</i>. Currently serving as Automation Test Engineer on a <strong>banking (BNI)</strong> testing project, previously tested an integrated freight forwarding ERP application.',
+        'about.p2': 'Focused on quality assurance in <strong>fintech & enterprise systems</strong> — designing, evaluating, and improving automation frameworks with <strong>Katalon Studio</strong> and <strong>Maestro</strong>, using the Page Object Model (POM) pattern and automated reporting integration.',
+        'about.p3': 'Actively pursuing a further <strong>QA Engineer</strong> role in the finance/fintech space to contribute to a team that values system quality, security, and procedural compliance.',
+        'about.tag1': 'IT UMY - GPA 3.53 (cum laude)',
+        'about.tag2': 'Fintech QA - BNI Project',
+        'about.tagBnsp': 'BNSP Certified',
+        'about.tagCisco': 'CCST Cybersecurity',
         'about.tag4': 'AI Grant',
         'about.tag5': 'HAKI',
-        'about.tag6': 'Business Incubation',
-        'about.summary': 'A detail-oriented <strong>fresh graduate</strong> with passion for software testing and IT audit.',
-        'about.summary2': 'Ready to contribute to quality-driven teams.',
+        'about.summary': 'QA Engineer focused on <em>fintech & enterprise system quality assurance</em>, experienced end-to-end from manual testing to automation in Agile environments.',
+        'about.summary2': 'Experienced testing large-scale enterprise systems — from ERP to mobile banking.',
         // Education
         'education.title': 'Education',
         'edu.uni': 'Universitas Muhammadiyah Yogyakarta',
-        'edu.uniDate': '2022 - 2026 | GPA 3.4/4.0',
+        'edu.uniDate': '2022 - 2026 | GPA 3.53/4.0 <i>(cum laude)</i>',
         'edu.uniDesc': 'Faculty of Engineering | Bachelor of Information Technology',
         'edu.ma': 'Madrasah Aliyah Mu\'allimin Muhammadiyah Yogyakarta',
         'edu.maDate': '2019 - 2022',
         'edu.maDesc': 'Natural Science Major',
         // Experience
         'experience.title': 'Work Experience',
+        'exp0.company': 'PT Adi Data Informatika | BNI Avatar Project',
+        'exp0.role': 'Automation Test Engineer',
+        'exp0.date': 'Sep 2026 - Mar 2027 | Onsite, Jakarta',
+        'exp0.l1': 'Enhanced 150+ mobile automation test cases (Maestro/YAML)',
+        'exp0.l2': 'Built a mobile automation framework on Katalon Studio using Page Object Model (POM), integrating reporting with TARS (internal REST API tool)',
         'exp1.company': 'PT Rimba Ananta Vikasa Indonesia',
-        'exp1.role': 'Junior Quality Assurance (PWKT)',
-        'exp1.date': 'Mar 2026 - Jun 2026',
-        'exp1.l1': 'Independently owned a full application module',
-        'exp1.l2': 'Led testing of new features and UI migration',
-        'exp1.l3': 'Handled client technical issues as frontline support',
-        'exp1.l4': 'Completed average 10-15 tasks daily via ClickUp',
+        'exp1.role': 'Junior Quality Assurance',
+        'exp1.date': 'Mar 2026 – Jun 2026 | Hybrid, Yogyakarta',
+        'exp1.l1': 'Built Katalon Studio (Groovy) automation test scripts for 4 business flows: OAuth token to Accurate, Create Jobfile, Jobfile-Buying, and Master Customer',
+        'exp1.l2': 'Tested Oaktree ERP end-to-end across Operational, Marketing, Master, and Reporting modules, including leading regression testing for the Marketing module during a UI migration',
+        'exp1.l3': 'Tested Oaktree AI feature (sAIns) for auto-generating Jobfile/Item from uploaded invoices',
+        'exp1.l4': 'Completed 100+ testing tasks in ClickUp using Agile methodology: user story analysis, acceptance criteria, and edge case coverage',
         'exp2.company': 'PT Rimba Ananta Vikasa Indonesia',
-        'exp2.role': 'Intern - Quality Assurance',
-        'exp2.date': 'Nov 2025 - Feb 2026',
-        'exp2.l1': 'Designed and executed 200-300+ test cases on Oaktree system',
-        'exp2.l2': 'Performed end-to-end testing including XSS security validation',
-        'exp2.l3': 'Proposed input validation standardization for QA procedures',
-        'exp2.l4': 'Coordinated with developers via ClickUp & Discord',
-        'exp3.title': 'Teaching Assistant - UMY',
-        'exp3.date': '3 Courses (2023-2026)',
-        'exp3.l1': '<strong>Requirements Engineering</strong> (2023/2024) - 40 students',
-        'exp3.l2': '<strong>Software Testing & QA</strong> (2024/2025) - RTM, Katalon Studio, Jira',
-        'exp3.l3': '<strong>Probability & Statistics</strong> (2025/2026) - 100+ students',
+        'exp2.role': 'Quality Assurance Intern',
+        'exp2.date': 'Nov 2025 – Feb 2026 | Remote',
+        'exp2.l1': 'Used Chrome DevTools and HeidiSQL to debug request/response, error console, and database queries',
+        'exp2.l2': 'Performed basic security testing (XSS & SQL Injection) on application input forms',
+        'exp2.l3': 'Performed manual testing across Marketing, Operational, and Master modules',
+        'exp3.title': 'Teaching Assistant — Information Technology, UMY',
+        'exp3.date': '3 Courses (2023–2026)',
+        'exp3.l1': '<strong>Software Testing & QA (STQA)</strong> (2024/2025 & 2025/2026) — guided 40 students through STLC, RTM, Katalon Studio automation, and Jira',
+        'exp3.l2': '<strong>Probability & Statistics (Probstat)</strong> (2025/2026) — taught a class of 100+ students for scientific article final projects',
+        'exp3.l3': '<strong>Requirements Engineering (RK)</strong> (2023/2024) — assisted 40 students using Design Thinking & PACT Framework',
         // Organization
         'organization.title': 'Organizations',
         'org1.title': 'Governor - BEM KMFT UMY',
@@ -1275,12 +1394,12 @@ const translations = {
         'org5.desc': 'Accompanied students in self-development activities.',
         // Projects
         'projects.title': 'Projects & Awards',
-        'proj1.title': 'myHeartD v2 – AI Heart Disease Detection',
-        'proj1.date': 'HAKI No. 000947021 (2025) | AI Research Grant',
-        'proj1.desc': 'Python, scikit-learn, Gradient Boosting. High accuracy heart disease prediction model.',
-        'proj2.title': 'Automation Testing Portfolio - Katalon Studio',
+        'proj1.title': 'myHeartD v2 – AI-Powered Coronary Heart Disease Detection',
+        'proj1.date': 'HAKI No. 000947021 (2025) dan No. 001378477 (2026) | Hibah Penelitian AI',
+        'proj1.desc': 'Next.js, TypeScript, FastAPI, Python, TensorFlow, PostgreSQL. Full stack web app with CNN-LSTM model trained on CDC BRFSS dataset across 3 feature configurations. Registered at UMY Directorate of Innovation.',
+        'proj2.title': 'Automation Testing – Oaktree ERP (Katalon Studio)',
         'proj2.date': '2026 | Personal Project',
-        'proj2.desc': 'Automation test suite for e-commerce demo using Katalon Studio.',
+        'proj2.desc': 'Built 4 automated ERP test cases: OAuth token integration with Accurate Online and 3 business flows (Create Jobfile, Buying, Customer). Developed 3 reusable custom keywords and Excel-based Data-Driven Testing.',
         'proj3.title': 'Cybersecurity Portfolio',
         'proj3.date': '2026 | Self-Learning',
         'proj3.desc': 'Cisco Certified Support Technician (CCST) Cybersecurity.',
@@ -1322,13 +1441,15 @@ const translations = {
         'form.send': 'Send Message',
         'form.note': '* Will be replied within 24 hours',
         'cv.download': 'Download CV',
-        'footer.p1': '© 2026 Muhammad Zharfan Widyadana Hukmana | Information Technology UMY | QA Engineer & Aspiring IT Auditor',
-        'footer.p2': 'Open for Quality Assurance & Junior IT Auditor positions | Available immediately'
+        'footer.p1': '© 2026 Muhammad Zharfan Widyadana Hukmana | B.Sc. Information Technology, UMY | QA Engineer & Aspiring IT Auditor',
+        'footer.p2': 'Open for QA Engineer & Junior IT Auditor positions | Available immediately',
+        'cv.modal' : 'Choose CV Language',
+        'cv.optdesc' : 'Please choose which version of the CV you want to download:',
     }
 };
 
 // ==================== TYPING EFFECT ====================
-const words = ["QA Engineer", "Aspiring IT Auditor", "Fresh Graduate TI UMY", "Bug Hunter", "AI Enthusiast"];
+const words = ["QA Engineer", "Aspiring IT Auditor", "Graduate of TI UMY", "Bug Hunter", "AI Enthusiast"];
 let i = 0, j = 0, isDeleting = false;
 const typingElement = document.getElementById("typingText");
 
@@ -1716,6 +1837,19 @@ window.addEventListener('resize', function() {
     if (window.innerWidth > 768) {
         closeMenu();
     }
+});
+
+function openCvModal() {
+    document.getElementById('cvModal').style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+function closeCvModal() {
+    document.getElementById('cvModal').style.display = 'none';
+    document.body.style.overflow = '';
+}
+// Tutup modal jika klik di luar konten
+document.getElementById('cvModal')?.addEventListener('click', function(e) {
+    if (e.target === this) closeCvModal();
 });
 </script>
 </body>
